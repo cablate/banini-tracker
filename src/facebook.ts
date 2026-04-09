@@ -1,5 +1,6 @@
 export interface FacebookPost {
   id: string;
+  source: 'facebook';
   text: string;
   ocrText: string;
   timestamp: string;
@@ -11,20 +12,13 @@ export interface FacebookPost {
   mediaUrl: string;
 }
 
-/**
- * 透過 Apify 官方 Facebook Posts Scraper 抓取粉專貼文
- * Actor: apify/facebook-posts-scraper
- * 計費：CU-based（無 per-result 費用）
- */
 export async function fetchFacebookPosts(
   pageUrl: string,
   token: string,
-  maxPosts = 5,
+  maxPosts = 3,
 ): Promise<FacebookPost[]> {
   const actorId = 'apify~facebook-posts-scraper';
   const url = `https://api.apify.com/v2/acts/${actorId}/run-sync-get-dataset-items`;
-
-  console.log(`[Facebook] 抓取 ${pageUrl} 最新 ${maxPosts} 篇貼文...`);
 
   const res = await fetch(url, {
     method: 'POST',
@@ -46,7 +40,7 @@ export async function fetchFacebookPosts(
 
   const raw = (await res.json()) as any[];
 
-  const posts: FacebookPost[] = raw.map((item) => {
+  return raw.map((item) => {
     const media = item.media?.[0];
     const ocrTexts = (item.media ?? [])
       .map((m: any) => m.ocrText ?? '')
@@ -54,6 +48,7 @@ export async function fetchFacebookPosts(
 
     return {
       id: item.postId ?? item.id ?? '',
+      source: 'facebook' as const,
       text: item.text ?? item.message ?? '',
       ocrText: ocrTexts.join('\n'),
       timestamp: item.time ?? new Date().toISOString(),
@@ -65,7 +60,4 @@ export async function fetchFacebookPosts(
       mediaUrl: media?.thumbnail ?? media?.photo_image?.uri ?? '',
     };
   });
-
-  console.log(`[Facebook] 取得 ${posts.length} 篇貼文`);
-  return posts;
 }

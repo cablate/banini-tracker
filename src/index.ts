@@ -14,7 +14,7 @@ import cron from 'node-cron';
 import { fetchThreadsPosts, type ThreadsPost } from './threads.js';
 import { fetchFacebookPosts, type FacebookPost } from './facebook.js';
 import { analyzePosts } from './analyze.js';
-import { sendTelegramMessage, formatReport } from './telegram.js';
+import { sendTelegramMessageWithConfig, formatReport } from './telegram.js';
 
 // ── Config ──────────────────────────────────────────────────
 const THREADS_USERNAME = 'banini31';
@@ -251,7 +251,7 @@ async function runInner(opts: RunOptions) {
         text: p.text.slice(0, 60),
       }));
       const msg = formatReport(analysis, { threads: threadCount, fb: fbCount }, postSummaries);
-      await sendTelegramMessage({ botToken: tgToken, channelId: tgChannelId }, msg);
+      await sendTelegramMessageWithConfig({ botToken: tgToken, channelId: tgChannelId }, msg);
       console.log('[Telegram] 通知已發送');
     } catch (err) {
       console.error(`[Telegram] 發送失敗: ${err instanceof Error ? err.message : err}`);

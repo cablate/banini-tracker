@@ -1,40 +1,49 @@
-/**
- * Telegram 通知模組
- * 使用 Bot API 直接發送，不需額外套件
- */
-
 const API_BASE = 'https://api.telegram.org/bot';
 
-function escapeHtml(text: string): string {
-  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// ── CLI 用（直接傳參數）────────────────────────────────
+export async function sendTelegramMessage(
+  botToken: string,
+  channelId: string,
+  text: string,
+  parseMode: 'HTML' | 'Markdown' | '' = 'HTML',
+): Promise<void> {
+  const url = `${API_BASE}${botToken}/sendMessage`;
+
+  const body: Record<string, any> = {
+    chat_id: channelId,
+    text,
+    disable_web_page_preview: true,
+  };
+  if (parseMode) body.parse_mode = parseMode;
+
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    const respBody = await res.text().catch(() => '');
+    throw new Error(`Telegram 發送失敗: ${res.status} ${respBody.slice(0, 200)}`);
+  }
 }
+
+// ── 常駐模式用（物件參數 + formatReport）────────────────
 
 export interface TelegramConfig {
   botToken: string;
   channelId: string;
 }
 
-export async function sendTelegramMessage(
+export async function sendTelegramMessageWithConfig(
   config: TelegramConfig,
   text: string,
 ): Promise<void> {
-  const url = `${API_BASE}${config.botToken}/sendMessage`;
+  return sendTelegramMessage(config.botToken, config.channelId, text);
+}
 
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: config.channelId,
-      text,
-      parse_mode: 'HTML',
-      disable_web_page_preview: true,
-    }),
-  });
-
-  if (!res.ok) {
-    const body = await res.text().catch(() => '');
-    throw new Error(`Telegram 發送失敗: ${res.status} ${body.slice(0, 200)}`);
-  }
+function escapeHtml(text: string): string {
+  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 interface PostSummary {
@@ -68,7 +77,6 @@ export function formatReport(
   lines.push(`來源：Threads ${postCount.threads} 篇 / FB ${postCount.fb} 篇`);
   lines.push('');
 
-  // 貼文時間軸
   lines.push('<b>她的動態</b>');
   for (const p of posts) {
     const src = p.source === 'threads' ? 'TH' : 'FB';

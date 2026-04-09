@@ -1,18 +1,27 @@
 {
   "name": "banini-tracker",
-  "version": "0.1.0",
-  "description": "巴逆逆（8zz）Threads 反指標追蹤器",
+  "version": "2.0.0",
+  "description": "巴逆逆反指標追蹤器 — 常駐排程 + CLI 雙模式",
   "type": "module",
+  "bin": {
+    "banini-tracker": "dist/cli.js"
+  },
   "scripts": {
     "dev": "tsx src/index.ts",
     "dry": "tsx src/index.ts --dry",
     "market": "tsx src/index.ts --fb-only --max-posts=1",
     "evening": "tsx src/index.ts --max-posts=3",
     "cron": "tsx src/index.ts --cron",
+    "cli": "tsx src/cli.ts",
     "build": "tsc",
-    "start": "node dist/index.js --cron"
+    "start": "node dist/index.js --cron",
+    "prepublishOnly": "npm run build"
   },
+  "keywords": ["banini", "reverse-indicator", "threads", "facebook", "apify", "telegram", "claude"],
+  "author": "cablate",
+  "license": "MIT",
   "dependencies": {
+    "commander": "^13.0.0",
     "dotenv": "^16.4.0",
     "node-cron": "^4.2.1",
     "openai": "^4.0.0"
@@ -22,5 +31,8 @@
     "@types/node-cron": "^3.0.11",
     "tsx": "^4.0.0",
     "typescript": "^5.5.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
