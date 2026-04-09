@@ -4,37 +4,72 @@
 
 # banini-tracker
 
-追蹤「股海冥燈」巴逆逆（8zz）的社群貼文 CLI 工具。
+追蹤「股海冥燈」巴逆逆（8zz）的 Threads / Facebook 社群貼文，透過 Apify 抓取、AI 反指標分析、Telegram 即時推送。
 
-透過 Apify 抓取 Threads / Facebook 貼文，讓 AI（Claude / GPT / 任何 LLM）進行反指標分析，結果推送到 Telegram。
+支援兩種使用模式：
+- **常駐排程**：Docker 部署，自動盤中/盤後排程 + LLM 分析 + Telegram 推送
+- **CLI 工具**：`npx banini-tracker`，搭配 Claude Code 等 AI 手動執行分析
 
-## 安裝
+## 快速開始（常駐排程）
 
 ```bash
-# 不需安裝，npx 直接用
-npx banini-tracker --help
+# 1. 複製設定
+cp .env.example .env
+# 填入 APIFY_TOKEN, LLM_BASE_URL, LLM_API_KEY, LLM_MODEL, TG_BOT_TOKEN, TG_CHANNEL_ID
 
-# 或全域安裝
-npm install -g banini-tracker
+# 2. Docker 部署
+docker build -t banini-tracker .
+docker run -d --name banini --env-file .env banini-tracker
+
+# 3. 或本地直接跑
+npm install && npm run start
 ```
 
-## 快速開始
+### 排程規則
+
+- **盤中**（週一~五 09:00-13:30）：每 30 分鐘，FB only 抓 1 篇
+- **盤後**（每天 23:00）：Threads + FB 各 3 篇
+
+### npm scripts
+
+| 指令 | 說明 |
+|------|------|
+| `npm run start` | 常駐排程模式（盤中 + 盤後自動跑） |
+| `npm run dev` | 單次執行（Threads + FB 各 3 篇） |
+| `npm run dry` | 只抓取，不呼叫 LLM |
+| `npm run market` | 盤中模式（FB only, 1 篇） |
+| `npm run evening` | 盤後模式（各 3 篇） |
+
+### .env 設定
+
+```
+APIFY_TOKEN=apify_api_...
+LLM_BASE_URL=https://api.deepinfra.com/v1/openai
+LLM_API_KEY=...
+LLM_MODEL=MiniMaxAI/MiniMax-M2.5
+TG_BOT_TOKEN=...
+TG_CHANNEL_ID=-100...
+```
+
+## CLI 工具模式
+
+不需 clone repo，任何環境直接用：
 
 ```bash
-# 1. 初始化設定
+# 初始化設定
 npx banini-tracker init \
   --apify-token YOUR_APIFY_TOKEN \
   --tg-bot-token YOUR_TG_BOT_TOKEN \
   --tg-channel-id YOUR_TG_CHANNEL_ID
 
-# 2. 抓取 Facebook 最新 3 篇貼文
+# 抓取 Facebook 最新 3 篇
 npx banini-tracker fetch -s fb -n 3 --mark-seen
 
-# 3. 推送分析結果到 Telegram
+# 推送結果到 Telegram
 npx banini-tracker push -m "分析結果..."
 ```
 
-## 指令
+### CLI 指令
 
 | 指令 | 說明 |
 |------|------|
@@ -65,9 +100,9 @@ npx banini-tracker push -m "分析結果..."
 
 不帶 `-m` 或 `-f` 時從 stdin 讀取。
 
-## 搭配 Claude Code 使用
+### 搭配 Claude Code 使用
 
-在 Claude Code 的 skill 中使用，Claude 自己就是分析引擎：
+在 Claude Code 的 skill 中，Claude 自己就是分析引擎：
 
 1. `fetch` 抓貼文 → Claude 讀 JSON
 2. Claude 分析 + WebSearch 查最新走勢
@@ -75,59 +110,12 @@ npx banini-tracker push -m "分析結果..."
 
 詳見 [`skill/SKILL.md`](skill/SKILL.md)。
 
-## 常駐排程模式（Docker 部署）
-
-除了 CLI 模式，也可以用 Docker 部署為常駐服務，自動排程抓取 + LLM 分析 + Telegram 推送。
-
-```bash
-# 1. 複製 .env
-cp .env.example .env
-# 填入 APIFY_TOKEN, LLM_BASE_URL, LLM_API_KEY, LLM_MODEL, TG_BOT_TOKEN, TG_CHANNEL_ID
-
-# 2. Docker 部署
-docker build -t banini-tracker .
-docker run -d --name banini --env-file .env banini-tracker
-
-# 3. 或本地直接跑
-npm install && npm run start
-```
-
-**排程規則**：
-- 盤中（週一~五 09:00-13:30）：每 30 分鐘，FB only 抓 1 篇
-- 盤後（每天 23:00）：Threads + FB 各 3 篇
-
-**手動模式**：
-```bash
-npm run dev              # 單次執行（Threads + FB 各 3 篇）
-npm run dry              # 只抓取不分析
-npm run market           # 盤中模式（FB only, 1 篇）
-npm run evening          # 盤後模式（各 3 篇）
-```
-
 ## 費用
 
 | 來源 | 每次費用 | 說明 |
 |------|---------|------|
 | Facebook | ~$0.02 | CU 計費，便宜 |
 | Threads | ~$0.15 | Pay-per-event，較貴 |
-
-## 設定檔
-
-`~/.banini-tracker.json`：
-
-```json
-{
-  "apifyToken": "apify_api_...",
-  "telegram": {
-    "botToken": "123456:ABC...",
-    "channelId": "-100..."
-  },
-  "targets": {
-    "threadsUsername": "banini31",
-    "facebookPageUrl": "https://www.facebook.com/DieWithoutBang/"
-  }
-}
-```
 
 ## 免責聲明
 
