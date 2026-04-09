@@ -75,6 +75,35 @@ npx banini-tracker push -m "分析結果..."
 
 詳見 [`skill/SKILL.md`](skill/SKILL.md)。
 
+## 常駐排程模式（Docker 部署）
+
+除了 CLI 模式，也可以用 Docker 部署為常駐服務，自動排程抓取 + LLM 分析 + Telegram 推送。
+
+```bash
+# 1. 複製 .env
+cp .env.example .env
+# 填入 APIFY_TOKEN, LLM_BASE_URL, LLM_API_KEY, LLM_MODEL, TG_BOT_TOKEN, TG_CHANNEL_ID
+
+# 2. Docker 部署
+docker build -t banini-tracker .
+docker run -d --name banini --env-file .env banini-tracker
+
+# 3. 或本地直接跑
+npm install && npm run start
+```
+
+**排程規則**：
+- 盤中（週一~五 09:00-13:30）：每 30 分鐘，FB only 抓 1 篇
+- 盤後（每天 23:00）：Threads + FB 各 3 篇
+
+**手動模式**：
+```bash
+npm run dev              # 單次執行（Threads + FB 各 3 篇）
+npm run dry              # 只抓取不分析
+npm run market           # 盤中模式（FB only, 1 篇）
+npm run evening          # 盤後模式（各 3 篇）
+```
+
 ## 費用
 
 | 來源 | 每次費用 | 說明 |
