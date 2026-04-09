@@ -1,95 +1,151 @@
-<svg width="1280" height="640" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0D1117"/>
-      <stop offset="100%" style="stop-color:#161B22"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#EF4444"/>
-      <stop offset="50%" style="stop-color:#F59E0B"/>
-      <stop offset="100%" style="stop-color:#10B981"/>
+    <linearGradient id="card-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c0392b"/>
     </linearGradient>
-    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#EF4444;stop-opacity:0.15"/>
-      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0.05"/>
+    <linearGradient id="tg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2AABEE"/>
+      <stop offset="100%" stop-color="#229ED9"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="1280" height="640" fill="url(#bg)"/>
 
-  <!-- Decorative grid dots -->
-  <g fill="#21262D" opacity="0.6">
-    <circle cx="900" cy="120" r="2"/>
-    <circle cx="940" cy="120" r="2"/>
-    <circle cx="980" cy="120" r="2"/>
-    <circle cx="1020" cy="120" r="2"/>
-    <circle cx="1060" cy="120" r="2"/>
-    <circle cx="1100" cy="120" r="2"/>
-    <circle cx="1140" cy="120" r="2"/>
-    <circle cx="900" cy="160" r="2"/>
-    <circle cx="940" cy="160" r="2"/>
-    <circle cx="980" cy="160" r="2"/>
-    <circle cx="1020" cy="160" r="2"/>
-    <circle cx="1060" cy="160" r="2"/>
-    <circle cx="1100" cy="160" r="2"/>
-    <circle cx="1140" cy="160" r="2"/>
-    <circle cx="900" cy="200" r="2"/>
-    <circle cx="940" cy="200" r="2"/>
-    <circle cx="980" cy="200" r="2"/>
-    <circle cx="1020" cy="200" r="2"/>
-    <circle cx="1060" cy="200" r="2"/>
-    <circle cx="1100" cy="200" r="2"/>
-    <circle cx="1140" cy="200" r="2"/>
+  <!-- Subtle pattern dots -->
+  <g fill="#fff" opacity="0.03">
+    <circle cx="80" cy="80" r="4"/><circle cx="160" cy="120" r="3"/><circle cx="240" cy="60" r="5"/>
+    <circle cx="320" cy="140" r="3"/><circle cx="400" cy="90" r="4"/><circle cx="480" cy="160" r="3"/>
+    <circle cx="560" cy="70" r="5"/><circle cx="640" cy="130" r="4"/><circle cx="720" cy="50" r="3"/>
+    <circle cx="800" cy="110" r="5"/><circle cx="880" cy="80" r="3"/><circle cx="960" cy="150" r="4"/>
+    <circle cx="1040" cy="60" r="3"/><circle cx="1120" cy="140" r="5"/><circle cx="1200" cy="100" r="4"/>
+    <circle cx="100" cy="500" r="4"/><circle cx="200" cy="560" r="3"/><circle cx="300" cy="520" r="5"/>
+    <circle cx="400" cy="580" r="3"/><circle cx="500" cy="510" r="4"/><circle cx="600" cy="570" r="3"/>
+    <circle cx="700" cy="530" r="5"/><circle cx="800" cy="590" r="4"/><circle cx="900" cy="500" r="3"/>
+    <circle cx="1000" cy="560" r="5"/><circle cx="1100" cy="520" r="3"/><circle cx="1200" cy="580" r="4"/>
   </g>
 
-  <!-- Glow background -->
-  <ellipse cx="640" cy="300" rx="500" ry="250" fill="url(#glow)"/>
-
-  <!-- Candlestick chart decoration -->
-  <g transform="translate(780, 220)" opacity="0.35">
-    <!-- Green candle -->
-    <line x1="40" y1="60" x2="40" y2="140" stroke="#10B981" stroke-width="2"/>
-    <rect x="30" y="80" width="20" height="40" fill="#10B981" rx="2"/>
-    <!-- Red candle -->
-    <line x1="80" y1="40" x2="80" y2="130" stroke="#EF4444" stroke-width="2"/>
-    <rect x="70" y="50" width="20" height="60" fill="#EF4444" rx="2"/>
-    <!-- Green candle -->
-    <line x1="120" y1="30" x2="120" y2="120" stroke="#10B981" stroke-width="2"/>
-    <rect x="110" y="50" width="20" height="50" fill="#10B981" rx="2"/>
-    <!-- Red candle (big drop) -->
-    <line x1="160" y1="20" x2="160" y2="160" stroke="#EF4444" stroke-width="2"/>
-    <rect x="150" y="40" width="20" height="100" fill="#EF4444" rx="2"/>
-    <!-- Green candle (reversal) -->
-    <line x1="200" y1="60" x2="200" y2="170" stroke="#10B981" stroke-width="2"/>
-    <rect x="190" y="90" width="20" height="60" fill="#10B981" rx="2"/>
-    <!-- Arrow reversal indicator -->
-    <path d="M220,80 Q260,20 300,70" stroke="#F59E0B" stroke-width="2.5" fill="none" stroke-dasharray="6,4"/>
-    <polygon points="295,60 305,72 292,75" fill="#F59E0B"/>
+  <!-- ==================== LEFT: Social Posts ==================== -->
+  <!-- Threads post bubble -->
+  <g transform="translate(60, 120)">
+    <rect width="300" height="90" rx="16" fill="#fff" opacity="0.95"/>
+    <!-- Threads icon -->
+    <circle cx="30" cy="28" r="14" fill="#000"/>
+    <text x="30" y="33" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#fff">@</text>
+    <text x="52" y="33" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#1d1d1f">banini31</text>
+    <text x="220" y="33" font-family="-apple-system, sans-serif" font-size="11" fill="#86868b">Threads</text>
+    <rect x="16" y="48" width="200" height="7" rx="3.5" fill="#e5e5e5"/>
+    <rect x="16" y="62" width="260" height="7" rx="3.5" fill="#e5e5e5"/>
   </g>
 
-  <!-- Accent line -->
-  <rect x="120" y="330" width="240" height="4" rx="2" fill="url(#accent)"/>
-
-  <!-- Title -->
-  <text x="120" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="#F0F6FC">banini-tracker</text>
-
-  <!-- Subtitle -->
-  <text x="120" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#8B949E">Reverse-indicator goddess tracker.</text>
-  <text x="120" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#8B949E">AI-powered contrarian signal from social posts.</text>
-
-  <!-- Tags -->
-  <g transform="translate(120, 470)">
-    <rect x="0" y="0" width="100" height="32" rx="16" fill="#21262D"/>
-    <text x="50" y="21" font-family="ui-monospace, monospace" font-size="14" fill="#8B949E" text-anchor="middle">Threads</text>
-    <rect x="116" y="0" width="100" height="32" rx="16" fill="#21262D"/>
-    <text x="166" y="21" font-family="ui-monospace, monospace" font-size="14" fill="#8B949E" text-anchor="middle">Facebook</text>
-    <rect x="232" y="0" width="60" height="32" rx="16" fill="#21262D"/>
-    <text x="262" y="21" font-family="ui-monospace, monospace" font-size="14" fill="#8B949E" text-anchor="middle">LLM</text>
-    <rect x="308" y="0" width="100" height="32" rx="16" fill="#21262D"/>
-    <text x="358" y="21" font-family="ui-monospace, monospace" font-size="14" fill="#8B949E" text-anchor="middle">Telegram</text>
+  <!-- Facebook post bubble -->
+  <g transform="translate(100, 230)">
+    <rect width="300" height="110" rx="16" fill="#fff" opacity="0.95"/>
+    <!-- FB icon -->
+    <circle cx="30" cy="28" r="14" fill="#1877F2"/>
+    <text x="30" y="34" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#fff">f</text>
+    <text x="52" y="33" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#1d1d1f">DieWithoutBang</text>
+    <text x="240" y="33" font-family="-apple-system, sans-serif" font-size="11" fill="#86868b">Facebook</text>
+    <!-- Post content skeleton -->
+    <rect x="16" y="48" width="240" height="7" rx="3.5" fill="#e5e5e5"/>
+    <rect x="16" y="62" width="180" height="7" rx="3.5" fill="#e5e5e5"/>
+    <!-- Image placeholder -->
+    <rect x="16" y="78" width="80" height="20" rx="4" fill="#f0f0f0"/>
+    <text x="56" y="92" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#aaa">OCR</text>
   </g>
 
-  <!-- Author -->
-  <text x="120" y="560" font-family="ui-monospace, monospace" font-size="20" fill="#6E7681">by @cablate</text>
+  <!-- ==================== MIDDLE: Arrow + AI ==================== -->
+  <g transform="translate(420, 240)">
+    <!-- Arrow line -->
+    <line x1="0" y1="0" x2="80" y2="0" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <polygon points="80,-8 96,0 80,8" fill="#f59e0b" opacity="0.6"/>
+  </g>
+
+  <!-- AI Analysis card -->
+  <g transform="translate(530, 100)">
+    <rect width="300" height="280" rx="16" fill="#fff" opacity="0.95"/>
+    <!-- Header -->
+    <rect width="300" height="48" rx="16" fill="url(#card-header)"/>
+    <rect x="0" y="32" width="300" height="16" fill="url(#card-header)"/>
+    <text x="150" y="32" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#fff">AI 反指標分析</text>
+
+    <!-- Target list -->
+    <g transform="translate(20, 64)">
+      <text font-family="-apple-system, sans-serif" font-size="12" fill="#86868b">提及標的</text>
+      <!-- Target 1 -->
+      <g transform="translate(0, 18)">
+        <text font-family="-apple-system, sans-serif" font-size="13" fill="#10B981" font-weight="700">↑</text>
+        <text x="16" font-family="-apple-system, sans-serif" font-size="13" fill="#1d1d1f" font-weight="600">鈦昇</text>
+        <rect x="50" width="60" height="18" rx="9" fill="#ecfdf5"/>
+        <text x="80" y="13" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#10B981">可能反彈</text>
+      </g>
+      <!-- Target 2 -->
+      <g transform="translate(0, 42)">
+        <text font-family="-apple-system, sans-serif" font-size="13" fill="#EF4444" font-weight="700">↓</text>
+        <text x="16" font-family="-apple-system, sans-serif" font-size="13" fill="#1d1d1f" font-weight="600">原油正二</text>
+        <rect x="76" width="60" height="18" rx="9" fill="#fef2f2"/>
+        <text x="106" y="13" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#EF4444">可能續跌</text>
+      </g>
+    </g>
+
+    <!-- Chain analysis -->
+    <g transform="translate(20, 150)">
+      <text font-family="-apple-system, sans-serif" font-size="12" fill="#86868b">連鎖推導</text>
+      <rect y="16" width="260" height="6" rx="3" fill="#f0f0f0"/>
+      <rect y="28" width="200" height="6" rx="3" fill="#f0f0f0"/>
+    </g>
+
+    <!-- Mood score -->
+    <g transform="translate(20, 200)">
+      <text font-family="-apple-system, sans-serif" font-size="12" fill="#86868b">冥燈指數</text>
+      <g transform="translate(0, 16)">
+        <rect width="200" height="8" rx="4" fill="#f0f0f0"/>
+        <rect width="160" height="8" rx="4" fill="#f59e0b"/>
+      </g>
+      <text x="210" y="24" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#f59e0b">8/10</text>
+    </g>
+
+    <!-- Disclaimer -->
+    <text x="150" y="262" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#c0c0c0">僅供娛樂參考，不構成投資建議</text>
+  </g>
+
+  <!-- ==================== RIGHT: Arrow + Telegram ==================== -->
+  <g transform="translate(845, 240)">
+    <line x1="0" y1="0" x2="80" y2="0" stroke="#2AABEE" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <polygon points="80,-8 96,0 80,8" fill="#2AABEE" opacity="0.6"/>
+  </g>
+
+  <!-- Telegram notification -->
+  <g transform="translate(950, 160)">
+    <rect width="270" height="160" rx="16" fill="url(#tg-grad)"/>
+    <!-- Telegram plane icon -->
+    <g transform="translate(20, 20)">
+      <polygon points="0,10 24,0 24,20" fill="#fff" opacity="0.9"/>
+      <polygon points="10,10 24,4 24,16" fill="#fff" opacity="0.7"/>
+    </g>
+    <text x="52" y="34" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#fff">巴逆逆反指標速報</text>
+    <!-- Message preview -->
+    <rect x="16" y="50" width="238" height="94" rx="10" fill="#fff" opacity="0.2"/>
+    <rect x="26" y="62" width="160" height="6" rx="3" fill="#fff" opacity="0.5"/>
+    <rect x="26" y="76" width="200" height="6" rx="3" fill="#fff" opacity="0.4"/>
+    <rect x="26" y="90" width="140" height="6" rx="3" fill="#fff" opacity="0.4"/>
+    <!-- Arrow indicators -->
+    <text x="26" y="120" font-family="-apple-system, sans-serif" font-size="12" fill="#fff" opacity="0.8">↑ 鈦昇  ↓ 原油正二</text>
+  </g>
+
+  <!-- ==================== BOTTOM: Title ==================== -->
+  <text x="640" y="500" text-anchor="middle" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-weight="800" font-size="64" fill="#fff" letter-spacing="-1">
+    banini-tracker
+  </text>
+  <text x="640" y="545" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="22" fill="#fff" opacity="0.7">
+    Social posts → AI reverse-indicator analysis → Telegram alerts
+  </text>
+  <text x="640" y="590" text-anchor="middle" font-family="ui-monospace, monospace" font-size="16" fill="#fff" opacity="0.35">
+    by @cablate
+  </text>
 </svg>
