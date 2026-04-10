@@ -1,0 +1,11152 @@
+[
+  {
+    "code": "00400A",
+    "name": "主動國泰動能高息",
+    "market": "tse"
+  },
+  {
+    "code": "0050",
+    "name": "元大台灣50",
+    "market": "tse"
+  },
+  {
+    "code": "0051",
+    "name": "元大中型100",
+    "market": "tse"
+  },
+  {
+    "code": "0052",
+    "name": "富邦科技",
+    "market": "tse"
+  },
+  {
+    "code": "0053",
+    "name": "元大電子",
+    "market": "tse"
+  },
+  {
+    "code": "0055",
+    "name": "元大MSCI金融",
+    "market": "tse"
+  },
+  {
+    "code": "0056",
+    "name": "元大高股息",
+    "market": "tse"
+  },
+  {
+    "code": "0057",
+    "name": "富邦摩台",
+    "market": "tse"
+  },
+  {
+    "code": "0061",
+    "name": "元大寶滬深",
+    "market": "tse"
+  },
+  {
+    "code": "006203",
+    "name": "元大MSCI台灣",
+    "market": "tse"
+  },
+  {
+    "code": "006204",
+    "name": "永豐臺灣加權",
+    "market": "tse"
+  },
+  {
+    "code": "006205",
+    "name": "富邦上証",
+    "market": "tse"
+  },
+  {
+    "code": "006206",
+    "name": "元大上證50",
+    "market": "tse"
+  },
+  {
+    "code": "006207",
+    "name": "復華滬深",
+    "market": "tse"
+  },
+  {
+    "code": "006208",
+    "name": "富邦台50",
+    "market": "tse"
+  },
+  {
+    "code": "00625K",
+    "name": "富邦上証+R",
+    "market": "tse"
+  },
+  {
+    "code": "00631L",
+    "name": "元大台灣50正2",
+    "market": "tse"
+  },
+  {
+    "code": "00632R",
+    "name": "元大台灣50反1",
+    "market": "tse"
+  },
+  {
+    "code": "00633L",
+    "name": "富邦上証正2",
+    "market": "tse"
+  },
+  {
+    "code": "00634R",
+    "name": "富邦上証反1",
+    "market": "tse"
+  },
+  {
+    "code": "00635U",
+    "name": "期元大S&P黃金",
+    "market": "tse"
+  },
+  {
+    "code": "00636",
+    "name": "國泰中國A50",
+    "market": "tse"
+  },
+  {
+    "code": "00636K",
+    "name": "國泰中國A50+U",
+    "market": "tse"
+  },
+  {
+    "code": "00637L",
+    "name": "元大滬深300正2",
+    "market": "tse"
+  },
+  {
+    "code": "00638R",
+    "name": "元大滬深300反1",
+    "market": "tse"
+  },
+  {
+    "code": "00639",
+    "name": "富邦深100",
+    "market": "tse"
+  },
+  {
+    "code": "00640L",
+    "name": "富邦日本正2",
+    "market": "tse"
+  },
+  {
+    "code": "00641R",
+    "name": "富邦日本反1",
+    "market": "tse"
+  },
+  {
+    "code": "00642U",
+    "name": "期元大S&P石油",
+    "market": "tse"
+  },
+  {
+    "code": "00643",
+    "name": "群益深証中小",
+    "market": "tse"
+  },
+  {
+    "code": "00643K",
+    "name": "群益深証中小+R",
+    "market": "tse"
+  },
+  {
+    "code": "00645",
+    "name": "富邦日本",
+    "market": "tse"
+  },
+  {
+    "code": "00646",
+    "name": "元大S&P500",
+    "market": "tse"
+  },
+  {
+    "code": "00647L",
+    "name": "元大S&P500正2",
+    "market": "tse"
+  },
+  {
+    "code": "00648R",
+    "name": "元大S&P500反1",
+    "market": "tse"
+  },
+  {
+    "code": "00650L",
+    "name": "復華香港正2",
+    "market": "tse"
+  },
+  {
+    "code": "00651R",
+    "name": "復華香港反1",
+    "market": "tse"
+  },
+  {
+    "code": "00652",
+    "name": "富邦印度",
+    "market": "tse"
+  },
+  {
+    "code": "00653L",
+    "name": "富邦印度正2",
+    "market": "tse"
+  },
+  {
+    "code": "00654R",
+    "name": "富邦印度反1",
+    "market": "tse"
+  },
+  {
+    "code": "00655L",
+    "name": "國泰中國A50正2",
+    "market": "tse"
+  },
+  {
+    "code": "00656R",
+    "name": "國泰中國A50反1",
+    "market": "tse"
+  },
+  {
+    "code": "00657",
+    "name": "國泰日經225",
+    "market": "tse"
+  },
+  {
+    "code": "00657K",
+    "name": "國泰日經225+U",
+    "market": "tse"
+  },
+  {
+    "code": "00660",
+    "name": "元大歐洲50",
+    "market": "tse"
+  },
+  {
+    "code": "00661",
+    "name": "元大日經225",
+    "market": "tse"
+  },
+  {
+    "code": "00662",
+    "name": "富邦NASDAQ",
+    "market": "tse"
+  },
+  {
+    "code": "00663L",
+    "name": "國泰臺灣加權正2",
+    "market": "tse"
+  },
+  {
+    "code": "00664R",
+    "name": "國泰臺灣加權反1",
+    "market": "tse"
+  },
+  {
+    "code": "00665L",
+    "name": "富邦恒生國企正2",
+    "market": "tse"
+  },
+  {
+    "code": "00666R",
+    "name": "富邦恒生國企反1",
+    "market": "tse"
+  },
+  {
+    "code": "00668",
+    "name": "國泰美國道瓊",
+    "market": "tse"
+  },
+  {
+    "code": "00668K",
+    "name": "國泰美國道瓊+U",
+    "market": "tse"
+  },
+  {
+    "code": "00669R",
+    "name": "國泰美國道瓊反1",
+    "market": "tse"
+  },
+  {
+    "code": "00670L",
+    "name": "富邦NASDAQ正2",
+    "market": "tse"
+  },
+  {
+    "code": "00671R",
+    "name": "富邦NASDAQ反1",
+    "market": "tse"
+  },
+  {
+    "code": "00673R",
+    "name": "期元大S&P原油反1",
+    "market": "tse"
+  },
+  {
+    "code": "00674R",
+    "name": "期元大S&P黃金反1",
+    "market": "tse"
+  },
+  {
+    "code": "00675L",
+    "name": "富邦臺灣加權正2",
+    "market": "tse"
+  },
+  {
+    "code": "00676R",
+    "name": "富邦臺灣加權反1",
+    "market": "tse"
+  },
+  {
+    "code": "00678",
+    "name": "群益那斯達克生技",
+    "market": "tse"
+  },
+  {
+    "code": "00680L",
+    "name": "元大美債20正2",
+    "market": "tse"
+  },
+  {
+    "code": "00681R",
+    "name": "元大美債20反1",
+    "market": "tse"
+  },
+  {
+    "code": "00682U",
+    "name": "期元大美元指數",
+    "market": "tse"
+  },
+  {
+    "code": "00683L",
+    "name": "期元大美元指正2",
+    "market": "tse"
+  },
+  {
+    "code": "00684R",
+    "name": "期元大美元指反1",
+    "market": "tse"
+  },
+  {
+    "code": "00685L",
+    "name": "群益臺灣加權正2",
+    "market": "tse"
+  },
+  {
+    "code": "00686R",
+    "name": "群益臺灣加權反1",
+    "market": "tse"
+  },
+  {
+    "code": "00688L",
+    "name": "國泰20年美債正2",
+    "market": "tse"
+  },
+  {
+    "code": "00689R",
+    "name": "國泰20年美債反1",
+    "market": "tse"
+  },
+  {
+    "code": "00690",
+    "name": "兆豐藍籌30",
+    "market": "tse"
+  },
+  {
+    "code": "00692",
+    "name": "富邦公司治理",
+    "market": "tse"
+  },
+  {
+    "code": "00693U",
+    "name": "期街口S&P黃豆",
+    "market": "tse"
+  },
+  {
+    "code": "00700",
+    "name": "富邦恒生國企",
+    "market": "tse"
+  },
+  {
+    "code": "00701",
+    "name": "國泰股利精選30",
+    "market": "tse"
+  },
+  {
+    "code": "00702",
+    "name": "國泰標普低波高息",
+    "market": "tse"
+  },
+  {
+    "code": "00703",
+    "name": "台新MSCI中國",
+    "market": "tse"
+  },
+  {
+    "code": "00706L",
+    "name": "期元大S&P日圓正2",
+    "market": "tse"
+  },
+  {
+    "code": "00707R",
+    "name": "期元大S&P日圓反1",
+    "market": "tse"
+  },
+  {
+    "code": "00708L",
+    "name": "期元大S&P黃金正2",
+    "market": "tse"
+  },
+  {
+    "code": "00709",
+    "name": "富邦歐洲",
+    "market": "tse"
+  },
+  {
+    "code": "00710B",
+    "name": "復華彭博非投等債",
+    "market": "tse"
+  },
+  {
+    "code": "00711B",
+    "name": "復華彭博新興債",
+    "market": "tse"
+  },
+  {
+    "code": "00712",
+    "name": "復華富時不動產",
+    "market": "tse"
+  },
+  {
+    "code": "00713",
+    "name": "元大台灣高息低波",
+    "market": "tse"
+  },
+  {
+    "code": "00714",
+    "name": "群益道瓊美國地產",
+    "market": "tse"
+  },
+  {
+    "code": "00715L",
+    "name": "期街口布蘭特正2",
+    "market": "tse"
+  },
+  {
+    "code": "00717",
+    "name": "富邦美國特別股",
+    "market": "tse"
+  },
+  {
+    "code": "00728",
+    "name": "第一金工業30",
+    "market": "tse"
+  },
+  {
+    "code": "00730",
+    "name": "富邦臺灣優質高息",
+    "market": "tse"
+  },
+  {
+    "code": "00731",
+    "name": "復華富時高息低波",
+    "market": "tse"
+  },
+  {
+    "code": "00733",
+    "name": "富邦臺灣中小",
+    "market": "tse"
+  },
+  {
+    "code": "00735",
+    "name": "國泰臺韓科技",
+    "market": "tse"
+  },
+  {
+    "code": "00736",
+    "name": "國泰新興市場",
+    "market": "tse"
+  },
+  {
+    "code": "00737",
+    "name": "國泰AI機器人",
+    "market": "tse"
+  },
+  {
+    "code": "00738U",
+    "name": "期元大道瓊白銀",
+    "market": "tse"
+  },
+  {
+    "code": "00739",
+    "name": "元大MSCI A股",
+    "market": "tse"
+  },
+  {
+    "code": "00752",
+    "name": "中信中國50",
+    "market": "tse"
+  },
+  {
+    "code": "00753L",
+    "name": "中信中國50正2",
+    "market": "tse"
+  },
+  {
+    "code": "00757",
+    "name": "統一FANG+",
+    "market": "tse"
+  },
+  {
+    "code": "00762",
+    "name": "元大全球AI",
+    "market": "tse"
+  },
+  {
+    "code": "00763U",
+    "name": "期街口道瓊銅",
+    "market": "tse"
+  },
+  {
+    "code": "00770",
+    "name": "國泰北美科技",
+    "market": "tse"
+  },
+  {
+    "code": "00771",
+    "name": "元大US高息特別股",
+    "market": "tse"
+  },
+  {
+    "code": "00775B",
+    "name": "新光投等債15+",
+    "market": "tse"
+  },
+  {
+    "code": "00783",
+    "name": "富邦中証500",
+    "market": "tse"
+  },
+  {
+    "code": "00830",
+    "name": "國泰費城半導體",
+    "market": "tse"
+  },
+  {
+    "code": "00850",
+    "name": "元大臺灣ESG永續",
+    "market": "tse"
+  },
+  {
+    "code": "00851",
+    "name": "台新全球AI",
+    "market": "tse"
+  },
+  {
+    "code": "00852L",
+    "name": "國泰美國道瓊正2",
+    "market": "tse"
+  },
+  {
+    "code": "00861",
+    "name": "元大全球未來通訊",
+    "market": "tse"
+  },
+  {
+    "code": "00865B",
+    "name": "國泰US短期公債",
+    "market": "tse"
+  },
+  {
+    "code": "00875",
+    "name": "國泰網路資安",
+    "market": "tse"
+  },
+  {
+    "code": "00876",
+    "name": "元大全球5G",
+    "market": "tse"
+  },
+  {
+    "code": "00878",
+    "name": "國泰永續高股息",
+    "market": "tse"
+  },
+  {
+    "code": "00881",
+    "name": "國泰台灣科技龍頭",
+    "market": "tse"
+  },
+  {
+    "code": "00882",
+    "name": "中信中國高股息",
+    "market": "tse"
+  },
+  {
+    "code": "00885",
+    "name": "富邦越南",
+    "market": "tse"
+  },
+  {
+    "code": "00891",
+    "name": "中信關鍵半導體",
+    "market": "tse"
+  },
+  {
+    "code": "00892",
+    "name": "富邦台灣半導體",
+    "market": "tse"
+  },
+  {
+    "code": "00893",
+    "name": "國泰智能電動車",
+    "market": "tse"
+  },
+  {
+    "code": "00894",
+    "name": "中信小資高價30",
+    "market": "tse"
+  },
+  {
+    "code": "00895",
+    "name": "富邦未來車",
+    "market": "tse"
+  },
+  {
+    "code": "00896",
+    "name": "中信綠能及電動車",
+    "market": "tse"
+  },
+  {
+    "code": "00897",
+    "name": "富邦基因免疫生技",
+    "market": "tse"
+  },
+  {
+    "code": "00898",
+    "name": "國泰基因免疫革命",
+    "market": "tse"
+  },
+  {
+    "code": "00899",
+    "name": "FT潔淨能源",
+    "market": "tse"
+  },
+  {
+    "code": "00900",
+    "name": "富邦特選高股息30",
+    "market": "tse"
+  },
+  {
+    "code": "00901",
+    "name": "永豐智能車供應鏈",
+    "market": "tse"
+  },
+  {
+    "code": "00902",
+    "name": "中信電池及儲能",
+    "market": "tse"
+  },
+  {
+    "code": "00903",
+    "name": "富邦元宇宙",
+    "market": "tse"
+  },
+  {
+    "code": "00904",
+    "name": "新光臺灣半導體30",
+    "market": "tse"
+  },
+  {
+    "code": "00905",
+    "name": "FT臺灣Smart",
+    "market": "tse"
+  },
+  {
+    "code": "00907",
+    "name": "永豐優息存股",
+    "market": "tse"
+  },
+  {
+    "code": "00908",
+    "name": "富邦入息REITs+",
+    "market": "tse"
+  },
+  {
+    "code": "00909",
+    "name": "國泰數位支付服務",
+    "market": "tse"
+  },
+  {
+    "code": "00910",
+    "name": "第一金太空衛星",
+    "market": "tse"
+  },
+  {
+    "code": "00911",
+    "name": "兆豐洲際半導體",
+    "market": "tse"
+  },
+  {
+    "code": "00912",
+    "name": "中信臺灣智慧50",
+    "market": "tse"
+  },
+  {
+    "code": "00913",
+    "name": "兆豐台灣晶圓製造",
+    "market": "tse"
+  },
+  {
+    "code": "00915",
+    "name": "凱基優選高股息30",
+    "market": "tse"
+  },
+  {
+    "code": "00916",
+    "name": "國泰全球品牌50",
+    "market": "tse"
+  },
+  {
+    "code": "00917",
+    "name": "中信特選金融",
+    "market": "tse"
+  },
+  {
+    "code": "00918",
+    "name": "大華優利高填息30",
+    "market": "tse"
+  },
+  {
+    "code": "00919",
+    "name": "群益台灣精選高息",
+    "market": "tse"
+  },
+  {
+    "code": "00920",
+    "name": "富邦ESG綠色電力",
+    "market": "tse"
+  },
+  {
+    "code": "00921",
+    "name": "兆豐龍頭等權重",
+    "market": "tse"
+  },
+  {
+    "code": "00922",
+    "name": "國泰台灣領袖50",
+    "market": "tse"
+  },
+  {
+    "code": "00923",
+    "name": "群益台ESG低碳50",
+    "market": "tse"
+  },
+  {
+    "code": "00924",
+    "name": "復華S&P500成長",
+    "market": "tse"
+  },
+  {
+    "code": "00926",
+    "name": "凱基全球菁英55",
+    "market": "tse"
+  },
+  {
+    "code": "00927",
+    "name": "群益半導體收益",
+    "market": "tse"
+  },
+  {
+    "code": "00929",
+    "name": "復華台灣科技優息",
+    "market": "tse"
+  },
+  {
+    "code": "00930",
+    "name": "永豐ESG低碳高息",
+    "market": "tse"
+  },
+  {
+    "code": "00932",
+    "name": "兆豐永續高息等權",
+    "market": "tse"
+  },
+  {
+    "code": "00934",
+    "name": "中信成長高股息",
+    "market": "tse"
+  },
+  {
+    "code": "00935",
+    "name": "野村臺灣新科技50",
+    "market": "tse"
+  },
+  {
+    "code": "00936",
+    "name": "台新永續高息中小",
+    "market": "tse"
+  },
+  {
+    "code": "00938",
+    "name": "凱基優選30",
+    "market": "tse"
+  },
+  {
+    "code": "00939",
+    "name": "統一台灣高息動能",
+    "market": "tse"
+  },
+  {
+    "code": "00940",
+    "name": "元大台灣價值高息",
+    "market": "tse"
+  },
+  {
+    "code": "00941",
+    "name": "中信上游半導體",
+    "market": "tse"
+  },
+  {
+    "code": "00943",
+    "name": "兆豐電子高息等權",
+    "market": "tse"
+  },
+  {
+    "code": "00944",
+    "name": "野村趨勢動能高息",
+    "market": "tse"
+  },
+  {
+    "code": "00945B",
+    "name": "凱基美國非投等債",
+    "market": "tse"
+  },
+  {
+    "code": "00946",
+    "name": "群益科技高息成長",
+    "market": "tse"
+  },
+  {
+    "code": "00947",
+    "name": "台新臺灣IC設計",
+    "market": "tse"
+  },
+  {
+    "code": "00949",
+    "name": "復華日本龍頭",
+    "market": "tse"
+  },
+  {
+    "code": "00951",
+    "name": "台新日本半導體",
+    "market": "tse"
+  },
+  {
+    "code": "00952",
+    "name": "凱基台灣AI50",
+    "market": "tse"
+  },
+  {
+    "code": "00953B",
+    "name": "群益優選非投等債",
+    "market": "tse"
+  },
+  {
+    "code": "00954",
+    "name": "中信日本半導體",
+    "market": "tse"
+  },
+  {
+    "code": "00956",
+    "name": "中信日經高股息",
+    "market": "tse"
+  },
+  {
+    "code": "00960",
+    "name": "野村全球航運龍頭",
+    "market": "tse"
+  },
+  {
+    "code": "00961",
+    "name": "FT臺灣永續高息",
+    "market": "tse"
+  },
+  {
+    "code": "00962",
+    "name": "台新AI優息動能",
+    "market": "tse"
+  },
+  {
+    "code": "00963",
+    "name": "中信全球高股息",
+    "market": "tse"
+  },
+  {
+    "code": "00964",
+    "name": "中信亞太高股息",
+    "market": "tse"
+  },
+  {
+    "code": "00965",
+    "name": "元大航太防衛科技",
+    "market": "tse"
+  },
+  {
+    "code": "00971",
+    "name": "野村美國研發龍頭",
+    "market": "tse"
+  },
+  {
+    "code": "00972",
+    "name": "野村日本動能高息",
+    "market": "tse"
+  },
+  {
+    "code": "009800",
+    "name": "中信NASDAQ",
+    "market": "tse"
+  },
+  {
+    "code": "009801",
+    "name": "中信美國創新科技",
+    "market": "tse"
+  },
+  {
+    "code": "009802",
+    "name": "富邦旗艦50",
+    "market": "tse"
+  },
+  {
+    "code": "009803",
+    "name": "保德信市值動能50",
+    "market": "tse"
+  },
+  {
+    "code": "009804",
+    "name": "聯邦台精彩50",
+    "market": "tse"
+  },
+  {
+    "code": "009805",
+    "name": "新光美國電力基建",
+    "market": "tse"
+  },
+  {
+    "code": "009808",
+    "name": "華南永昌優選50",
+    "market": "tse"
+  },
+  {
+    "code": "009809",
+    "name": "富邦淨零ESG50",
+    "market": "tse"
+  },
+  {
+    "code": "00980A",
+    "name": "主動野村臺灣優選",
+    "market": "tse"
+  },
+  {
+    "code": "009810",
+    "name": "保德信全球藍籌",
+    "market": "tse"
+  },
+  {
+    "code": "009811",
+    "name": "統一美國50",
+    "market": "tse"
+  },
+  {
+    "code": "009812",
+    "name": "野村日本東證",
+    "market": "tse"
+  },
+  {
+    "code": "009813",
+    "name": "貝萊德標普卓越50",
+    "market": "tse"
+  },
+  {
+    "code": "009816",
+    "name": "凱基台灣TOP50",
+    "market": "tse"
+  },
+  {
+    "code": "009817",
+    "name": "國泰日本不動產",
+    "market": "tse"
+  },
+  {
+    "code": "009818",
+    "name": "華南永昌NASDAQxT",
+    "market": "tse"
+  },
+  {
+    "code": "00981A",
+    "name": "主動統一台股增長",
+    "market": "tse"
+  },
+  {
+    "code": "00981T",
+    "name": "平衡凱基雙核收息",
+    "market": "tse"
+  },
+  {
+    "code": "00982A",
+    "name": "主動群益台灣強棒",
+    "market": "tse"
+  },
+  {
+    "code": "00982D",
+    "name": "主動富邦動態入息",
+    "market": "tse"
+  },
+  {
+    "code": "00982T",
+    "name": "平衡兆豐台美動能",
+    "market": "tse"
+  },
+  {
+    "code": "00983A",
+    "name": "主動中信ARK創新",
+    "market": "tse"
+  },
+  {
+    "code": "00983D",
+    "name": "主動富邦複合收益",
+    "market": "tse"
+  },
+  {
+    "code": "00984A",
+    "name": "主動安聯台灣高息",
+    "market": "tse"
+  },
+  {
+    "code": "00984D",
+    "name": "主動聯博全球非投",
+    "market": "tse"
+  },
+  {
+    "code": "00985A",
+    "name": "主動野村台灣50",
+    "market": "tse"
+  },
+  {
+    "code": "00985B",
+    "name": "群益ESG投等債0-5",
+    "market": "tse"
+  },
+  {
+    "code": "00986A",
+    "name": "主動台新龍頭成長",
+    "market": "tse"
+  },
+  {
+    "code": "00987A",
+    "name": "主動台新優勢成長",
+    "market": "tse"
+  },
+  {
+    "code": "00988A",
+    "name": "主動統一全球創新",
+    "market": "tse"
+  },
+  {
+    "code": "00989A",
+    "name": "主動摩根美國科技",
+    "market": "tse"
+  },
+  {
+    "code": "00990A",
+    "name": "主動元大AI新經濟",
+    "market": "tse"
+  },
+  {
+    "code": "00991A",
+    "name": "主動復華未來50",
+    "market": "tse"
+  },
+  {
+    "code": "00992A",
+    "name": "主動群益科技創新",
+    "market": "tse"
+  },
+  {
+    "code": "00993A",
+    "name": "主動安聯台灣",
+    "market": "tse"
+  },
+  {
+    "code": "00994A",
+    "name": "主動第一金台股優",
+    "market": "tse"
+  },
+  {
+    "code": "00995A",
+    "name": "主動中信台灣卓越",
+    "market": "tse"
+  },
+  {
+    "code": "00996A",
+    "name": "主動兆豐台灣豐收",
+    "market": "tse"
+  },
+  {
+    "code": "01001T",
+    "name": "土銀富邦R1",
+    "market": "tse"
+  },
+  {
+    "code": "01002T",
+    "name": "土銀國泰R1",
+    "market": "tse"
+  },
+  {
+    "code": "01004T",
+    "name": "土銀富邦R2",
+    "market": "tse"
+  },
+  {
+    "code": "01007T",
+    "name": "兆豐國泰R2",
+    "market": "tse"
+  },
+  {
+    "code": "01009T",
+    "name": "王道圓滿R1",
+    "market": "tse"
+  },
+  {
+    "code": "01010T",
+    "name": "京城樂富R1",
+    "market": "tse"
+  },
+  {
+    "code": "020000",
+    "name": "富邦特選蘋果N",
+    "market": "tse"
+  },
+  {
+    "code": "020011",
+    "name": "統一微波高息20N",
+    "market": "tse"
+  },
+  {
+    "code": "020012",
+    "name": "富邦行動通訊N",
+    "market": "tse"
+  },
+  {
+    "code": "02001L",
+    "name": "富邦蘋果正二N",
+    "market": "tse"
+  },
+  {
+    "code": "02001R",
+    "name": "富邦蘋果反一N",
+    "market": "tse"
+  },
+  {
+    "code": "020020",
+    "name": "元大台股領航N",
+    "market": "tse"
+  },
+  {
+    "code": "020028",
+    "name": "元大特選電動車N",
+    "market": "tse"
+  },
+  {
+    "code": "020029",
+    "name": "元大ESG高股息N",
+    "market": "tse"
+  },
+  {
+    "code": "020030",
+    "name": "統一智慧電動車N",
+    "market": "tse"
+  },
+  {
+    "code": "020031",
+    "name": "統一IC設計臺灣N",
+    "market": "tse"
+  },
+  {
+    "code": "020032",
+    "name": "元大綠能N",
+    "market": "tse"
+  },
+  {
+    "code": "020034",
+    "name": "元大IC設計N",
+    "market": "tse"
+  },
+  {
+    "code": "020036",
+    "name": "元大金融配息N",
+    "market": "tse"
+  },
+  {
+    "code": "020037",
+    "name": "元大金融高股息N",
+    "market": "tse"
+  },
+  {
+    "code": "020038",
+    "name": "元大ESG配息N",
+    "market": "tse"
+  },
+  {
+    "code": "020039",
+    "name": "元大加權N",
+    "market": "tse"
+  },
+  {
+    "code": "1101",
+    "name": "台泥",
+    "market": "tse"
+  },
+  {
+    "code": "1101B",
+    "name": "台泥乙特",
+    "market": "tse"
+  },
+  {
+    "code": "1102",
+    "name": "亞泥",
+    "market": "tse"
+  },
+  {
+    "code": "1103",
+    "name": "嘉泥",
+    "market": "tse"
+  },
+  {
+    "code": "1104",
+    "name": "環泥",
+    "market": "tse"
+  },
+  {
+    "code": "1108",
+    "name": "幸福",
+    "market": "tse"
+  },
+  {
+    "code": "1109",
+    "name": "信大",
+    "market": "tse"
+  },
+  {
+    "code": "1110",
+    "name": "東泥",
+    "market": "tse"
+  },
+  {
+    "code": "1201",
+    "name": "味全",
+    "market": "tse"
+  },
+  {
+    "code": "1203",
+    "name": "味王",
+    "market": "tse"
+  },
+  {
+    "code": "1210",
+    "name": "大成",
+    "market": "tse"
+  },
+  {
+    "code": "1213",
+    "name": "大飲",
+    "market": "tse"
+  },
+  {
+    "code": "1215",
+    "name": "卜蜂",
+    "market": "tse"
+  },
+  {
+    "code": "1216",
+    "name": "統一",
+    "market": "tse"
+  },
+  {
+    "code": "1217",
+    "name": "愛之味",
+    "market": "tse"
+  },
+  {
+    "code": "1218",
+    "name": "泰山",
+    "market": "tse"
+  },
+  {
+    "code": "1219",
+    "name": "福壽",
+    "market": "tse"
+  },
+  {
+    "code": "1220",
+    "name": "台榮",
+    "market": "tse"
+  },
+  {
+    "code": "1225",
+    "name": "福懋油",
+    "market": "tse"
+  },
+  {
+    "code": "1227",
+    "name": "佳格",
+    "market": "tse"
+  },
+  {
+    "code": "1229",
+    "name": "聯華",
+    "market": "tse"
+  },
+  {
+    "code": "1231",
+    "name": "聯華食",
+    "market": "tse"
+  },
+  {
+    "code": "1232",
+    "name": "大統益",
+    "market": "tse"
+  },
+  {
+    "code": "1233",
+    "name": "天仁",
+    "market": "tse"
+  },
+  {
+    "code": "1234",
+    "name": "黑松",
+    "market": "tse"
+  },
+  {
+    "code": "1235",
+    "name": "興泰",
+    "market": "tse"
+  },
+  {
+    "code": "1236",
+    "name": "宏亞",
+    "market": "tse"
+  },
+  {
+    "code": "1256",
+    "name": "鮮活果汁-KY",
+    "market": "tse"
+  },
+  {
+    "code": "1301",
+    "name": "台塑",
+    "market": "tse"
+  },
+  {
+    "code": "1303",
+    "name": "南亞",
+    "market": "tse"
+  },
+  {
+    "code": "1304",
+    "name": "台聚",
+    "market": "tse"
+  },
+  {
+    "code": "1305",
+    "name": "華夏",
+    "market": "tse"
+  },
+  {
+    "code": "1307",
+    "name": "三芳",
+    "market": "tse"
+  },
+  {
+    "code": "1308",
+    "name": "亞聚",
+    "market": "tse"
+  },
+  {
+    "code": "1309",
+    "name": "台達化",
+    "market": "tse"
+  },
+  {
+    "code": "1310",
+    "name": "台苯",
+    "market": "tse"
+  },
+  {
+    "code": "1312",
+    "name": "國喬",
+    "market": "tse"
+  },
+  {
+    "code": "1312A",
+    "name": "國喬特",
+    "market": "tse"
+  },
+  {
+    "code": "1313",
+    "name": "聯成",
+    "market": "tse"
+  },
+  {
+    "code": "1314",
+    "name": "中石化",
+    "market": "tse"
+  },
+  {
+    "code": "1315",
+    "name": "達新",
+    "market": "tse"
+  },
+  {
+    "code": "1316",
+    "name": "上曜",
+    "market": "tse"
+  },
+  {
+    "code": "1319",
+    "name": "東陽",
+    "market": "tse"
+  },
+  {
+    "code": "1321",
+    "name": "大洋",
+    "market": "tse"
+  },
+  {
+    "code": "1323",
+    "name": "永裕",
+    "market": "tse"
+  },
+  {
+    "code": "1324",
+    "name": "地球",
+    "market": "tse"
+  },
+  {
+    "code": "1325",
+    "name": "恆大",
+    "market": "tse"
+  },
+  {
+    "code": "1326",
+    "name": "台化",
+    "market": "tse"
+  },
+  {
+    "code": "1337",
+    "name": "再生-KY",
+    "market": "tse"
+  },
+  {
+    "code": "1338",
+    "name": "廣華-KY",
+    "market": "tse"
+  },
+  {
+    "code": "1339",
+    "name": "昭輝",
+    "market": "tse"
+  },
+  {
+    "code": "1340",
+    "name": "勝悅-KY",
+    "market": "tse"
+  },
+  {
+    "code": "1341",
+    "name": "富林-KY",
+    "market": "tse"
+  },
+  {
+    "code": "1342",
+    "name": "八貫",
+    "market": "tse"
+  },
+  {
+    "code": "1402",
+    "name": "遠東新",
+    "market": "tse"
+  },
+  {
+    "code": "1409",
+    "name": "新纖",
+    "market": "tse"
+  },
+  {
+    "code": "1410",
+    "name": "南染",
+    "market": "tse"
+  },
+  {
+    "code": "1413",
+    "name": "宏洲",
+    "market": "tse"
+  },
+  {
+    "code": "1414",
+    "name": "東和",
+    "market": "tse"
+  },
+  {
+    "code": "1416",
+    "name": "廣豐",
+    "market": "tse"
+  },
+  {
+    "code": "1417",
+    "name": "嘉裕",
+    "market": "tse"
+  },
+  {
+    "code": "1418",
+    "name": "東華",
+    "market": "tse"
+  },
+  {
+    "code": "1419",
+    "name": "新紡",
+    "market": "tse"
+  },
+  {
+    "code": "1423",
+    "name": "利華",
+    "market": "tse"
+  },
+  {
+    "code": "1432",
+    "name": "大魯閣",
+    "market": "tse"
+  },
+  {
+    "code": "1434",
+    "name": "福懋",
+    "market": "tse"
+  },
+  {
+    "code": "1435",
+    "name": "中福",
+    "market": "tse"
+  },
+  {
+    "code": "1436",
+    "name": "華友聯",
+    "market": "tse"
+  },
+  {
+    "code": "1437",
+    "name": "勤益控",
+    "market": "tse"
+  },
+  {
+    "code": "1438",
+    "name": "三地開發",
+    "market": "tse"
+  },
+  {
+    "code": "1439",
+    "name": "雋揚",
+    "market": "tse"
+  },
+  {
+    "code": "1440",
+    "name": "南紡",
+    "market": "tse"
+  },
+  {
+    "code": "1441",
+    "name": "大東",
+    "market": "tse"
+  },
+  {
+    "code": "1442",
+    "name": "名軒",
+    "market": "tse"
+  },
+  {
+    "code": "1443",
+    "name": "立益物流",
+    "market": "tse"
+  },
+  {
+    "code": "1444",
+    "name": "力麗",
+    "market": "tse"
+  },
+  {
+    "code": "1445",
+    "name": "大宇",
+    "market": "tse"
+  },
+  {
+    "code": "1446",
+    "name": "宏和",
+    "market": "tse"
+  },
+  {
+    "code": "1447",
+    "name": "力鵬",
+    "market": "tse"
+  },
+  {
+    "code": "1449",
+    "name": "佳和",
+    "market": "tse"
+  },
+  {
+    "code": "1451",
+    "name": "年興",
+    "market": "tse"
+  },
+  {
+    "code": "1452",
+    "name": "宏益",
+    "market": "tse"
+  },
+  {
+    "code": "1453",
+    "name": "大將",
+    "market": "tse"
+  },
+  {
+    "code": "1454",
+    "name": "台富",
+    "market": "tse"
+  },
+  {
+    "code": "1455",
+    "name": "集盛",
+    "market": "tse"
+  },
+  {
+    "code": "1456",
+    "name": "怡華",
+    "market": "tse"
+  },
+  {
+    "code": "1457",
+    "name": "宜進",
+    "market": "tse"
+  },
+  {
+    "code": "1459",
+    "name": "聯發",
+    "market": "tse"
+  },
+  {
+    "code": "1460",
+    "name": "宏遠",
+    "market": "tse"
+  },
+  {
+    "code": "1463",
+    "name": "強盛新",
+    "market": "tse"
+  },
+  {
+    "code": "1464",
+    "name": "得力",
+    "market": "tse"
+  },
+  {
+    "code": "1465",
+    "name": "偉全",
+    "market": "tse"
+  },
+  {
+    "code": "1466",
+    "name": "聚隆",
+    "market": "tse"
+  },
+  {
+    "code": "1467",
+    "name": "南緯",
+    "market": "tse"
+  },
+  {
+    "code": "1468",
+    "name": "昶和",
+    "market": "tse"
+  },
+  {
+    "code": "1470",
+    "name": "大統新創",
+    "market": "tse"
+  },
+  {
+    "code": "1471",
+    "name": "首利",
+    "market": "tse"
+  },
+  {
+    "code": "1472",
+    "name": "三洋實業",
+    "market": "tse"
+  },
+  {
+    "code": "1473",
+    "name": "台南",
+    "market": "tse"
+  },
+  {
+    "code": "1474",
+    "name": "弘裕",
+    "market": "tse"
+  },
+  {
+    "code": "1475",
+    "name": "業旺",
+    "market": "tse"
+  },
+  {
+    "code": "1476",
+    "name": "儒鴻",
+    "market": "tse"
+  },
+  {
+    "code": "1477",
+    "name": "聚陽",
+    "market": "tse"
+  },
+  {
+    "code": "1503",
+    "name": "士電",
+    "market": "tse"
+  },
+  {
+    "code": "1504",
+    "name": "東元",
+    "market": "tse"
+  },
+  {
+    "code": "1506",
+    "name": "正道",
+    "market": "tse"
+  },
+  {
+    "code": "1512",
+    "name": "瑞利",
+    "market": "tse"
+  },
+  {
+    "code": "1513",
+    "name": "中興電",
+    "market": "tse"
+  },
+  {
+    "code": "1514",
+    "name": "亞力",
+    "market": "tse"
+  },
+  {
+    "code": "1515",
+    "name": "力山",
+    "market": "tse"
+  },
+  {
+    "code": "1516",
+    "name": "川飛",
+    "market": "tse"
+  },
+  {
+    "code": "1517",
+    "name": "利奇",
+    "market": "tse"
+  },
+  {
+    "code": "1519",
+    "name": "華城",
+    "market": "tse"
+  },
+  {
+    "code": "1521",
+    "name": "大億",
+    "market": "tse"
+  },
+  {
+    "code": "1522",
+    "name": "堤維西",
+    "market": "tse"
+  },
+  {
+    "code": "1522A",
+    "name": "堤維西甲特",
+    "market": "tse"
+  },
+  {
+    "code": "1524",
+    "name": "耿鼎",
+    "market": "tse"
+  },
+  {
+    "code": "1525",
+    "name": "江申",
+    "market": "tse"
+  },
+  {
+    "code": "1526",
+    "name": "日馳",
+    "market": "tse"
+  },
+  {
+    "code": "1527",
+    "name": "鑽全",
+    "market": "tse"
+  },
+  {
+    "code": "1528",
+    "name": "恩德",
+    "market": "tse"
+  },
+  {
+    "code": "1529",
+    "name": "樂事綠能",
+    "market": "tse"
+  },
+  {
+    "code": "1530",
+    "name": "亞崴",
+    "market": "tse"
+  },
+  {
+    "code": "1531",
+    "name": "高林股",
+    "market": "tse"
+  },
+  {
+    "code": "1532",
+    "name": "勤美",
+    "market": "tse"
+  },
+  {
+    "code": "1533",
+    "name": "車王電",
+    "market": "tse"
+  },
+  {
+    "code": "1535",
+    "name": "中宇",
+    "market": "tse"
+  },
+  {
+    "code": "1536",
+    "name": "和大",
+    "market": "tse"
+  },
+  {
+    "code": "1537",
+    "name": "廣隆",
+    "market": "tse"
+  },
+  {
+    "code": "1538",
+    "name": "正峰",
+    "market": "tse"
+  },
+  {
+    "code": "1539",
+    "name": "巨庭",
+    "market": "tse"
+  },
+  {
+    "code": "1540",
+    "name": "喬福",
+    "market": "tse"
+  },
+  {
+    "code": "1541",
+    "name": "錩泰",
+    "market": "tse"
+  },
+  {
+    "code": "1558",
+    "name": "伸興",
+    "market": "tse"
+  },
+  {
+    "code": "1560",
+    "name": "中砂",
+    "market": "tse"
+  },
+  {
+    "code": "1563",
+    "name": "巧新",
+    "market": "tse"
+  },
+  {
+    "code": "1568",
+    "name": "倉佑",
+    "market": "tse"
+  },
+  {
+    "code": "1582",
+    "name": "信錦",
+    "market": "tse"
+  },
+  {
+    "code": "1583",
+    "name": "程泰",
+    "market": "tse"
+  },
+  {
+    "code": "1587",
+    "name": "吉茂",
+    "market": "tse"
+  },
+  {
+    "code": "1590",
+    "name": "亞德客-KY",
+    "market": "tse"
+  },
+  {
+    "code": "1597",
+    "name": "直得",
+    "market": "tse"
+  },
+  {
+    "code": "1598",
+    "name": "岱宇",
+    "market": "tse"
+  },
+  {
+    "code": "1603",
+    "name": "華電",
+    "market": "tse"
+  },
+  {
+    "code": "1604",
+    "name": "聲寶",
+    "market": "tse"
+  },
+  {
+    "code": "1605",
+    "name": "華新",
+    "market": "tse"
+  },
+  {
+    "code": "1608",
+    "name": "華榮",
+    "market": "tse"
+  },
+  {
+    "code": "1609",
+    "name": "大亞",
+    "market": "tse"
+  },
+  {
+    "code": "1611",
+    "name": "中電",
+    "market": "tse"
+  },
+  {
+    "code": "1612",
+    "name": "宏泰",
+    "market": "tse"
+  },
+  {
+    "code": "1614",
+    "name": "三洋電",
+    "market": "tse"
+  },
+  {
+    "code": "1615",
+    "name": "大山",
+    "market": "tse"
+  },
+  {
+    "code": "1616",
+    "name": "億泰",
+    "market": "tse"
+  },
+  {
+    "code": "1617",
+    "name": "榮星",
+    "market": "tse"
+  },
+  {
+    "code": "1618",
+    "name": "合機",
+    "market": "tse"
+  },
+  {
+    "code": "1623",
+    "name": "大東電",
+    "market": "tse"
+  },
+  {
+    "code": "1626",
+    "name": "艾美特-KY",
+    "market": "tse"
+  },
+  {
+    "code": "1702",
+    "name": "南僑",
+    "market": "tse"
+  },
+  {
+    "code": "1707",
+    "name": "葡萄王",
+    "market": "tse"
+  },
+  {
+    "code": "1708",
+    "name": "東鹼",
+    "market": "tse"
+  },
+  {
+    "code": "1709",
+    "name": "和益",
+    "market": "tse"
+  },
+  {
+    "code": "1710",
+    "name": "東聯",
+    "market": "tse"
+  },
+  {
+    "code": "1711",
+    "name": "永光",
+    "market": "tse"
+  },
+  {
+    "code": "1712",
+    "name": "興農",
+    "market": "tse"
+  },
+  {
+    "code": "1713",
+    "name": "國化",
+    "market": "tse"
+  },
+  {
+    "code": "1714",
+    "name": "和桐",
+    "market": "tse"
+  },
+  {
+    "code": "1717",
+    "name": "長興",
+    "market": "tse"
+  },
+  {
+    "code": "1718",
+    "name": "中纖",
+    "market": "tse"
+  },
+  {
+    "code": "1720",
+    "name": "生達",
+    "market": "tse"
+  },
+  {
+    "code": "1721",
+    "name": "三晃",
+    "market": "tse"
+  },
+  {
+    "code": "1722",
+    "name": "台肥",
+    "market": "tse"
+  },
+  {
+    "code": "1723",
+    "name": "中碳",
+    "market": "tse"
+  },
+  {
+    "code": "1725",
+    "name": "元禎",
+    "market": "tse"
+  },
+  {
+    "code": "1726",
+    "name": "永記",
+    "market": "tse"
+  },
+  {
+    "code": "1727",
+    "name": "中華化",
+    "market": "tse"
+  },
+  {
+    "code": "1730",
+    "name": "花仙子",
+    "market": "tse"
+  },
+  {
+    "code": "1731",
+    "name": "美吾華",
+    "market": "tse"
+  },
+  {
+    "code": "1732",
+    "name": "毛寶",
+    "market": "tse"
+  },
+  {
+    "code": "1733",
+    "name": "五鼎",
+    "market": "tse"
+  },
+  {
+    "code": "1734",
+    "name": "杏輝",
+    "market": "tse"
+  },
+  {
+    "code": "1735",
+    "name": "日勝化",
+    "market": "tse"
+  },
+  {
+    "code": "1736",
+    "name": "喬山",
+    "market": "tse"
+  },
+  {
+    "code": "1737",
+    "name": "臺鹽",
+    "market": "tse"
+  },
+  {
+    "code": "1752",
+    "name": "南光",
+    "market": "tse"
+  },
+  {
+    "code": "1760",
+    "name": "寶齡富錦",
+    "market": "tse"
+  },
+  {
+    "code": "1762",
+    "name": "中化生",
+    "market": "tse"
+  },
+  {
+    "code": "1773",
+    "name": "勝一",
+    "market": "tse"
+  },
+  {
+    "code": "1776",
+    "name": "展宇",
+    "market": "tse"
+  },
+  {
+    "code": "1783",
+    "name": "和康生",
+    "market": "tse"
+  },
+  {
+    "code": "1786",
+    "name": "科妍",
+    "market": "tse"
+  },
+  {
+    "code": "1789",
+    "name": "神隆",
+    "market": "tse"
+  },
+  {
+    "code": "1795",
+    "name": "美時",
+    "market": "tse"
+  },
+  {
+    "code": "1802",
+    "name": "台玻",
+    "market": "tse"
+  },
+  {
+    "code": "1805",
+    "name": "寶徠",
+    "market": "tse"
+  },
+  {
+    "code": "1806",
+    "name": "冠軍",
+    "market": "tse"
+  },
+  {
+    "code": "1808",
+    "name": "潤隆",
+    "market": "tse"
+  },
+  {
+    "code": "1809",
+    "name": "中釉",
+    "market": "tse"
+  },
+  {
+    "code": "1810",
+    "name": "和成",
+    "market": "tse"
+  },
+  {
+    "code": "1817",
+    "name": "凱撒衛",
+    "market": "tse"
+  },
+  {
+    "code": "1903",
+    "name": "士紙",
+    "market": "tse"
+  },
+  {
+    "code": "1904",
+    "name": "正隆",
+    "market": "tse"
+  },
+  {
+    "code": "1905",
+    "name": "華紙",
+    "market": "tse"
+  },
+  {
+    "code": "1906",
+    "name": "寶隆",
+    "market": "tse"
+  },
+  {
+    "code": "1907",
+    "name": "永豐餘",
+    "market": "tse"
+  },
+  {
+    "code": "1909",
+    "name": "榮成",
+    "market": "tse"
+  },
+  {
+    "code": "2002",
+    "name": "中鋼",
+    "market": "tse"
+  },
+  {
+    "code": "2002A",
+    "name": "中鋼特",
+    "market": "tse"
+  },
+  {
+    "code": "2006",
+    "name": "東和鋼鐵",
+    "market": "tse"
+  },
+  {
+    "code": "2007",
+    "name": "燁興",
+    "market": "tse"
+  },
+  {
+    "code": "2008",
+    "name": "高興昌",
+    "market": "tse"
+  },
+  {
+    "code": "2009",
+    "name": "第一銅",
+    "market": "tse"
+  },
+  {
+    "code": "2010",
+    "name": "春源",
+    "market": "tse"
+  },
+  {
+    "code": "2012",
+    "name": "春雨",
+    "market": "tse"
+  },
+  {
+    "code": "2013",
+    "name": "中鋼構",
+    "market": "tse"
+  },
+  {
+    "code": "2014",
+    "name": "中鴻",
+    "market": "tse"
+  },
+  {
+    "code": "2015",
+    "name": "豐興",
+    "market": "tse"
+  },
+  {
+    "code": "2017",
+    "name": "官田鋼",
+    "market": "tse"
+  },
+  {
+    "code": "2020",
+    "name": "美亞",
+    "market": "tse"
+  },
+  {
+    "code": "2022",
+    "name": "聚亨",
+    "market": "tse"
+  },
+  {
+    "code": "2023",
+    "name": "燁輝",
+    "market": "tse"
+  },
+  {
+    "code": "2024",
+    "name": "志聯",
+    "market": "tse"
+  },
+  {
+    "code": "2025",
+    "name": "千興",
+    "market": "tse"
+  },
+  {
+    "code": "2027",
+    "name": "大成鋼",
+    "market": "tse"
+  },
+  {
+    "code": "2028",
+    "name": "威致",
+    "market": "tse"
+  },
+  {
+    "code": "2029",
+    "name": "盛餘",
+    "market": "tse"
+  },
+  {
+    "code": "2030",
+    "name": "彰源",
+    "market": "tse"
+  },
+  {
+    "code": "2031",
+    "name": "新光鋼",
+    "market": "tse"
+  },
+  {
+    "code": "2032",
+    "name": "新鋼",
+    "market": "tse"
+  },
+  {
+    "code": "2033",
+    "name": "佳大",
+    "market": "tse"
+  },
+  {
+    "code": "2034",
+    "name": "允強",
+    "market": "tse"
+  },
+  {
+    "code": "2038",
+    "name": "海光",
+    "market": "tse"
+  },
+  {
+    "code": "2049",
+    "name": "上銀",
+    "market": "tse"
+  },
+  {
+    "code": "2059",
+    "name": "川湖",
+    "market": "tse"
+  },
+  {
+    "code": "2062",
+    "name": "橋椿",
+    "market": "tse"
+  },
+  {
+    "code": "2069",
+    "name": "運錩",
+    "market": "tse"
+  },
+  {
+    "code": "2072",
+    "name": "世紀風電",
+    "market": "tse"
+  },
+  {
+    "code": "2101",
+    "name": "南港",
+    "market": "tse"
+  },
+  {
+    "code": "2102",
+    "name": "泰豐",
+    "market": "tse"
+  },
+  {
+    "code": "2103",
+    "name": "台橡",
+    "market": "tse"
+  },
+  {
+    "code": "2104",
+    "name": "國際中橡",
+    "market": "tse"
+  },
+  {
+    "code": "2105",
+    "name": "正新",
+    "market": "tse"
+  },
+  {
+    "code": "2106",
+    "name": "建大",
+    "market": "tse"
+  },
+  {
+    "code": "2107",
+    "name": "厚生",
+    "market": "tse"
+  },
+  {
+    "code": "2108",
+    "name": "南帝",
+    "market": "tse"
+  },
+  {
+    "code": "2109",
+    "name": "華豐",
+    "market": "tse"
+  },
+  {
+    "code": "2114",
+    "name": "鑫永銓",
+    "market": "tse"
+  },
+  {
+    "code": "2115",
+    "name": "六暉-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2201",
+    "name": "裕隆",
+    "market": "tse"
+  },
+  {
+    "code": "2204",
+    "name": "中華",
+    "market": "tse"
+  },
+  {
+    "code": "2206",
+    "name": "三陽工業",
+    "market": "tse"
+  },
+  {
+    "code": "2207",
+    "name": "和泰車",
+    "market": "tse"
+  },
+  {
+    "code": "2208",
+    "name": "台船",
+    "market": "tse"
+  },
+  {
+    "code": "2211",
+    "name": "長榮鋼",
+    "market": "tse"
+  },
+  {
+    "code": "2227",
+    "name": "裕日車",
+    "market": "tse"
+  },
+  {
+    "code": "2228",
+    "name": "劍麟",
+    "market": "tse"
+  },
+  {
+    "code": "2231",
+    "name": "為升",
+    "market": "tse"
+  },
+  {
+    "code": "2233",
+    "name": "宇隆",
+    "market": "tse"
+  },
+  {
+    "code": "2236",
+    "name": "百達-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2239",
+    "name": "英利-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2241",
+    "name": "艾姆勒",
+    "market": "tse"
+  },
+  {
+    "code": "2243",
+    "name": "宏旭-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2247",
+    "name": "汎德永業",
+    "market": "tse"
+  },
+  {
+    "code": "2248",
+    "name": "華勝-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2250",
+    "name": "IKKA-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2254",
+    "name": "巨鎧精密-創",
+    "market": "tse"
+  },
+  {
+    "code": "2258",
+    "name": "鴻華先進-創",
+    "market": "tse"
+  },
+  {
+    "code": "2301",
+    "name": "光寶科",
+    "market": "tse"
+  },
+  {
+    "code": "2302",
+    "name": "麗正",
+    "market": "tse"
+  },
+  {
+    "code": "2303",
+    "name": "聯電",
+    "market": "tse"
+  },
+  {
+    "code": "2305",
+    "name": "全友",
+    "market": "tse"
+  },
+  {
+    "code": "2308",
+    "name": "台達電",
+    "market": "tse"
+  },
+  {
+    "code": "2312",
+    "name": "金寶",
+    "market": "tse"
+  },
+  {
+    "code": "2313",
+    "name": "華通",
+    "market": "tse"
+  },
+  {
+    "code": "2314",
+    "name": "台揚",
+    "market": "tse"
+  },
+  {
+    "code": "2316",
+    "name": "楠梓電",
+    "market": "tse"
+  },
+  {
+    "code": "2317",
+    "name": "鴻海",
+    "market": "tse"
+  },
+  {
+    "code": "2321",
+    "name": "東訊",
+    "market": "tse"
+  },
+  {
+    "code": "2323",
+    "name": "中環",
+    "market": "tse"
+  },
+  {
+    "code": "2324",
+    "name": "仁寶",
+    "market": "tse"
+  },
+  {
+    "code": "2327",
+    "name": "國巨*",
+    "market": "tse"
+  },
+  {
+    "code": "2328",
+    "name": "廣宇",
+    "market": "tse"
+  },
+  {
+    "code": "2329",
+    "name": "華泰",
+    "market": "tse"
+  },
+  {
+    "code": "2330",
+    "name": "台積電",
+    "market": "tse"
+  },
+  {
+    "code": "2331",
+    "name": "精英",
+    "market": "tse"
+  },
+  {
+    "code": "2332",
+    "name": "友訊",
+    "market": "tse"
+  },
+  {
+    "code": "2337",
+    "name": "旺宏",
+    "market": "tse"
+  },
+  {
+    "code": "2338",
+    "name": "光罩",
+    "market": "tse"
+  },
+  {
+    "code": "2340",
+    "name": "台亞",
+    "market": "tse"
+  },
+  {
+    "code": "2342",
+    "name": "茂矽",
+    "market": "tse"
+  },
+  {
+    "code": "2344",
+    "name": "華邦電",
+    "market": "tse"
+  },
+  {
+    "code": "2345",
+    "name": "智邦",
+    "market": "tse"
+  },
+  {
+    "code": "2347",
+    "name": "聯強",
+    "market": "tse"
+  },
+  {
+    "code": "2348",
+    "name": "海悅",
+    "market": "tse"
+  },
+  {
+    "code": "2348A",
+    "name": "海悅甲特",
+    "market": "tse"
+  },
+  {
+    "code": "2349",
+    "name": "錸德",
+    "market": "tse"
+  },
+  {
+    "code": "2351",
+    "name": "順德",
+    "market": "tse"
+  },
+  {
+    "code": "2352",
+    "name": "佳世達",
+    "market": "tse"
+  },
+  {
+    "code": "2353",
+    "name": "宏碁",
+    "market": "tse"
+  },
+  {
+    "code": "2354",
+    "name": "鴻準",
+    "market": "tse"
+  },
+  {
+    "code": "2355",
+    "name": "敬鵬",
+    "market": "tse"
+  },
+  {
+    "code": "2356",
+    "name": "英業達",
+    "market": "tse"
+  },
+  {
+    "code": "2357",
+    "name": "華碩",
+    "market": "tse"
+  },
+  {
+    "code": "2359",
+    "name": "所羅門",
+    "market": "tse"
+  },
+  {
+    "code": "2360",
+    "name": "致茂",
+    "market": "tse"
+  },
+  {
+    "code": "2362",
+    "name": "藍天",
+    "market": "tse"
+  },
+  {
+    "code": "2363",
+    "name": "矽統",
+    "market": "tse"
+  },
+  {
+    "code": "2364",
+    "name": "倫飛",
+    "market": "tse"
+  },
+  {
+    "code": "2365",
+    "name": "昆盈",
+    "market": "tse"
+  },
+  {
+    "code": "2367",
+    "name": "燿華",
+    "market": "tse"
+  },
+  {
+    "code": "2368",
+    "name": "金像電",
+    "market": "tse"
+  },
+  {
+    "code": "2369",
+    "name": "菱生",
+    "market": "tse"
+  },
+  {
+    "code": "2371",
+    "name": "大同",
+    "market": "tse"
+  },
+  {
+    "code": "2373",
+    "name": "震旦行",
+    "market": "tse"
+  },
+  {
+    "code": "2374",
+    "name": "佳能",
+    "market": "tse"
+  },
+  {
+    "code": "2375",
+    "name": "凱美",
+    "market": "tse"
+  },
+  {
+    "code": "2376",
+    "name": "技嘉",
+    "market": "tse"
+  },
+  {
+    "code": "2377",
+    "name": "微星",
+    "market": "tse"
+  },
+  {
+    "code": "2379",
+    "name": "瑞昱",
+    "market": "tse"
+  },
+  {
+    "code": "2380",
+    "name": "虹光",
+    "market": "tse"
+  },
+  {
+    "code": "2382",
+    "name": "廣達",
+    "market": "tse"
+  },
+  {
+    "code": "2383",
+    "name": "台光電",
+    "market": "tse"
+  },
+  {
+    "code": "2385",
+    "name": "群光",
+    "market": "tse"
+  },
+  {
+    "code": "2387",
+    "name": "精元",
+    "market": "tse"
+  },
+  {
+    "code": "2388",
+    "name": "威盛",
+    "market": "tse"
+  },
+  {
+    "code": "2390",
+    "name": "云辰",
+    "market": "tse"
+  },
+  {
+    "code": "2392",
+    "name": "正崴",
+    "market": "tse"
+  },
+  {
+    "code": "2393",
+    "name": "億光",
+    "market": "tse"
+  },
+  {
+    "code": "2395",
+    "name": "研華",
+    "market": "tse"
+  },
+  {
+    "code": "2397",
+    "name": "友通",
+    "market": "tse"
+  },
+  {
+    "code": "2399",
+    "name": "映泰",
+    "market": "tse"
+  },
+  {
+    "code": "2401",
+    "name": "凌陽",
+    "market": "tse"
+  },
+  {
+    "code": "2402",
+    "name": "毅嘉",
+    "market": "tse"
+  },
+  {
+    "code": "2404",
+    "name": "漢唐",
+    "market": "tse"
+  },
+  {
+    "code": "2405",
+    "name": "輔信",
+    "market": "tse"
+  },
+  {
+    "code": "2406",
+    "name": "國碩",
+    "market": "tse"
+  },
+  {
+    "code": "2408",
+    "name": "南亞科",
+    "market": "tse"
+  },
+  {
+    "code": "2409",
+    "name": "友達",
+    "market": "tse"
+  },
+  {
+    "code": "2412",
+    "name": "中華電",
+    "market": "tse"
+  },
+  {
+    "code": "2413",
+    "name": "環科",
+    "market": "tse"
+  },
+  {
+    "code": "2414",
+    "name": "精技",
+    "market": "tse"
+  },
+  {
+    "code": "2415",
+    "name": "錩新",
+    "market": "tse"
+  },
+  {
+    "code": "2417",
+    "name": "圓剛",
+    "market": "tse"
+  },
+  {
+    "code": "2419",
+    "name": "仲琦",
+    "market": "tse"
+  },
+  {
+    "code": "2420",
+    "name": "新巨",
+    "market": "tse"
+  },
+  {
+    "code": "2421",
+    "name": "建準",
+    "market": "tse"
+  },
+  {
+    "code": "2423",
+    "name": "固緯",
+    "market": "tse"
+  },
+  {
+    "code": "2424",
+    "name": "隴華",
+    "market": "tse"
+  },
+  {
+    "code": "2425",
+    "name": "承啟",
+    "market": "tse"
+  },
+  {
+    "code": "2426",
+    "name": "鼎元",
+    "market": "tse"
+  },
+  {
+    "code": "2427",
+    "name": "三商電",
+    "market": "tse"
+  },
+  {
+    "code": "2428",
+    "name": "興勤",
+    "market": "tse"
+  },
+  {
+    "code": "2429",
+    "name": "銘旺科",
+    "market": "tse"
+  },
+  {
+    "code": "2430",
+    "name": "燦坤",
+    "market": "tse"
+  },
+  {
+    "code": "2431",
+    "name": "聯昌",
+    "market": "tse"
+  },
+  {
+    "code": "2432",
+    "name": "倚天酷碁-創",
+    "market": "tse"
+  },
+  {
+    "code": "2433",
+    "name": "互盛電",
+    "market": "tse"
+  },
+  {
+    "code": "2434",
+    "name": "統懋",
+    "market": "tse"
+  },
+  {
+    "code": "2436",
+    "name": "偉詮電",
+    "market": "tse"
+  },
+  {
+    "code": "2438",
+    "name": "翔耀",
+    "market": "tse"
+  },
+  {
+    "code": "2439",
+    "name": "美律",
+    "market": "tse"
+  },
+  {
+    "code": "2440",
+    "name": "太空梭",
+    "market": "tse"
+  },
+  {
+    "code": "2441",
+    "name": "超豐",
+    "market": "tse"
+  },
+  {
+    "code": "2442",
+    "name": "新美齊",
+    "market": "tse"
+  },
+  {
+    "code": "2444",
+    "name": "兆勁",
+    "market": "tse"
+  },
+  {
+    "code": "2449",
+    "name": "京元電子",
+    "market": "tse"
+  },
+  {
+    "code": "2450",
+    "name": "神腦",
+    "market": "tse"
+  },
+  {
+    "code": "2451",
+    "name": "創見",
+    "market": "tse"
+  },
+  {
+    "code": "2453",
+    "name": "凌群",
+    "market": "tse"
+  },
+  {
+    "code": "2454",
+    "name": "聯發科",
+    "market": "tse"
+  },
+  {
+    "code": "2455",
+    "name": "全新",
+    "market": "tse"
+  },
+  {
+    "code": "2457",
+    "name": "飛宏",
+    "market": "tse"
+  },
+  {
+    "code": "2458",
+    "name": "義隆",
+    "market": "tse"
+  },
+  {
+    "code": "2459",
+    "name": "敦吉",
+    "market": "tse"
+  },
+  {
+    "code": "2460",
+    "name": "建通",
+    "market": "tse"
+  },
+  {
+    "code": "2461",
+    "name": "光群雷",
+    "market": "tse"
+  },
+  {
+    "code": "2462",
+    "name": "良得電",
+    "market": "tse"
+  },
+  {
+    "code": "2464",
+    "name": "盟立",
+    "market": "tse"
+  },
+  {
+    "code": "2465",
+    "name": "麗臺",
+    "market": "tse"
+  },
+  {
+    "code": "2466",
+    "name": "冠西電",
+    "market": "tse"
+  },
+  {
+    "code": "2467",
+    "name": "志聖",
+    "market": "tse"
+  },
+  {
+    "code": "2468",
+    "name": "華經",
+    "market": "tse"
+  },
+  {
+    "code": "2471",
+    "name": "資通",
+    "market": "tse"
+  },
+  {
+    "code": "2472",
+    "name": "立隆電",
+    "market": "tse"
+  },
+  {
+    "code": "2474",
+    "name": "可成",
+    "market": "tse"
+  },
+  {
+    "code": "2476",
+    "name": "鉅祥",
+    "market": "tse"
+  },
+  {
+    "code": "2477",
+    "name": "美隆電",
+    "market": "tse"
+  },
+  {
+    "code": "2478",
+    "name": "大毅",
+    "market": "tse"
+  },
+  {
+    "code": "2480",
+    "name": "敦陽科",
+    "market": "tse"
+  },
+  {
+    "code": "2481",
+    "name": "強茂",
+    "market": "tse"
+  },
+  {
+    "code": "2482",
+    "name": "連宇",
+    "market": "tse"
+  },
+  {
+    "code": "2483",
+    "name": "百容",
+    "market": "tse"
+  },
+  {
+    "code": "2484",
+    "name": "希華",
+    "market": "tse"
+  },
+  {
+    "code": "2485",
+    "name": "兆赫",
+    "market": "tse"
+  },
+  {
+    "code": "2486",
+    "name": "一詮",
+    "market": "tse"
+  },
+  {
+    "code": "2488",
+    "name": "漢平",
+    "market": "tse"
+  },
+  {
+    "code": "2489",
+    "name": "瑞軒",
+    "market": "tse"
+  },
+  {
+    "code": "2491",
+    "name": "吉祥全",
+    "market": "tse"
+  },
+  {
+    "code": "2492",
+    "name": "華新科",
+    "market": "tse"
+  },
+  {
+    "code": "2493",
+    "name": "揚博",
+    "market": "tse"
+  },
+  {
+    "code": "2495",
+    "name": "普安",
+    "market": "tse"
+  },
+  {
+    "code": "2496",
+    "name": "卓越",
+    "market": "tse"
+  },
+  {
+    "code": "2497",
+    "name": "怡利電",
+    "market": "tse"
+  },
+  {
+    "code": "2498",
+    "name": "宏達電",
+    "market": "tse"
+  },
+  {
+    "code": "2501",
+    "name": "國建",
+    "market": "tse"
+  },
+  {
+    "code": "2504",
+    "name": "國產",
+    "market": "tse"
+  },
+  {
+    "code": "2505",
+    "name": "國揚",
+    "market": "tse"
+  },
+  {
+    "code": "2506",
+    "name": "太設",
+    "market": "tse"
+  },
+  {
+    "code": "2509",
+    "name": "全坤建",
+    "market": "tse"
+  },
+  {
+    "code": "2511",
+    "name": "太子",
+    "market": "tse"
+  },
+  {
+    "code": "2514",
+    "name": "龍邦",
+    "market": "tse"
+  },
+  {
+    "code": "2515",
+    "name": "中工",
+    "market": "tse"
+  },
+  {
+    "code": "2516",
+    "name": "新建",
+    "market": "tse"
+  },
+  {
+    "code": "2520",
+    "name": "冠德",
+    "market": "tse"
+  },
+  {
+    "code": "2524",
+    "name": "京城",
+    "market": "tse"
+  },
+  {
+    "code": "2527",
+    "name": "宏璟",
+    "market": "tse"
+  },
+  {
+    "code": "2528",
+    "name": "皇普",
+    "market": "tse"
+  },
+  {
+    "code": "2530",
+    "name": "華建",
+    "market": "tse"
+  },
+  {
+    "code": "2534",
+    "name": "宏盛",
+    "market": "tse"
+  },
+  {
+    "code": "2535",
+    "name": "達欣工",
+    "market": "tse"
+  },
+  {
+    "code": "2536",
+    "name": "宏普",
+    "market": "tse"
+  },
+  {
+    "code": "2537",
+    "name": "聯上發",
+    "market": "tse"
+  },
+  {
+    "code": "2538",
+    "name": "基泰",
+    "market": "tse"
+  },
+  {
+    "code": "2539",
+    "name": "櫻花建",
+    "market": "tse"
+  },
+  {
+    "code": "2540",
+    "name": "愛山林",
+    "market": "tse"
+  },
+  {
+    "code": "2542",
+    "name": "興富發",
+    "market": "tse"
+  },
+  {
+    "code": "2543",
+    "name": "皇昌",
+    "market": "tse"
+  },
+  {
+    "code": "2545",
+    "name": "皇翔",
+    "market": "tse"
+  },
+  {
+    "code": "2546",
+    "name": "根基",
+    "market": "tse"
+  },
+  {
+    "code": "2547",
+    "name": "日勝生",
+    "market": "tse"
+  },
+  {
+    "code": "2548",
+    "name": "華固",
+    "market": "tse"
+  },
+  {
+    "code": "2597",
+    "name": "潤弘",
+    "market": "tse"
+  },
+  {
+    "code": "2601",
+    "name": "益航",
+    "market": "tse"
+  },
+  {
+    "code": "2603",
+    "name": "長榮",
+    "market": "tse"
+  },
+  {
+    "code": "2605",
+    "name": "新興",
+    "market": "tse"
+  },
+  {
+    "code": "2606",
+    "name": "裕民",
+    "market": "tse"
+  },
+  {
+    "code": "2607",
+    "name": "榮運",
+    "market": "tse"
+  },
+  {
+    "code": "2608",
+    "name": "嘉里大榮",
+    "market": "tse"
+  },
+  {
+    "code": "2609",
+    "name": "陽明",
+    "market": "tse"
+  },
+  {
+    "code": "2610",
+    "name": "華航",
+    "market": "tse"
+  },
+  {
+    "code": "2611",
+    "name": "志信",
+    "market": "tse"
+  },
+  {
+    "code": "2612",
+    "name": "中航",
+    "market": "tse"
+  },
+  {
+    "code": "2613",
+    "name": "中櫃",
+    "market": "tse"
+  },
+  {
+    "code": "2614",
+    "name": "東森",
+    "market": "tse"
+  },
+  {
+    "code": "2615",
+    "name": "萬海",
+    "market": "tse"
+  },
+  {
+    "code": "2616",
+    "name": "山隆",
+    "market": "tse"
+  },
+  {
+    "code": "2617",
+    "name": "台航",
+    "market": "tse"
+  },
+  {
+    "code": "2618",
+    "name": "長榮航",
+    "market": "tse"
+  },
+  {
+    "code": "2630",
+    "name": "亞航",
+    "market": "tse"
+  },
+  {
+    "code": "2633",
+    "name": "台灣高鐵",
+    "market": "tse"
+  },
+  {
+    "code": "2634",
+    "name": "漢翔",
+    "market": "tse"
+  },
+  {
+    "code": "2636",
+    "name": "台驊控股",
+    "market": "tse"
+  },
+  {
+    "code": "2637",
+    "name": "慧洋-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2642",
+    "name": "宅配通",
+    "market": "tse"
+  },
+  {
+    "code": "2645",
+    "name": "長榮航太",
+    "market": "tse"
+  },
+  {
+    "code": "2646",
+    "name": "星宇航空",
+    "market": "tse"
+  },
+  {
+    "code": "2701",
+    "name": "萬企",
+    "market": "tse"
+  },
+  {
+    "code": "2702",
+    "name": "華園",
+    "market": "tse"
+  },
+  {
+    "code": "2704",
+    "name": "國賓",
+    "market": "tse"
+  },
+  {
+    "code": "2705",
+    "name": "六福",
+    "market": "tse"
+  },
+  {
+    "code": "2706",
+    "name": "第一店",
+    "market": "tse"
+  },
+  {
+    "code": "2707",
+    "name": "晶華",
+    "market": "tse"
+  },
+  {
+    "code": "2712",
+    "name": "遠雄來",
+    "market": "tse"
+  },
+  {
+    "code": "2722",
+    "name": "夏都",
+    "market": "tse"
+  },
+  {
+    "code": "2723",
+    "name": "美食-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2727",
+    "name": "王品",
+    "market": "tse"
+  },
+  {
+    "code": "2731",
+    "name": "雄獅",
+    "market": "tse"
+  },
+  {
+    "code": "2739",
+    "name": "寒舍",
+    "market": "tse"
+  },
+  {
+    "code": "2748",
+    "name": "雲品",
+    "market": "tse"
+  },
+  {
+    "code": "2753",
+    "name": "八方雲集",
+    "market": "tse"
+  },
+  {
+    "code": "2762",
+    "name": "世界健身-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2801",
+    "name": "彰銀",
+    "market": "tse"
+  },
+  {
+    "code": "2812",
+    "name": "台中銀",
+    "market": "tse"
+  },
+  {
+    "code": "2816",
+    "name": "旺旺保",
+    "market": "tse"
+  },
+  {
+    "code": "2820",
+    "name": "華票",
+    "market": "tse"
+  },
+  {
+    "code": "2832",
+    "name": "台產",
+    "market": "tse"
+  },
+  {
+    "code": "2834",
+    "name": "臺企銀",
+    "market": "tse"
+  },
+  {
+    "code": "2836",
+    "name": "高雄銀",
+    "market": "tse"
+  },
+  {
+    "code": "2836A",
+    "name": "高雄銀甲特",
+    "market": "tse"
+  },
+  {
+    "code": "2838",
+    "name": "聯邦銀",
+    "market": "tse"
+  },
+  {
+    "code": "2838A",
+    "name": "聯邦銀甲特",
+    "market": "tse"
+  },
+  {
+    "code": "2845",
+    "name": "遠東銀",
+    "market": "tse"
+  },
+  {
+    "code": "2849",
+    "name": "安泰銀",
+    "market": "tse"
+  },
+  {
+    "code": "2850",
+    "name": "新產",
+    "market": "tse"
+  },
+  {
+    "code": "2851",
+    "name": "中再保",
+    "market": "tse"
+  },
+  {
+    "code": "2852",
+    "name": "第一保",
+    "market": "tse"
+  },
+  {
+    "code": "2855",
+    "name": "統一證",
+    "market": "tse"
+  },
+  {
+    "code": "2867",
+    "name": "三商壽",
+    "market": "tse"
+  },
+  {
+    "code": "2880",
+    "name": "華南金",
+    "market": "tse"
+  },
+  {
+    "code": "2881",
+    "name": "富邦金",
+    "market": "tse"
+  },
+  {
+    "code": "2881A",
+    "name": "富邦特",
+    "market": "tse"
+  },
+  {
+    "code": "2881B",
+    "name": "富邦金乙特",
+    "market": "tse"
+  },
+  {
+    "code": "2881C",
+    "name": "富邦金丙特",
+    "market": "tse"
+  },
+  {
+    "code": "2882",
+    "name": "國泰金",
+    "market": "tse"
+  },
+  {
+    "code": "2882A",
+    "name": "國泰特",
+    "market": "tse"
+  },
+  {
+    "code": "2882B",
+    "name": "國泰金乙特",
+    "market": "tse"
+  },
+  {
+    "code": "2883",
+    "name": "凱基金",
+    "market": "tse"
+  },
+  {
+    "code": "2883B",
+    "name": "凱基金乙特",
+    "market": "tse"
+  },
+  {
+    "code": "2884",
+    "name": "玉山金",
+    "market": "tse"
+  },
+  {
+    "code": "2885",
+    "name": "元大金",
+    "market": "tse"
+  },
+  {
+    "code": "2886",
+    "name": "兆豐金",
+    "market": "tse"
+  },
+  {
+    "code": "2887",
+    "name": "台新新光金",
+    "market": "tse"
+  },
+  {
+    "code": "2887E",
+    "name": "台新新光戊特一",
+    "market": "tse"
+  },
+  {
+    "code": "2887F",
+    "name": "台新新光戊特二",
+    "market": "tse"
+  },
+  {
+    "code": "2887G",
+    "name": "台新新光庚特一",
+    "market": "tse"
+  },
+  {
+    "code": "2887H",
+    "name": "台新新光庚特二",
+    "market": "tse"
+  },
+  {
+    "code": "2887I",
+    "name": "台新新光辛特",
+    "market": "tse"
+  },
+  {
+    "code": "2887Z1",
+    "name": "台新新光己特",
+    "market": "tse"
+  },
+  {
+    "code": "2889",
+    "name": "國票金",
+    "market": "tse"
+  },
+  {
+    "code": "2890",
+    "name": "永豐金",
+    "market": "tse"
+  },
+  {
+    "code": "2891",
+    "name": "中信金",
+    "market": "tse"
+  },
+  {
+    "code": "2891B",
+    "name": "中信金乙特",
+    "market": "tse"
+  },
+  {
+    "code": "2891C",
+    "name": "中信金丙特",
+    "market": "tse"
+  },
+  {
+    "code": "2892",
+    "name": "第一金",
+    "market": "tse"
+  },
+  {
+    "code": "2897",
+    "name": "王道銀行",
+    "market": "tse"
+  },
+  {
+    "code": "2897B",
+    "name": "王道銀乙特",
+    "market": "tse"
+  },
+  {
+    "code": "2901",
+    "name": "欣欣",
+    "market": "tse"
+  },
+  {
+    "code": "2903",
+    "name": "遠百",
+    "market": "tse"
+  },
+  {
+    "code": "2904",
+    "name": "匯僑",
+    "market": "tse"
+  },
+  {
+    "code": "2905",
+    "name": "三商",
+    "market": "tse"
+  },
+  {
+    "code": "2906",
+    "name": "高林",
+    "market": "tse"
+  },
+  {
+    "code": "2908",
+    "name": "特力",
+    "market": "tse"
+  },
+  {
+    "code": "2910",
+    "name": "統領",
+    "market": "tse"
+  },
+  {
+    "code": "2911",
+    "name": "麗嬰房",
+    "market": "tse"
+  },
+  {
+    "code": "2912",
+    "name": "統一超",
+    "market": "tse"
+  },
+  {
+    "code": "2913",
+    "name": "農林",
+    "market": "tse"
+  },
+  {
+    "code": "2915",
+    "name": "潤泰全",
+    "market": "tse"
+  },
+  {
+    "code": "2923",
+    "name": "鼎固-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2929",
+    "name": "淘帝-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2939",
+    "name": "永邑-KY",
+    "market": "tse"
+  },
+  {
+    "code": "2945",
+    "name": "三商家購",
+    "market": "tse"
+  },
+  {
+    "code": "3002",
+    "name": "歐格",
+    "market": "tse"
+  },
+  {
+    "code": "3003",
+    "name": "健和興",
+    "market": "tse"
+  },
+  {
+    "code": "3004",
+    "name": "豐達科",
+    "market": "tse"
+  },
+  {
+    "code": "3005",
+    "name": "神基",
+    "market": "tse"
+  },
+  {
+    "code": "3006",
+    "name": "晶豪科",
+    "market": "tse"
+  },
+  {
+    "code": "3008",
+    "name": "大立光",
+    "market": "tse"
+  },
+  {
+    "code": "3010",
+    "name": "華立",
+    "market": "tse"
+  },
+  {
+    "code": "3011",
+    "name": "今皓",
+    "market": "tse"
+  },
+  {
+    "code": "3013",
+    "name": "晟銘電",
+    "market": "tse"
+  },
+  {
+    "code": "3014",
+    "name": "聯陽",
+    "market": "tse"
+  },
+  {
+    "code": "3015",
+    "name": "全漢",
+    "market": "tse"
+  },
+  {
+    "code": "3016",
+    "name": "嘉晶",
+    "market": "tse"
+  },
+  {
+    "code": "3017",
+    "name": "奇鋐",
+    "market": "tse"
+  },
+  {
+    "code": "3018",
+    "name": "隆銘綠能",
+    "market": "tse"
+  },
+  {
+    "code": "3019",
+    "name": "亞光",
+    "market": "tse"
+  },
+  {
+    "code": "3021",
+    "name": "鴻名",
+    "market": "tse"
+  },
+  {
+    "code": "3022",
+    "name": "威強電",
+    "market": "tse"
+  },
+  {
+    "code": "3023",
+    "name": "信邦",
+    "market": "tse"
+  },
+  {
+    "code": "3024",
+    "name": "憶聲",
+    "market": "tse"
+  },
+  {
+    "code": "3025",
+    "name": "星通",
+    "market": "tse"
+  },
+  {
+    "code": "3026",
+    "name": "禾伸堂",
+    "market": "tse"
+  },
+  {
+    "code": "3027",
+    "name": "盛達",
+    "market": "tse"
+  },
+  {
+    "code": "3028",
+    "name": "增你強",
+    "market": "tse"
+  },
+  {
+    "code": "3029",
+    "name": "零壹",
+    "market": "tse"
+  },
+  {
+    "code": "3030",
+    "name": "德律",
+    "market": "tse"
+  },
+  {
+    "code": "3031",
+    "name": "佰鴻",
+    "market": "tse"
+  },
+  {
+    "code": "3032",
+    "name": "偉訓",
+    "market": "tse"
+  },
+  {
+    "code": "3033",
+    "name": "威健",
+    "market": "tse"
+  },
+  {
+    "code": "3034",
+    "name": "聯詠",
+    "market": "tse"
+  },
+  {
+    "code": "3035",
+    "name": "智原",
+    "market": "tse"
+  },
+  {
+    "code": "3036",
+    "name": "文曄",
+    "market": "tse"
+  },
+  {
+    "code": "3037",
+    "name": "欣興",
+    "market": "tse"
+  },
+  {
+    "code": "3038",
+    "name": "全台",
+    "market": "tse"
+  },
+  {
+    "code": "3040",
+    "name": "遠見",
+    "market": "tse"
+  },
+  {
+    "code": "3041",
+    "name": "揚智",
+    "market": "tse"
+  },
+  {
+    "code": "3042",
+    "name": "晶技",
+    "market": "tse"
+  },
+  {
+    "code": "3043",
+    "name": "科風",
+    "market": "tse"
+  },
+  {
+    "code": "3044",
+    "name": "健鼎",
+    "market": "tse"
+  },
+  {
+    "code": "3045",
+    "name": "台灣大",
+    "market": "tse"
+  },
+  {
+    "code": "3046",
+    "name": "建碁",
+    "market": "tse"
+  },
+  {
+    "code": "3047",
+    "name": "訊舟",
+    "market": "tse"
+  },
+  {
+    "code": "3048",
+    "name": "益登",
+    "market": "tse"
+  },
+  {
+    "code": "3049",
+    "name": "精金",
+    "market": "tse"
+  },
+  {
+    "code": "3050",
+    "name": "鈺德",
+    "market": "tse"
+  },
+  {
+    "code": "3051",
+    "name": "力特",
+    "market": "tse"
+  },
+  {
+    "code": "3052",
+    "name": "夆典",
+    "market": "tse"
+  },
+  {
+    "code": "3054",
+    "name": "立萬利",
+    "market": "tse"
+  },
+  {
+    "code": "3055",
+    "name": "蔚華科",
+    "market": "tse"
+  },
+  {
+    "code": "3056",
+    "name": "富華新",
+    "market": "tse"
+  },
+  {
+    "code": "3057",
+    "name": "喬鼎",
+    "market": "tse"
+  },
+  {
+    "code": "3058",
+    "name": "立德",
+    "market": "tse"
+  },
+  {
+    "code": "3059",
+    "name": "華晶科",
+    "market": "tse"
+  },
+  {
+    "code": "3060",
+    "name": "銘異",
+    "market": "tse"
+  },
+  {
+    "code": "3062",
+    "name": "建漢",
+    "market": "tse"
+  },
+  {
+    "code": "3090",
+    "name": "日電貿",
+    "market": "tse"
+  },
+  {
+    "code": "3092",
+    "name": "鴻碩",
+    "market": "tse"
+  },
+  {
+    "code": "3094",
+    "name": "聯傑",
+    "market": "tse"
+  },
+  {
+    "code": "3130",
+    "name": "一零四",
+    "market": "tse"
+  },
+  {
+    "code": "3135",
+    "name": "凌航",
+    "market": "tse"
+  },
+  {
+    "code": "3138",
+    "name": "耀登",
+    "market": "tse"
+  },
+  {
+    "code": "3149",
+    "name": "正達",
+    "market": "tse"
+  },
+  {
+    "code": "3150",
+    "name": "鈺寶-創",
+    "market": "tse"
+  },
+  {
+    "code": "3164",
+    "name": "景岳",
+    "market": "tse"
+  },
+  {
+    "code": "3167",
+    "name": "大量",
+    "market": "tse"
+  },
+  {
+    "code": "3168",
+    "name": "眾福科",
+    "market": "tse"
+  },
+  {
+    "code": "3189",
+    "name": "景碩",
+    "market": "tse"
+  },
+  {
+    "code": "3209",
+    "name": "全科",
+    "market": "tse"
+  },
+  {
+    "code": "3229",
+    "name": "晟鈦",
+    "market": "tse"
+  },
+  {
+    "code": "3231",
+    "name": "緯創",
+    "market": "tse"
+  },
+  {
+    "code": "3257",
+    "name": "虹冠電",
+    "market": "tse"
+  },
+  {
+    "code": "3266",
+    "name": "昇陽",
+    "market": "tse"
+  },
+  {
+    "code": "3296",
+    "name": "勝德",
+    "market": "tse"
+  },
+  {
+    "code": "3305",
+    "name": "昇貿",
+    "market": "tse"
+  },
+  {
+    "code": "3308",
+    "name": "聯德",
+    "market": "tse"
+  },
+  {
+    "code": "3311",
+    "name": "閎暉",
+    "market": "tse"
+  },
+  {
+    "code": "3312",
+    "name": "弘憶股",
+    "market": "tse"
+  },
+  {
+    "code": "3321",
+    "name": "同泰",
+    "market": "tse"
+  },
+  {
+    "code": "3338",
+    "name": "泰碩",
+    "market": "tse"
+  },
+  {
+    "code": "3346",
+    "name": "麗清",
+    "market": "tse"
+  },
+  {
+    "code": "3356",
+    "name": "奇偶",
+    "market": "tse"
+  },
+  {
+    "code": "3376",
+    "name": "新日興",
+    "market": "tse"
+  },
+  {
+    "code": "3380",
+    "name": "明泰",
+    "market": "tse"
+  },
+  {
+    "code": "3406",
+    "name": "玉晶光",
+    "market": "tse"
+  },
+  {
+    "code": "3413",
+    "name": "京鼎",
+    "market": "tse"
+  },
+  {
+    "code": "3416",
+    "name": "融程電",
+    "market": "tse"
+  },
+  {
+    "code": "3419",
+    "name": "譁裕",
+    "market": "tse"
+  },
+  {
+    "code": "3432",
+    "name": "台端",
+    "market": "tse"
+  },
+  {
+    "code": "3437",
+    "name": "榮創",
+    "market": "tse"
+  },
+  {
+    "code": "3443",
+    "name": "創意",
+    "market": "tse"
+  },
+  {
+    "code": "3447",
+    "name": "展達",
+    "market": "tse"
+  },
+  {
+    "code": "3450",
+    "name": "聯鈞",
+    "market": "tse"
+  },
+  {
+    "code": "3481",
+    "name": "群創",
+    "market": "tse"
+  },
+  {
+    "code": "3494",
+    "name": "誠研",
+    "market": "tse"
+  },
+  {
+    "code": "3501",
+    "name": "維熹",
+    "market": "tse"
+  },
+  {
+    "code": "3504",
+    "name": "揚明光",
+    "market": "tse"
+  },
+  {
+    "code": "3515",
+    "name": "華擎",
+    "market": "tse"
+  },
+  {
+    "code": "3518",
+    "name": "柏騰",
+    "market": "tse"
+  },
+  {
+    "code": "3528",
+    "name": "安馳",
+    "market": "tse"
+  },
+  {
+    "code": "3530",
+    "name": "晶相光",
+    "market": "tse"
+  },
+  {
+    "code": "3532",
+    "name": "台勝科",
+    "market": "tse"
+  },
+  {
+    "code": "3533",
+    "name": "嘉澤",
+    "market": "tse"
+  },
+  {
+    "code": "3535",
+    "name": "晶彩科",
+    "market": "tse"
+  },
+  {
+    "code": "3543",
+    "name": "州巧",
+    "market": "tse"
+  },
+  {
+    "code": "3545",
+    "name": "敦泰",
+    "market": "tse"
+  },
+  {
+    "code": "3550",
+    "name": "聯穎",
+    "market": "tse"
+  },
+  {
+    "code": "3557",
+    "name": "嘉威",
+    "market": "tse"
+  },
+  {
+    "code": "3563",
+    "name": "牧德",
+    "market": "tse"
+  },
+  {
+    "code": "3576",
+    "name": "聯合再生",
+    "market": "tse"
+  },
+  {
+    "code": "3583",
+    "name": "辛耘",
+    "market": "tse"
+  },
+  {
+    "code": "3588",
+    "name": "通嘉",
+    "market": "tse"
+  },
+  {
+    "code": "3591",
+    "name": "艾笛森",
+    "market": "tse"
+  },
+  {
+    "code": "3592",
+    "name": "瑞鼎",
+    "market": "tse"
+  },
+  {
+    "code": "3593",
+    "name": "力銘",
+    "market": "tse"
+  },
+  {
+    "code": "3596",
+    "name": "智易",
+    "market": "tse"
+  },
+  {
+    "code": "3605",
+    "name": "宏致",
+    "market": "tse"
+  },
+  {
+    "code": "3607",
+    "name": "谷崧",
+    "market": "tse"
+  },
+  {
+    "code": "3617",
+    "name": "碩天",
+    "market": "tse"
+  },
+  {
+    "code": "3622",
+    "name": "洋華",
+    "market": "tse"
+  },
+  {
+    "code": "3645",
+    "name": "達邁",
+    "market": "tse"
+  },
+  {
+    "code": "3652",
+    "name": "精聯",
+    "market": "tse"
+  },
+  {
+    "code": "3653",
+    "name": "健策",
+    "market": "tse"
+  },
+  {
+    "code": "3661",
+    "name": "世芯-KY",
+    "market": "tse"
+  },
+  {
+    "code": "3665",
+    "name": "貿聯-KY",
+    "market": "tse"
+  },
+  {
+    "code": "3669",
+    "name": "圓展",
+    "market": "tse"
+  },
+  {
+    "code": "3673",
+    "name": "TPK-KY",
+    "market": "tse"
+  },
+  {
+    "code": "3679",
+    "name": "新至陞",
+    "market": "tse"
+  },
+  {
+    "code": "3686",
+    "name": "達能",
+    "market": "tse"
+  },
+  {
+    "code": "3694",
+    "name": "海華",
+    "market": "tse"
+  },
+  {
+    "code": "3701",
+    "name": "大眾控",
+    "market": "tse"
+  },
+  {
+    "code": "3702",
+    "name": "大聯大",
+    "market": "tse"
+  },
+  {
+    "code": "3703",
+    "name": "欣陸",
+    "market": "tse"
+  },
+  {
+    "code": "3704",
+    "name": "合勤控",
+    "market": "tse"
+  },
+  {
+    "code": "3705",
+    "name": "永信",
+    "market": "tse"
+  },
+  {
+    "code": "3706",
+    "name": "神達",
+    "market": "tse"
+  },
+  {
+    "code": "3708",
+    "name": "上緯投控",
+    "market": "tse"
+  },
+  {
+    "code": "3711",
+    "name": "日月光投控",
+    "market": "tse"
+  },
+  {
+    "code": "3712",
+    "name": "永崴投控",
+    "market": "tse"
+  },
+  {
+    "code": "3714",
+    "name": "富采",
+    "market": "tse"
+  },
+  {
+    "code": "3715",
+    "name": "定穎投控",
+    "market": "tse"
+  },
+  {
+    "code": "3716",
+    "name": "中化控股",
+    "market": "tse"
+  },
+  {
+    "code": "3717",
+    "name": "聯嘉投控",
+    "market": "tse"
+  },
+  {
+    "code": "4104",
+    "name": "佳醫",
+    "market": "tse"
+  },
+  {
+    "code": "4106",
+    "name": "雃博",
+    "market": "tse"
+  },
+  {
+    "code": "4108",
+    "name": "懷特",
+    "market": "tse"
+  },
+  {
+    "code": "4119",
+    "name": "旭富",
+    "market": "tse"
+  },
+  {
+    "code": "4133",
+    "name": "亞諾法",
+    "market": "tse"
+  },
+  {
+    "code": "4137",
+    "name": "麗豐-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4142",
+    "name": "國光生",
+    "market": "tse"
+  },
+  {
+    "code": "4148",
+    "name": "全宇生技-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4155",
+    "name": "訊映",
+    "market": "tse"
+  },
+  {
+    "code": "4164",
+    "name": "承業醫",
+    "market": "tse"
+  },
+  {
+    "code": "4169",
+    "name": "泰宗",
+    "market": "tse"
+  },
+  {
+    "code": "4190",
+    "name": "佐登-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4306",
+    "name": "炎洲",
+    "market": "tse"
+  },
+  {
+    "code": "4414",
+    "name": "如興",
+    "market": "tse"
+  },
+  {
+    "code": "4426",
+    "name": "利勤",
+    "market": "tse"
+  },
+  {
+    "code": "4438",
+    "name": "廣越",
+    "market": "tse"
+  },
+  {
+    "code": "4439",
+    "name": "冠星-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4440",
+    "name": "宜新實業",
+    "market": "tse"
+  },
+  {
+    "code": "4441",
+    "name": "振大環球",
+    "market": "tse"
+  },
+  {
+    "code": "4526",
+    "name": "東台",
+    "market": "tse"
+  },
+  {
+    "code": "4532",
+    "name": "瑞智",
+    "market": "tse"
+  },
+  {
+    "code": "4536",
+    "name": "拓凱",
+    "market": "tse"
+  },
+  {
+    "code": "4540",
+    "name": "全球傳動",
+    "market": "tse"
+  },
+  {
+    "code": "4545",
+    "name": "銘鈺",
+    "market": "tse"
+  },
+  {
+    "code": "4551",
+    "name": "智伸科",
+    "market": "tse"
+  },
+  {
+    "code": "4552",
+    "name": "力達-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4555",
+    "name": "氣立",
+    "market": "tse"
+  },
+  {
+    "code": "4557",
+    "name": "永新-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4560",
+    "name": "強信-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4562",
+    "name": "穎漢",
+    "market": "tse"
+  },
+  {
+    "code": "4564",
+    "name": "元翎",
+    "market": "tse"
+  },
+  {
+    "code": "4566",
+    "name": "時碩工業",
+    "market": "tse"
+  },
+  {
+    "code": "4569",
+    "name": "六方科-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4571",
+    "name": "鈞興-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4572",
+    "name": "駐龍",
+    "market": "tse"
+  },
+  {
+    "code": "4576",
+    "name": "大銀微系統",
+    "market": "tse"
+  },
+  {
+    "code": "4581",
+    "name": "光隆精密-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4583",
+    "name": "台灣精銳",
+    "market": "tse"
+  },
+  {
+    "code": "4585",
+    "name": "達明",
+    "market": "tse"
+  },
+  {
+    "code": "4588",
+    "name": "玖鼎電力",
+    "market": "tse"
+  },
+  {
+    "code": "4590",
+    "name": "富田-創",
+    "market": "tse"
+  },
+  {
+    "code": "4720",
+    "name": "德淵",
+    "market": "tse"
+  },
+  {
+    "code": "4722",
+    "name": "國精化",
+    "market": "tse"
+  },
+  {
+    "code": "4736",
+    "name": "泰博",
+    "market": "tse"
+  },
+  {
+    "code": "4737",
+    "name": "華廣",
+    "market": "tse"
+  },
+  {
+    "code": "4739",
+    "name": "康普",
+    "market": "tse"
+  },
+  {
+    "code": "4746",
+    "name": "台耀",
+    "market": "tse"
+  },
+  {
+    "code": "4755",
+    "name": "三福化",
+    "market": "tse"
+  },
+  {
+    "code": "4763",
+    "name": "材料*-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4764",
+    "name": "雙鍵",
+    "market": "tse"
+  },
+  {
+    "code": "4766",
+    "name": "南寶",
+    "market": "tse"
+  },
+  {
+    "code": "4770",
+    "name": "上品",
+    "market": "tse"
+  },
+  {
+    "code": "4771",
+    "name": "望隼",
+    "market": "tse"
+  },
+  {
+    "code": "4807",
+    "name": "日成-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4904",
+    "name": "遠傳",
+    "market": "tse"
+  },
+  {
+    "code": "4906",
+    "name": "正文",
+    "market": "tse"
+  },
+  {
+    "code": "4912",
+    "name": "聯德控股-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4915",
+    "name": "致伸",
+    "market": "tse"
+  },
+  {
+    "code": "4916",
+    "name": "事欣科",
+    "market": "tse"
+  },
+  {
+    "code": "4919",
+    "name": "新唐",
+    "market": "tse"
+  },
+  {
+    "code": "4927",
+    "name": "泰鼎-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4930",
+    "name": "燦星網",
+    "market": "tse"
+  },
+  {
+    "code": "4934",
+    "name": "太極",
+    "market": "tse"
+  },
+  {
+    "code": "4935",
+    "name": "茂林-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4938",
+    "name": "和碩",
+    "market": "tse"
+  },
+  {
+    "code": "4942",
+    "name": "嘉彰",
+    "market": "tse"
+  },
+  {
+    "code": "4943",
+    "name": "康控-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4949",
+    "name": "有成精密",
+    "market": "tse"
+  },
+  {
+    "code": "4952",
+    "name": "凌通",
+    "market": "tse"
+  },
+  {
+    "code": "4956",
+    "name": "光鋐",
+    "market": "tse"
+  },
+  {
+    "code": "4958",
+    "name": "臻鼎-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4960",
+    "name": "誠美材",
+    "market": "tse"
+  },
+  {
+    "code": "4961",
+    "name": "天鈺",
+    "market": "tse"
+  },
+  {
+    "code": "4967",
+    "name": "十銓",
+    "market": "tse"
+  },
+  {
+    "code": "4968",
+    "name": "立積",
+    "market": "tse"
+  },
+  {
+    "code": "4976",
+    "name": "佳凌",
+    "market": "tse"
+  },
+  {
+    "code": "4977",
+    "name": "眾達-KY",
+    "market": "tse"
+  },
+  {
+    "code": "4989",
+    "name": "榮科",
+    "market": "tse"
+  },
+  {
+    "code": "4994",
+    "name": "傳奇",
+    "market": "tse"
+  },
+  {
+    "code": "4999",
+    "name": "鑫禾",
+    "market": "tse"
+  },
+  {
+    "code": "5007",
+    "name": "三星",
+    "market": "tse"
+  },
+  {
+    "code": "5203",
+    "name": "訊連",
+    "market": "tse"
+  },
+  {
+    "code": "5215",
+    "name": "科嘉-KY",
+    "market": "tse"
+  },
+  {
+    "code": "5222",
+    "name": "全訊",
+    "market": "tse"
+  },
+  {
+    "code": "5225",
+    "name": "東科-KY",
+    "market": "tse"
+  },
+  {
+    "code": "5234",
+    "name": "達興材料",
+    "market": "tse"
+  },
+  {
+    "code": "5243",
+    "name": "乙盛-KY",
+    "market": "tse"
+  },
+  {
+    "code": "5244",
+    "name": "弘凱",
+    "market": "tse"
+  },
+  {
+    "code": "5258",
+    "name": "虹堡",
+    "market": "tse"
+  },
+  {
+    "code": "5269",
+    "name": "祥碩",
+    "market": "tse"
+  },
+  {
+    "code": "5283",
+    "name": "禾聯碩",
+    "market": "tse"
+  },
+  {
+    "code": "5284",
+    "name": "jpp-KY",
+    "market": "tse"
+  },
+  {
+    "code": "5285",
+    "name": "界霖",
+    "market": "tse"
+  },
+  {
+    "code": "5288",
+    "name": "豐祥-KY",
+    "market": "tse"
+  },
+  {
+    "code": "5292",
+    "name": "華懋",
+    "market": "tse"
+  },
+  {
+    "code": "5306",
+    "name": "桂盟",
+    "market": "tse"
+  },
+  {
+    "code": "5388",
+    "name": "中磊",
+    "market": "tse"
+  },
+  {
+    "code": "5434",
+    "name": "崇越",
+    "market": "tse"
+  },
+  {
+    "code": "5469",
+    "name": "瀚宇博",
+    "market": "tse"
+  },
+  {
+    "code": "5471",
+    "name": "松翰",
+    "market": "tse"
+  },
+  {
+    "code": "5484",
+    "name": "慧友",
+    "market": "tse"
+  },
+  {
+    "code": "5515",
+    "name": "建國",
+    "market": "tse"
+  },
+  {
+    "code": "5519",
+    "name": "隆大",
+    "market": "tse"
+  },
+  {
+    "code": "5521",
+    "name": "工信",
+    "market": "tse"
+  },
+  {
+    "code": "5522",
+    "name": "遠雄",
+    "market": "tse"
+  },
+  {
+    "code": "5525",
+    "name": "順天",
+    "market": "tse"
+  },
+  {
+    "code": "5531",
+    "name": "鄉林",
+    "market": "tse"
+  },
+  {
+    "code": "5533",
+    "name": "皇鼎",
+    "market": "tse"
+  },
+  {
+    "code": "5534",
+    "name": "長虹",
+    "market": "tse"
+  },
+  {
+    "code": "5538",
+    "name": "東明-KY",
+    "market": "tse"
+  },
+  {
+    "code": "5546",
+    "name": "永固-KY",
+    "market": "tse"
+  },
+  {
+    "code": "5607",
+    "name": "遠雄港",
+    "market": "tse"
+  },
+  {
+    "code": "5608",
+    "name": "四維航",
+    "market": "tse"
+  },
+  {
+    "code": "5706",
+    "name": "鳳凰",
+    "market": "tse"
+  },
+  {
+    "code": "5871",
+    "name": "中租-KY",
+    "market": "tse"
+  },
+  {
+    "code": "5871A",
+    "name": "中租-KY甲特",
+    "market": "tse"
+  },
+  {
+    "code": "5876",
+    "name": "上海商銀",
+    "market": "tse"
+  },
+  {
+    "code": "5880",
+    "name": "合庫金",
+    "market": "tse"
+  },
+  {
+    "code": "5906",
+    "name": "台南-KY",
+    "market": "tse"
+  },
+  {
+    "code": "5907",
+    "name": "大洋-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6005",
+    "name": "群益證",
+    "market": "tse"
+  },
+  {
+    "code": "6024",
+    "name": "群益期",
+    "market": "tse"
+  },
+  {
+    "code": "6108",
+    "name": "競國",
+    "market": "tse"
+  },
+  {
+    "code": "6112",
+    "name": "邁達特",
+    "market": "tse"
+  },
+  {
+    "code": "6115",
+    "name": "鎰勝",
+    "market": "tse"
+  },
+  {
+    "code": "6116",
+    "name": "彩晶",
+    "market": "tse"
+  },
+  {
+    "code": "6117",
+    "name": "迎廣",
+    "market": "tse"
+  },
+  {
+    "code": "6120",
+    "name": "達運",
+    "market": "tse"
+  },
+  {
+    "code": "6128",
+    "name": "上福",
+    "market": "tse"
+  },
+  {
+    "code": "6133",
+    "name": "金橋",
+    "market": "tse"
+  },
+  {
+    "code": "6136",
+    "name": "富爾特",
+    "market": "tse"
+  },
+  {
+    "code": "6139",
+    "name": "亞翔",
+    "market": "tse"
+  },
+  {
+    "code": "6141",
+    "name": "柏承",
+    "market": "tse"
+  },
+  {
+    "code": "6142",
+    "name": "友勁",
+    "market": "tse"
+  },
+  {
+    "code": "6152",
+    "name": "百一",
+    "market": "tse"
+  },
+  {
+    "code": "6153",
+    "name": "嘉聯益",
+    "market": "tse"
+  },
+  {
+    "code": "6155",
+    "name": "鈞寶",
+    "market": "tse"
+  },
+  {
+    "code": "6164",
+    "name": "華興",
+    "market": "tse"
+  },
+  {
+    "code": "6165",
+    "name": "浪凡",
+    "market": "tse"
+  },
+  {
+    "code": "6166",
+    "name": "凌華",
+    "market": "tse"
+  },
+  {
+    "code": "6168",
+    "name": "宏齊",
+    "market": "tse"
+  },
+  {
+    "code": "6176",
+    "name": "瑞儀",
+    "market": "tse"
+  },
+  {
+    "code": "6177",
+    "name": "達麗",
+    "market": "tse"
+  },
+  {
+    "code": "6183",
+    "name": "關貿",
+    "market": "tse"
+  },
+  {
+    "code": "6184",
+    "name": "大豐電",
+    "market": "tse"
+  },
+  {
+    "code": "6189",
+    "name": "豐藝",
+    "market": "tse"
+  },
+  {
+    "code": "6191",
+    "name": "精成科",
+    "market": "tse"
+  },
+  {
+    "code": "6192",
+    "name": "巨路",
+    "market": "tse"
+  },
+  {
+    "code": "6196",
+    "name": "帆宣",
+    "market": "tse"
+  },
+  {
+    "code": "6197",
+    "name": "佳必琪",
+    "market": "tse"
+  },
+  {
+    "code": "6201",
+    "name": "亞弘電",
+    "market": "tse"
+  },
+  {
+    "code": "6202",
+    "name": "盛群",
+    "market": "tse"
+  },
+  {
+    "code": "6205",
+    "name": "詮欣",
+    "market": "tse"
+  },
+  {
+    "code": "6206",
+    "name": "飛捷",
+    "market": "tse"
+  },
+  {
+    "code": "6209",
+    "name": "今國光",
+    "market": "tse"
+  },
+  {
+    "code": "6213",
+    "name": "聯茂",
+    "market": "tse"
+  },
+  {
+    "code": "6214",
+    "name": "精誠",
+    "market": "tse"
+  },
+  {
+    "code": "6215",
+    "name": "和椿",
+    "market": "tse"
+  },
+  {
+    "code": "6216",
+    "name": "居易",
+    "market": "tse"
+  },
+  {
+    "code": "6224",
+    "name": "聚鼎",
+    "market": "tse"
+  },
+  {
+    "code": "6225",
+    "name": "天瀚",
+    "market": "tse"
+  },
+  {
+    "code": "6226",
+    "name": "光鼎",
+    "market": "tse"
+  },
+  {
+    "code": "6230",
+    "name": "尼得科超眾",
+    "market": "tse"
+  },
+  {
+    "code": "6235",
+    "name": "華孚",
+    "market": "tse"
+  },
+  {
+    "code": "6239",
+    "name": "力成",
+    "market": "tse"
+  },
+  {
+    "code": "6243",
+    "name": "迅杰",
+    "market": "tse"
+  },
+  {
+    "code": "6257",
+    "name": "矽格",
+    "market": "tse"
+  },
+  {
+    "code": "6269",
+    "name": "台郡",
+    "market": "tse"
+  },
+  {
+    "code": "6271",
+    "name": "同欣電",
+    "market": "tse"
+  },
+  {
+    "code": "6272",
+    "name": "驊陞",
+    "market": "tse"
+  },
+  {
+    "code": "6277",
+    "name": "宏正",
+    "market": "tse"
+  },
+  {
+    "code": "6278",
+    "name": "台表科",
+    "market": "tse"
+  },
+  {
+    "code": "6281",
+    "name": "全國電",
+    "market": "tse"
+  },
+  {
+    "code": "6282",
+    "name": "康舒",
+    "market": "tse"
+  },
+  {
+    "code": "6283",
+    "name": "淳安",
+    "market": "tse"
+  },
+  {
+    "code": "6285",
+    "name": "啟碁",
+    "market": "tse"
+  },
+  {
+    "code": "6405",
+    "name": "悅城",
+    "market": "tse"
+  },
+  {
+    "code": "6409",
+    "name": "旭隼",
+    "market": "tse"
+  },
+  {
+    "code": "6412",
+    "name": "群電",
+    "market": "tse"
+  },
+  {
+    "code": "6414",
+    "name": "樺漢",
+    "market": "tse"
+  },
+  {
+    "code": "6415",
+    "name": "矽力*-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6416",
+    "name": "瑞祺電通",
+    "market": "tse"
+  },
+  {
+    "code": "6426",
+    "name": "統新",
+    "market": "tse"
+  },
+  {
+    "code": "6431",
+    "name": "光麗-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6438",
+    "name": "迅得",
+    "market": "tse"
+  },
+  {
+    "code": "6442",
+    "name": "光聖",
+    "market": "tse"
+  },
+  {
+    "code": "6443",
+    "name": "元晶",
+    "market": "tse"
+  },
+  {
+    "code": "6446",
+    "name": "藥華藥",
+    "market": "tse"
+  },
+  {
+    "code": "6449",
+    "name": "鈺邦",
+    "market": "tse"
+  },
+  {
+    "code": "6451",
+    "name": "訊芯-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6456",
+    "name": "GIS-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6464",
+    "name": "台數科",
+    "market": "tse"
+  },
+  {
+    "code": "6472",
+    "name": "保瑞",
+    "market": "tse"
+  },
+  {
+    "code": "6477",
+    "name": "安集",
+    "market": "tse"
+  },
+  {
+    "code": "6491",
+    "name": "晶碩",
+    "market": "tse"
+  },
+  {
+    "code": "6504",
+    "name": "南六",
+    "market": "tse"
+  },
+  {
+    "code": "6505",
+    "name": "台塑化",
+    "market": "tse"
+  },
+  {
+    "code": "6515",
+    "name": "穎崴",
+    "market": "tse"
+  },
+  {
+    "code": "6525",
+    "name": "捷敏-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6526",
+    "name": "達發",
+    "market": "tse"
+  },
+  {
+    "code": "6531",
+    "name": "愛普*",
+    "market": "tse"
+  },
+  {
+    "code": "6533",
+    "name": "晶心科",
+    "market": "tse"
+  },
+  {
+    "code": "6534",
+    "name": "正瀚-創",
+    "market": "tse"
+  },
+  {
+    "code": "6541",
+    "name": "泰福-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6550",
+    "name": "北極星藥業-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6552",
+    "name": "易華電",
+    "market": "tse"
+  },
+  {
+    "code": "6558",
+    "name": "興能高",
+    "market": "tse"
+  },
+  {
+    "code": "6573",
+    "name": "虹揚-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6579",
+    "name": "研揚",
+    "market": "tse"
+  },
+  {
+    "code": "6581",
+    "name": "鋼聯",
+    "market": "tse"
+  },
+  {
+    "code": "6582",
+    "name": "申豐",
+    "market": "tse"
+  },
+  {
+    "code": "6585",
+    "name": "鼎基",
+    "market": "tse"
+  },
+  {
+    "code": "6589",
+    "name": "台康生技",
+    "market": "tse"
+  },
+  {
+    "code": "6591",
+    "name": "動力-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6592",
+    "name": "和潤企業",
+    "market": "tse"
+  },
+  {
+    "code": "6592A",
+    "name": "和潤企業甲特",
+    "market": "tse"
+  },
+  {
+    "code": "6592B",
+    "name": "和潤企業乙特",
+    "market": "tse"
+  },
+  {
+    "code": "6598",
+    "name": "ABC-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6605",
+    "name": "帝寶",
+    "market": "tse"
+  },
+  {
+    "code": "6606",
+    "name": "建德工業",
+    "market": "tse"
+  },
+  {
+    "code": "6614",
+    "name": "資拓宏宇",
+    "market": "tse"
+  },
+  {
+    "code": "6625",
+    "name": "必應",
+    "market": "tse"
+  },
+  {
+    "code": "6641",
+    "name": "基士德-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6645",
+    "name": "金萬林-創",
+    "market": "tse"
+  },
+  {
+    "code": "6655",
+    "name": "科定",
+    "market": "tse"
+  },
+  {
+    "code": "6657",
+    "name": "華安",
+    "market": "tse"
+  },
+  {
+    "code": "6658",
+    "name": "聯策",
+    "market": "tse"
+  },
+  {
+    "code": "6666",
+    "name": "羅麗芬-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6668",
+    "name": "中揚光",
+    "market": "tse"
+  },
+  {
+    "code": "6669",
+    "name": "緯穎",
+    "market": "tse"
+  },
+  {
+    "code": "6670",
+    "name": "復盛應用",
+    "market": "tse"
+  },
+  {
+    "code": "6671",
+    "name": "三能-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6672",
+    "name": "騰輝電子-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6674",
+    "name": "鋐寶科技",
+    "market": "tse"
+  },
+  {
+    "code": "6689",
+    "name": "伊雲谷",
+    "market": "tse"
+  },
+  {
+    "code": "6691",
+    "name": "洋基工程",
+    "market": "tse"
+  },
+  {
+    "code": "6695",
+    "name": "芯鼎",
+    "market": "tse"
+  },
+  {
+    "code": "6698",
+    "name": "旭暉應材",
+    "market": "tse"
+  },
+  {
+    "code": "6706",
+    "name": "惠特",
+    "market": "tse"
+  },
+  {
+    "code": "6715",
+    "name": "嘉基",
+    "market": "tse"
+  },
+  {
+    "code": "6719",
+    "name": "力智",
+    "market": "tse"
+  },
+  {
+    "code": "6722",
+    "name": "輝創",
+    "market": "tse"
+  },
+  {
+    "code": "6742",
+    "name": "澤米",
+    "market": "tse"
+  },
+  {
+    "code": "6743",
+    "name": "安普新",
+    "market": "tse"
+  },
+  {
+    "code": "6753",
+    "name": "龍德造船",
+    "market": "tse"
+  },
+  {
+    "code": "6754",
+    "name": "匯僑設計",
+    "market": "tse"
+  },
+  {
+    "code": "6756",
+    "name": "威鋒電子",
+    "market": "tse"
+  },
+  {
+    "code": "6757",
+    "name": "台灣虎航",
+    "market": "tse"
+  },
+  {
+    "code": "6768",
+    "name": "志強-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6770",
+    "name": "力積電",
+    "market": "tse"
+  },
+  {
+    "code": "6771",
+    "name": "平和環保-創",
+    "market": "tse"
+  },
+  {
+    "code": "6776",
+    "name": "展碁國際",
+    "market": "tse"
+  },
+  {
+    "code": "6781",
+    "name": "AES-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6782",
+    "name": "視陽",
+    "market": "tse"
+  },
+  {
+    "code": "6789",
+    "name": "采鈺",
+    "market": "tse"
+  },
+  {
+    "code": "6790",
+    "name": "永豐實",
+    "market": "tse"
+  },
+  {
+    "code": "6792",
+    "name": "詠業",
+    "market": "tse"
+  },
+  {
+    "code": "6794",
+    "name": "向榮生技",
+    "market": "tse"
+  },
+  {
+    "code": "6796",
+    "name": "晉弘",
+    "market": "tse"
+  },
+  {
+    "code": "6799",
+    "name": "來頡",
+    "market": "tse"
+  },
+  {
+    "code": "6805",
+    "name": "富世達",
+    "market": "tse"
+  },
+  {
+    "code": "6806",
+    "name": "森崴能源",
+    "market": "tse"
+  },
+  {
+    "code": "6807",
+    "name": "峰源-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6830",
+    "name": "汎銓",
+    "market": "tse"
+  },
+  {
+    "code": "6831",
+    "name": "邁科",
+    "market": "tse"
+  },
+  {
+    "code": "6834",
+    "name": "天二科技",
+    "market": "tse"
+  },
+  {
+    "code": "6835",
+    "name": "圓裕",
+    "market": "tse"
+  },
+  {
+    "code": "6838",
+    "name": "台新藥",
+    "market": "tse"
+  },
+  {
+    "code": "6854",
+    "name": "錼創科技-KY創",
+    "market": "tse"
+  },
+  {
+    "code": "6861",
+    "name": "睿生光電",
+    "market": "tse"
+  },
+  {
+    "code": "6862",
+    "name": "三集瑞-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6863",
+    "name": "永道-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6869",
+    "name": "雲豹能源",
+    "market": "tse"
+  },
+  {
+    "code": "6873",
+    "name": "泓德能源",
+    "market": "tse"
+  },
+  {
+    "code": "6885",
+    "name": "全福生技",
+    "market": "tse"
+  },
+  {
+    "code": "6887",
+    "name": "寶綠特-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6890",
+    "name": "來億-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6901",
+    "name": "鑽石投資",
+    "market": "tse"
+  },
+  {
+    "code": "6902",
+    "name": "GOGOLOOK",
+    "market": "tse"
+  },
+  {
+    "code": "6906",
+    "name": "現觀科",
+    "market": "tse"
+  },
+  {
+    "code": "6908",
+    "name": "宏碁遊戲-創",
+    "market": "tse"
+  },
+  {
+    "code": "6909",
+    "name": "創控",
+    "market": "tse"
+  },
+  {
+    "code": "6914",
+    "name": "阜爾運通",
+    "market": "tse"
+  },
+  {
+    "code": "6916",
+    "name": "華凌",
+    "market": "tse"
+  },
+  {
+    "code": "6918",
+    "name": "愛派司",
+    "market": "tse"
+  },
+  {
+    "code": "6919",
+    "name": "康霈*",
+    "market": "tse"
+  },
+  {
+    "code": "6921",
+    "name": "嘉雨思-創",
+    "market": "tse"
+  },
+  {
+    "code": "6923",
+    "name": "中台",
+    "market": "tse"
+  },
+  {
+    "code": "6924",
+    "name": "榮惠-KY創",
+    "market": "tse"
+  },
+  {
+    "code": "6928",
+    "name": "攸泰科技",
+    "market": "tse"
+  },
+  {
+    "code": "6931",
+    "name": "青松健康",
+    "market": "tse"
+  },
+  {
+    "code": "6933",
+    "name": "AMAX-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6934",
+    "name": "心誠鎂",
+    "market": "tse"
+  },
+  {
+    "code": "6936",
+    "name": "永鴻生技",
+    "market": "tse"
+  },
+  {
+    "code": "6937",
+    "name": "天虹",
+    "market": "tse"
+  },
+  {
+    "code": "6944",
+    "name": "兆聯實業",
+    "market": "tse"
+  },
+  {
+    "code": "6949",
+    "name": "沛爾生醫-創",
+    "market": "tse"
+  },
+  {
+    "code": "6951",
+    "name": "青新-創",
+    "market": "tse"
+  },
+  {
+    "code": "6952",
+    "name": "大武山",
+    "market": "tse"
+  },
+  {
+    "code": "6955",
+    "name": "邦睿生技-創",
+    "market": "tse"
+  },
+  {
+    "code": "6957",
+    "name": "裕慶-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6958",
+    "name": "日盛台駿",
+    "market": "tse"
+  },
+  {
+    "code": "6958A",
+    "name": "日盛台駿甲特",
+    "market": "tse"
+  },
+  {
+    "code": "6962",
+    "name": "奕力-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6965",
+    "name": "中傑-KY",
+    "market": "tse"
+  },
+  {
+    "code": "6969",
+    "name": "成信實業*-創",
+    "market": "tse"
+  },
+  {
+    "code": "6988",
+    "name": "威力暘-創",
+    "market": "tse"
+  },
+  {
+    "code": "6994",
+    "name": "富威電力",
+    "market": "tse"
+  },
+  {
+    "code": "7610",
+    "name": "聯友金屬-創",
+    "market": "tse"
+  },
+  {
+    "code": "7631",
+    "name": "聚賢研發-創",
+    "market": "tse"
+  },
+  {
+    "code": "7705",
+    "name": "三商餐飲",
+    "market": "tse"
+  },
+  {
+    "code": "7711",
+    "name": "永擎",
+    "market": "tse"
+  },
+  {
+    "code": "7721",
+    "name": "微程式",
+    "market": "tse"
+  },
+  {
+    "code": "7722",
+    "name": "LINEPAY",
+    "market": "tse"
+  },
+  {
+    "code": "7730",
+    "name": "暉盛-創",
+    "market": "tse"
+  },
+  {
+    "code": "7732",
+    "name": "金興精密",
+    "market": "tse"
+  },
+  {
+    "code": "7736",
+    "name": "虎山",
+    "market": "tse"
+  },
+  {
+    "code": "7740",
+    "name": "熙特爾-創",
+    "market": "tse"
+  },
+  {
+    "code": "7749",
+    "name": "意騰-KY",
+    "market": "tse"
+  },
+  {
+    "code": "7750",
+    "name": "新代",
+    "market": "tse"
+  },
+  {
+    "code": "7765",
+    "name": "中華資安",
+    "market": "tse"
+  },
+  {
+    "code": "7769",
+    "name": "鴻勁",
+    "market": "tse"
+  },
+  {
+    "code": "7780",
+    "name": "大研生醫*",
+    "market": "tse"
+  },
+  {
+    "code": "7786",
+    "name": "東方風能",
+    "market": "tse"
+  },
+  {
+    "code": "7788",
+    "name": "松川精密",
+    "market": "tse"
+  },
+  {
+    "code": "7791",
+    "name": "皇家可口",
+    "market": "tse"
+  },
+  {
+    "code": "7795",
+    "name": "長廣",
+    "market": "tse"
+  },
+  {
+    "code": "7799",
+    "name": "禾榮科",
+    "market": "tse"
+  },
+  {
+    "code": "7822",
+    "name": "倍利科",
+    "market": "tse"
+  },
+  {
+    "code": "7823",
+    "name": "奧義賽博-KY創",
+    "market": "tse"
+  },
+  {
+    "code": "8011",
+    "name": "台通",
+    "market": "tse"
+  },
+  {
+    "code": "8016",
+    "name": "矽創",
+    "market": "tse"
+  },
+  {
+    "code": "8021",
+    "name": "尖點",
+    "market": "tse"
+  },
+  {
+    "code": "8028",
+    "name": "昇陽半導體",
+    "market": "tse"
+  },
+  {
+    "code": "8033",
+    "name": "雷虎",
+    "market": "tse"
+  },
+  {
+    "code": "8039",
+    "name": "台虹",
+    "market": "tse"
+  },
+  {
+    "code": "8045",
+    "name": "達運光電",
+    "market": "tse"
+  },
+  {
+    "code": "8046",
+    "name": "南電",
+    "market": "tse"
+  },
+  {
+    "code": "8070",
+    "name": "長華*",
+    "market": "tse"
+  },
+  {
+    "code": "8072",
+    "name": "陞泰",
+    "market": "tse"
+  },
+  {
+    "code": "8081",
+    "name": "致新",
+    "market": "tse"
+  },
+  {
+    "code": "8101",
+    "name": "華冠",
+    "market": "tse"
+  },
+  {
+    "code": "8103",
+    "name": "瀚荃",
+    "market": "tse"
+  },
+  {
+    "code": "8104",
+    "name": "錸寶",
+    "market": "tse"
+  },
+  {
+    "code": "8105",
+    "name": "凌巨",
+    "market": "tse"
+  },
+  {
+    "code": "8110",
+    "name": "華東",
+    "market": "tse"
+  },
+  {
+    "code": "8112",
+    "name": "至上",
+    "market": "tse"
+  },
+  {
+    "code": "8112A",
+    "name": "至上甲特",
+    "market": "tse"
+  },
+  {
+    "code": "8114",
+    "name": "振樺電",
+    "market": "tse"
+  },
+  {
+    "code": "8131",
+    "name": "福懋科",
+    "market": "tse"
+  },
+  {
+    "code": "8150",
+    "name": "南茂",
+    "market": "tse"
+  },
+  {
+    "code": "8162",
+    "name": "微矽電子-創",
+    "market": "tse"
+  },
+  {
+    "code": "8163",
+    "name": "達方",
+    "market": "tse"
+  },
+  {
+    "code": "8201",
+    "name": "無敵",
+    "market": "tse"
+  },
+  {
+    "code": "8210",
+    "name": "勤誠",
+    "market": "tse"
+  },
+  {
+    "code": "8213",
+    "name": "志超",
+    "market": "tse"
+  },
+  {
+    "code": "8215",
+    "name": "明基材",
+    "market": "tse"
+  },
+  {
+    "code": "8222",
+    "name": "寶一",
+    "market": "tse"
+  },
+  {
+    "code": "8249",
+    "name": "菱光",
+    "market": "tse"
+  },
+  {
+    "code": "8261",
+    "name": "富鼎",
+    "market": "tse"
+  },
+  {
+    "code": "8271",
+    "name": "宇瞻",
+    "market": "tse"
+  },
+  {
+    "code": "8341",
+    "name": "日友",
+    "market": "tse"
+  },
+  {
+    "code": "8367",
+    "name": "建新國際",
+    "market": "tse"
+  },
+  {
+    "code": "8374",
+    "name": "羅昇",
+    "market": "tse"
+  },
+  {
+    "code": "8404",
+    "name": "百和興業-KY",
+    "market": "tse"
+  },
+  {
+    "code": "8411",
+    "name": "福貞-KY",
+    "market": "tse"
+  },
+  {
+    "code": "8422",
+    "name": "可寧衛*",
+    "market": "tse"
+  },
+  {
+    "code": "8429",
+    "name": "金麗-KY",
+    "market": "tse"
+  },
+  {
+    "code": "8438",
+    "name": "昶昕",
+    "market": "tse"
+  },
+  {
+    "code": "8442",
+    "name": "威宏-KY",
+    "market": "tse"
+  },
+  {
+    "code": "8443",
+    "name": "阿瘦",
+    "market": "tse"
+  },
+  {
+    "code": "8454",
+    "name": "富邦媒",
+    "market": "tse"
+  },
+  {
+    "code": "8462",
+    "name": "柏文",
+    "market": "tse"
+  },
+  {
+    "code": "8463",
+    "name": "潤泰材",
+    "market": "tse"
+  },
+  {
+    "code": "8464",
+    "name": "億豐",
+    "market": "tse"
+  },
+  {
+    "code": "8466",
+    "name": "美吉吉-KY",
+    "market": "tse"
+  },
+  {
+    "code": "8467",
+    "name": "波力-KY",
+    "market": "tse"
+  },
+  {
+    "code": "8473",
+    "name": "山林水",
+    "market": "tse"
+  },
+  {
+    "code": "8476",
+    "name": "台境*",
+    "market": "tse"
+  },
+  {
+    "code": "8478",
+    "name": "東哥遊艇",
+    "market": "tse"
+  },
+  {
+    "code": "8481",
+    "name": "政伸",
+    "market": "tse"
+  },
+  {
+    "code": "8482",
+    "name": "商億-KY",
+    "market": "tse"
+  },
+  {
+    "code": "8487",
+    "name": "愛爾達-創",
+    "market": "tse"
+  },
+  {
+    "code": "8488",
+    "name": "吉源-KY",
+    "market": "tse"
+  },
+  {
+    "code": "8499",
+    "name": "鼎炫-KY",
+    "market": "tse"
+  },
+  {
+    "code": "8926",
+    "name": "台汽電",
+    "market": "tse"
+  },
+  {
+    "code": "8940",
+    "name": "新天地",
+    "market": "tse"
+  },
+  {
+    "code": "8996",
+    "name": "高力",
+    "market": "tse"
+  },
+  {
+    "code": "9103",
+    "name": "美德醫療-DR",
+    "market": "tse"
+  },
+  {
+    "code": "910322",
+    "name": "康師傅-DR",
+    "market": "tse"
+  },
+  {
+    "code": "9105",
+    "name": "泰金寶-DR",
+    "market": "tse"
+  },
+  {
+    "code": "910861",
+    "name": "神州-DR",
+    "market": "tse"
+  },
+  {
+    "code": "9110",
+    "name": "越南控-DR",
+    "market": "tse"
+  },
+  {
+    "code": "911608",
+    "name": "明輝-DR",
+    "market": "tse"
+  },
+  {
+    "code": "911622",
+    "name": "泰聚亨-DR",
+    "market": "tse"
+  },
+  {
+    "code": "911868",
+    "name": "同方友友-DR",
+    "market": "tse"
+  },
+  {
+    "code": "912000",
+    "name": "晨訊科-DR",
+    "market": "tse"
+  },
+  {
+    "code": "9136",
+    "name": "巨騰-DR",
+    "market": "tse"
+  },
+  {
+    "code": "9802",
+    "name": "鈺齊-KY",
+    "market": "tse"
+  },
+  {
+    "code": "9902",
+    "name": "台火",
+    "market": "tse"
+  },
+  {
+    "code": "9904",
+    "name": "寶成",
+    "market": "tse"
+  },
+  {
+    "code": "9905",
+    "name": "大華",
+    "market": "tse"
+  },
+  {
+    "code": "9906",
+    "name": "欣巴巴",
+    "market": "tse"
+  },
+  {
+    "code": "9907",
+    "name": "統一實",
+    "market": "tse"
+  },
+  {
+    "code": "9908",
+    "name": "大台北",
+    "market": "tse"
+  },
+  {
+    "code": "9910",
+    "name": "豐泰",
+    "market": "tse"
+  },
+  {
+    "code": "9911",
+    "name": "櫻花",
+    "market": "tse"
+  },
+  {
+    "code": "9912",
+    "name": "偉聯",
+    "market": "tse"
+  },
+  {
+    "code": "9914",
+    "name": "美利達",
+    "market": "tse"
+  },
+  {
+    "code": "9917",
+    "name": "中保科",
+    "market": "tse"
+  },
+  {
+    "code": "9918",
+    "name": "欣天然",
+    "market": "tse"
+  },
+  {
+    "code": "9919",
+    "name": "康那香",
+    "market": "tse"
+  },
+  {
+    "code": "9921",
+    "name": "巨大",
+    "market": "tse"
+  },
+  {
+    "code": "9924",
+    "name": "福興",
+    "market": "tse"
+  },
+  {
+    "code": "9925",
+    "name": "新保",
+    "market": "tse"
+  },
+  {
+    "code": "9926",
+    "name": "新海",
+    "market": "tse"
+  },
+  {
+    "code": "9927",
+    "name": "泰銘",
+    "market": "tse"
+  },
+  {
+    "code": "9928",
+    "name": "中視",
+    "market": "tse"
+  },
+  {
+    "code": "9929",
+    "name": "秋雨",
+    "market": "tse"
+  },
+  {
+    "code": "9930",
+    "name": "中聯資源",
+    "market": "tse"
+  },
+  {
+    "code": "9931",
+    "name": "欣高",
+    "market": "tse"
+  },
+  {
+    "code": "9933",
+    "name": "中鼎",
+    "market": "tse"
+  },
+  {
+    "code": "9934",
+    "name": "成霖",
+    "market": "tse"
+  },
+  {
+    "code": "9935",
+    "name": "慶豐富",
+    "market": "tse"
+  },
+  {
+    "code": "9937",
+    "name": "全國",
+    "market": "tse"
+  },
+  {
+    "code": "9938",
+    "name": "百和",
+    "market": "tse"
+  },
+  {
+    "code": "9939",
+    "name": "宏全",
+    "market": "tse"
+  },
+  {
+    "code": "9940",
+    "name": "信義",
+    "market": "tse"
+  },
+  {
+    "code": "9941",
+    "name": "裕融",
+    "market": "tse"
+  },
+  {
+    "code": "9941A",
+    "name": "裕融甲特",
+    "market": "tse"
+  },
+  {
+    "code": "9942",
+    "name": "茂順",
+    "market": "tse"
+  },
+  {
+    "code": "9943",
+    "name": "好樂迪",
+    "market": "tse"
+  },
+  {
+    "code": "9944",
+    "name": "新麗",
+    "market": "tse"
+  },
+  {
+    "code": "9945",
+    "name": "潤泰新",
+    "market": "tse"
+  },
+  {
+    "code": "9946",
+    "name": "三發地產",
+    "market": "tse"
+  },
+  {
+    "code": "9955",
+    "name": "佳龍",
+    "market": "tse"
+  },
+  {
+    "code": "9958",
+    "name": "世紀鋼",
+    "market": "tse"
+  },
+  {
+    "code": "1240",
+    "name": "茂生農經",
+    "market": "otc"
+  },
+  {
+    "code": "1259",
+    "name": "安心食品服務",
+    "market": "otc"
+  },
+  {
+    "code": "1264",
+    "name": "德麥食品",
+    "market": "otc"
+  },
+  {
+    "code": "1268",
+    "name": "漢來美食",
+    "market": "otc"
+  },
+  {
+    "code": "1294",
+    "name": "漢田生技",
+    "market": "otc"
+  },
+  {
+    "code": "1295",
+    "name": "生合生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "1336",
+    "name": "台翰精密科技",
+    "market": "otc"
+  },
+  {
+    "code": "1565",
+    "name": "精華光學",
+    "market": "otc"
+  },
+  {
+    "code": "1569",
+    "name": "濱川企業",
+    "market": "otc"
+  },
+  {
+    "code": "1570",
+    "name": "力肯實業",
+    "market": "otc"
+  },
+  {
+    "code": "1580",
+    "name": "新麥企業",
+    "market": "otc"
+  },
+  {
+    "code": "1584",
+    "name": "精剛精密科技",
+    "market": "otc"
+  },
+  {
+    "code": "1586",
+    "name": "和勤精機",
+    "market": "otc"
+  },
+  {
+    "code": "1591",
+    "name": "英屬開曼群島商駿吉控股(股)公司",
+    "market": "otc"
+  },
+  {
+    "code": "1593",
+    "name": "祺驊",
+    "market": "otc"
+  },
+  {
+    "code": "1595",
+    "name": "川寶科技",
+    "market": "otc"
+  },
+  {
+    "code": "1599",
+    "name": "宏佳騰動力科技",
+    "market": "otc"
+  },
+  {
+    "code": "1742",
+    "name": "台灣蠟品",
+    "market": "otc"
+  },
+  {
+    "code": "1777",
+    "name": "生泰合成工業",
+    "market": "otc"
+  },
+  {
+    "code": "1781",
+    "name": "合世生醫科技",
+    "market": "otc"
+  },
+  {
+    "code": "1784",
+    "name": "訊聯生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "1785",
+    "name": "光洋應用材料科技",
+    "market": "otc"
+  },
+  {
+    "code": "1788",
+    "name": "杏昌生技",
+    "market": "otc"
+  },
+  {
+    "code": "1796",
+    "name": "金穎生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "1799",
+    "name": "易威生醫科技",
+    "market": "otc"
+  },
+  {
+    "code": "1813",
+    "name": "寶利徠光學科技",
+    "market": "otc"
+  },
+  {
+    "code": "1815",
+    "name": "富喬工業",
+    "market": "otc"
+  },
+  {
+    "code": "2035",
+    "name": "唐榮鐵工廠",
+    "market": "otc"
+  },
+  {
+    "code": "2061",
+    "name": "風青實業",
+    "market": "otc"
+  },
+  {
+    "code": "2063",
+    "name": "世鎧精密",
+    "market": "otc"
+  },
+  {
+    "code": "2064",
+    "name": "晉椿工業",
+    "market": "otc"
+  },
+  {
+    "code": "2065",
+    "name": "世豐螺絲",
+    "market": "otc"
+  },
+  {
+    "code": "2066",
+    "name": "世德工業",
+    "market": "otc"
+  },
+  {
+    "code": "2067",
+    "name": "嘉鋼精密工業",
+    "market": "otc"
+  },
+  {
+    "code": "2070",
+    "name": "精湛光學科技",
+    "market": "otc"
+  },
+  {
+    "code": "2073",
+    "name": "雄順金屬",
+    "market": "otc"
+  },
+  {
+    "code": "2221",
+    "name": "大甲永和機械工業",
+    "market": "otc"
+  },
+  {
+    "code": "2230",
+    "name": "泰茂實業",
+    "market": "otc"
+  },
+  {
+    "code": "2235",
+    "name": "謚源實業",
+    "market": "otc"
+  },
+  {
+    "code": "2596",
+    "name": "綠意開發",
+    "market": "otc"
+  },
+  {
+    "code": "2640",
+    "name": "台灣大車隊",
+    "market": "otc"
+  },
+  {
+    "code": "2641",
+    "name": "正德海運",
+    "market": "otc"
+  },
+  {
+    "code": "2643",
+    "name": "捷迅",
+    "market": "otc"
+  },
+  {
+    "code": "2718",
+    "name": "全心投資控股",
+    "market": "otc"
+  },
+  {
+    "code": "2719",
+    "name": "台鋼燦星國際旅行社",
+    "market": "otc"
+  },
+  {
+    "code": "2724",
+    "name": "藝舍國際創新",
+    "market": "otc"
+  },
+  {
+    "code": "2726",
+    "name": "雅茗天地",
+    "market": "otc"
+  },
+  {
+    "code": "2729",
+    "name": "瓦城泰統",
+    "market": "otc"
+  },
+  {
+    "code": "2732",
+    "name": "六角國際事業",
+    "market": "otc"
+  },
+  {
+    "code": "2734",
+    "name": "易飛網國際旅行社",
+    "market": "otc"
+  },
+  {
+    "code": "2736",
+    "name": "富野大飯店",
+    "market": "otc"
+  },
+  {
+    "code": "2740",
+    "name": "華軒地產",
+    "market": "otc"
+  },
+  {
+    "code": "2743",
+    "name": "山富國際旅行社",
+    "market": "otc"
+  },
+  {
+    "code": "2745",
+    "name": "五福旅行社",
+    "market": "otc"
+  },
+  {
+    "code": "2751",
+    "name": "王座國際餐飲",
+    "market": "otc"
+  },
+  {
+    "code": "2752",
+    "name": "豆府",
+    "market": "otc"
+  },
+  {
+    "code": "2754",
+    "name": "亞洲藏壽司",
+    "market": "otc"
+  },
+  {
+    "code": "2755",
+    "name": "揚秦國際企業",
+    "market": "otc"
+  },
+  {
+    "code": "2756",
+    "name": "聯發國際餐飲事業",
+    "market": "otc"
+  },
+  {
+    "code": "2916",
+    "name": "滿心企業",
+    "market": "otc"
+  },
+  {
+    "code": "2924",
+    "name": "開曼群島宏太",
+    "market": "otc"
+  },
+  {
+    "code": "2926",
+    "name": "誠品生活",
+    "market": "otc"
+  },
+  {
+    "code": "2937",
+    "name": "集雅社",
+    "market": "otc"
+  },
+  {
+    "code": "2941",
+    "name": "米斯特國際企業",
+    "market": "otc"
+  },
+  {
+    "code": "2947",
+    "name": "振宇五金",
+    "market": "otc"
+  },
+  {
+    "code": "2948",
+    "name": "寶陞國際",
+    "market": "otc"
+  },
+  {
+    "code": "2949",
+    "name": "欣新網",
+    "market": "otc"
+  },
+  {
+    "code": "3064",
+    "name": "泰偉電子",
+    "market": "otc"
+  },
+  {
+    "code": "3066",
+    "name": "李洲科技",
+    "market": "otc"
+  },
+  {
+    "code": "3067",
+    "name": "全域",
+    "market": "otc"
+  },
+  {
+    "code": "3071",
+    "name": "協禧電機",
+    "market": "otc"
+  },
+  {
+    "code": "3073",
+    "name": "天方能源科技",
+    "market": "otc"
+  },
+  {
+    "code": "3078",
+    "name": "僑威科技",
+    "market": "otc"
+  },
+  {
+    "code": "3081",
+    "name": "聯亞光電工業",
+    "market": "otc"
+  },
+  {
+    "code": "3083",
+    "name": "中華網龍",
+    "market": "otc"
+  },
+  {
+    "code": "3085",
+    "name": "台鋼新零售",
+    "market": "otc"
+  },
+  {
+    "code": "3086",
+    "name": "華義國際數位娛樂",
+    "market": "otc"
+  },
+  {
+    "code": "3088",
+    "name": "艾訊",
+    "market": "otc"
+  },
+  {
+    "code": "3093",
+    "name": "台灣港建",
+    "market": "otc"
+  },
+  {
+    "code": "3095",
+    "name": "及成企業",
+    "market": "otc"
+  },
+  {
+    "code": "3105",
+    "name": "穩懋半導體",
+    "market": "otc"
+  },
+  {
+    "code": "3114",
+    "name": "好德科技",
+    "market": "otc"
+  },
+  {
+    "code": "3115",
+    "name": "富育榮綱",
+    "market": "otc"
+  },
+  {
+    "code": "3118",
+    "name": "進階生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "3122",
+    "name": "笙泉科技",
+    "market": "otc"
+  },
+  {
+    "code": "3128",
+    "name": "昇銳智慧科技",
+    "market": "otc"
+  },
+  {
+    "code": "3131",
+    "name": "弘塑科技",
+    "market": "otc"
+  },
+  {
+    "code": "3141",
+    "name": "晶宏半導體",
+    "market": "otc"
+  },
+  {
+    "code": "3147",
+    "name": "大綜電腦系統",
+    "market": "otc"
+  },
+  {
+    "code": "3152",
+    "name": "璟德電子工業",
+    "market": "otc"
+  },
+  {
+    "code": "3158",
+    "name": "嘉實資訊",
+    "market": "otc"
+  },
+  {
+    "code": "3162",
+    "name": "精確實業",
+    "market": "otc"
+  },
+  {
+    "code": "3163",
+    "name": "波若威科技",
+    "market": "otc"
+  },
+  {
+    "code": "3169",
+    "name": "亞信電子",
+    "market": "otc"
+  },
+  {
+    "code": "3171",
+    "name": "炎洲流通",
+    "market": "otc"
+  },
+  {
+    "code": "3176",
+    "name": "基亞生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "3178",
+    "name": "公準精密工業",
+    "market": "otc"
+  },
+  {
+    "code": "3188",
+    "name": "鑫龍騰開發",
+    "market": "otc"
+  },
+  {
+    "code": "3191",
+    "name": "雲嘉南科技",
+    "market": "otc"
+  },
+  {
+    "code": "3205",
+    "name": "佰研生化科技",
+    "market": "otc"
+  },
+  {
+    "code": "3206",
+    "name": "志豐電子",
+    "market": "otc"
+  },
+  {
+    "code": "3207",
+    "name": "耀勝電子",
+    "market": "otc"
+  },
+  {
+    "code": "3211",
+    "name": "順達科技",
+    "market": "otc"
+  },
+  {
+    "code": "3213",
+    "name": "茂訊電腦",
+    "market": "otc"
+  },
+  {
+    "code": "3217",
+    "name": "優群科技",
+    "market": "otc"
+  },
+  {
+    "code": "3218",
+    "name": "大學光學科技",
+    "market": "otc"
+  },
+  {
+    "code": "3219",
+    "name": "倚強科技",
+    "market": "otc"
+  },
+  {
+    "code": "3221",
+    "name": "台灣嘉碩科技",
+    "market": "otc"
+  },
+  {
+    "code": "3224",
+    "name": "三顧",
+    "market": "otc"
+  },
+  {
+    "code": "3226",
+    "name": "龍鋒科技",
+    "market": "otc"
+  },
+  {
+    "code": "3227",
+    "name": "原相科技",
+    "market": "otc"
+  },
+  {
+    "code": "3228",
+    "name": "金麗科技",
+    "market": "otc"
+  },
+  {
+    "code": "3230",
+    "name": "錦明實業",
+    "market": "otc"
+  },
+  {
+    "code": "3232",
+    "name": "昱捷",
+    "market": "otc"
+  },
+  {
+    "code": "3234",
+    "name": "光環科技",
+    "market": "otc"
+  },
+  {
+    "code": "3236",
+    "name": "千如電機工業",
+    "market": "otc"
+  },
+  {
+    "code": "3252",
+    "name": "海灣國際開發(股)公司",
+    "market": "otc"
+  },
+  {
+    "code": "3259",
+    "name": "鑫創科技",
+    "market": "otc"
+  },
+  {
+    "code": "3260",
+    "name": "威剛科技",
+    "market": "otc"
+  },
+  {
+    "code": "3264",
+    "name": "欣銓科技",
+    "market": "otc"
+  },
+  {
+    "code": "3265",
+    "name": "台星科",
+    "market": "otc"
+  },
+  {
+    "code": "3268",
+    "name": "海德威電子工業",
+    "market": "otc"
+  },
+  {
+    "code": "3272",
+    "name": "東碩資訊",
+    "market": "otc"
+  },
+  {
+    "code": "3276",
+    "name": "宇環科技",
+    "market": "otc"
+  },
+  {
+    "code": "3284",
+    "name": "太普高精密影像",
+    "market": "otc"
+  },
+  {
+    "code": "3285",
+    "name": "微端科技",
+    "market": "otc"
+  },
+  {
+    "code": "3287",
+    "name": "廣寰科技",
+    "market": "otc"
+  },
+  {
+    "code": "3288",
+    "name": "點晶科技",
+    "market": "otc"
+  },
+  {
+    "code": "3289",
+    "name": "宜特科技",
+    "market": "otc"
+  },
+  {
+    "code": "3290",
+    "name": "東浦精密光電",
+    "market": "otc"
+  },
+  {
+    "code": "3293",
+    "name": "鈊象電子",
+    "market": "otc"
+  },
+  {
+    "code": "3294",
+    "name": "英濟",
+    "market": "otc"
+  },
+  {
+    "code": "3297",
+    "name": "杭特電子",
+    "market": "otc"
+  },
+  {
+    "code": "3303",
+    "name": "岱稜科技",
+    "market": "otc"
+  },
+  {
+    "code": "3306",
+    "name": "鼎天國際",
+    "market": "otc"
+  },
+  {
+    "code": "3310",
+    "name": "佳穎精密企業",
+    "market": "otc"
+  },
+  {
+    "code": "3313",
+    "name": "斐成開發科技",
+    "market": "otc"
+  },
+  {
+    "code": "3317",
+    "name": "尼克森微電子",
+    "market": "otc"
+  },
+  {
+    "code": "3322",
+    "name": "建舜電子製造",
+    "market": "otc"
+  },
+  {
+    "code": "3323",
+    "name": "加百裕工業",
+    "market": "otc"
+  },
+  {
+    "code": "3324",
+    "name": "雙鴻科技",
+    "market": "otc"
+  },
+  {
+    "code": "3325",
+    "name": "旭品科技",
+    "market": "otc"
+  },
+  {
+    "code": "3332",
+    "name": "幸康電子",
+    "market": "otc"
+  },
+  {
+    "code": "3339",
+    "name": "泰谷光電科技",
+    "market": "otc"
+  },
+  {
+    "code": "3349",
+    "name": "寶德科技",
+    "market": "otc"
+  },
+  {
+    "code": "3354",
+    "name": "律勝科技",
+    "market": "otc"
+  },
+  {
+    "code": "3357",
+    "name": "西北臺慶科技",
+    "market": "otc"
+  },
+  {
+    "code": "3360",
+    "name": "尚立",
+    "market": "otc"
+  },
+  {
+    "code": "3362",
+    "name": "先進光電科技",
+    "market": "otc"
+  },
+  {
+    "code": "3363",
+    "name": "上詮光纖通信",
+    "market": "otc"
+  },
+  {
+    "code": "3372",
+    "name": "台灣典範半導體",
+    "market": "otc"
+  },
+  {
+    "code": "3373",
+    "name": "熱映光電",
+    "market": "otc"
+  },
+  {
+    "code": "3374",
+    "name": "精材科技",
+    "market": "otc"
+  },
+  {
+    "code": "3379",
+    "name": "彬台科技",
+    "market": "otc"
+  },
+  {
+    "code": "3388",
+    "name": "崇越電通",
+    "market": "otc"
+  },
+  {
+    "code": "3390",
+    "name": "旭軟電子科技",
+    "market": "otc"
+  },
+  {
+    "code": "3402",
+    "name": "漢科系統科技",
+    "market": "otc"
+  },
+  {
+    "code": "3426",
+    "name": "台興電子企業",
+    "market": "otc"
+  },
+  {
+    "code": "3430",
+    "name": "奇鈦科技",
+    "market": "otc"
+  },
+  {
+    "code": "3434",
+    "name": "哲固資訊科技",
+    "market": "otc"
+  },
+  {
+    "code": "3438",
+    "name": "台灣類比科技",
+    "market": "otc"
+  },
+  {
+    "code": "3441",
+    "name": "聯一光電",
+    "market": "otc"
+  },
+  {
+    "code": "3444",
+    "name": "利機企業",
+    "market": "otc"
+  },
+  {
+    "code": "3455",
+    "name": "由田新技",
+    "market": "otc"
+  },
+  {
+    "code": "3465",
+    "name": "進泰電子科技",
+    "market": "otc"
+  },
+  {
+    "code": "3466",
+    "name": "德晉科技",
+    "market": "otc"
+  },
+  {
+    "code": "3467",
+    "name": "台灣精材",
+    "market": "otc"
+  },
+  {
+    "code": "3479",
+    "name": "安勤科技",
+    "market": "otc"
+  },
+  {
+    "code": "3483",
+    "name": "力致科技",
+    "market": "otc"
+  },
+  {
+    "code": "3484",
+    "name": "崧騰企業",
+    "market": "otc"
+  },
+  {
+    "code": "3489",
+    "name": "森寶開發",
+    "market": "otc"
+  },
+  {
+    "code": "3490",
+    "name": "單井工業",
+    "market": "otc"
+  },
+  {
+    "code": "3491",
+    "name": "昇達科技",
+    "market": "otc"
+  },
+  {
+    "code": "3492",
+    "name": "長盛科技",
+    "market": "otc"
+  },
+  {
+    "code": "3498",
+    "name": "陽程科技",
+    "market": "otc"
+  },
+  {
+    "code": "3499",
+    "name": "環天世通科技",
+    "market": "otc"
+  },
+  {
+    "code": "3508",
+    "name": "位速科技",
+    "market": "otc"
+  },
+  {
+    "code": "3511",
+    "name": "矽瑪科技",
+    "market": "otc"
+  },
+  {
+    "code": "3512",
+    "name": "皇龍開發",
+    "market": "otc"
+  },
+  {
+    "code": "3516",
+    "name": "亞帝歐光電",
+    "market": "otc"
+  },
+  {
+    "code": "3520",
+    "name": "華盈電子",
+    "market": "otc"
+  },
+  {
+    "code": "3521",
+    "name": "台鋼建設事業",
+    "market": "otc"
+  },
+  {
+    "code": "3522",
+    "name": "御嵿國際",
+    "market": "otc"
+  },
+  {
+    "code": "3523",
+    "name": "迎輝科技",
+    "market": "otc"
+  },
+  {
+    "code": "3526",
+    "name": "凡甲科技",
+    "market": "otc"
+  },
+  {
+    "code": "3527",
+    "name": "聚積科技",
+    "market": "otc"
+  },
+  {
+    "code": "3529",
+    "name": "力旺電子",
+    "market": "otc"
+  },
+  {
+    "code": "3531",
+    "name": "先益電子工業",
+    "market": "otc"
+  },
+  {
+    "code": "3537",
+    "name": "堡達實業",
+    "market": "otc"
+  },
+  {
+    "code": "3540",
+    "name": "曜越科技",
+    "market": "otc"
+  },
+  {
+    "code": "3541",
+    "name": "西柏科技",
+    "market": "otc"
+  },
+  {
+    "code": "3546",
+    "name": "宇峻奧汀科技",
+    "market": "otc"
+  },
+  {
+    "code": "3548",
+    "name": "兆利科技工業",
+    "market": "otc"
+  },
+  {
+    "code": "3551",
+    "name": "世禾科技",
+    "market": "otc"
+  },
+  {
+    "code": "3552",
+    "name": "同致電子企業",
+    "market": "otc"
+  },
+  {
+    "code": "3555",
+    "name": "博士旺創新",
+    "market": "otc"
+  },
+  {
+    "code": "3556",
+    "name": "禾瑞亞科技",
+    "market": "otc"
+  },
+  {
+    "code": "3558",
+    "name": "神準科技",
+    "market": "otc"
+  },
+  {
+    "code": "3564",
+    "name": "其陽科技",
+    "market": "otc"
+  },
+  {
+    "code": "3567",
+    "name": "逸昌科技",
+    "market": "otc"
+  },
+  {
+    "code": "3570",
+    "name": "大塚資訊科技",
+    "market": "otc"
+  },
+  {
+    "code": "3577",
+    "name": "泓格科技",
+    "market": "otc"
+  },
+  {
+    "code": "3580",
+    "name": "友威科技",
+    "market": "otc"
+  },
+  {
+    "code": "3581",
+    "name": "博磊科技",
+    "market": "otc"
+  },
+  {
+    "code": "3587",
+    "name": "閎康科技",
+    "market": "otc"
+  },
+  {
+    "code": "3594",
+    "name": "磐儀科技",
+    "market": "otc"
+  },
+  {
+    "code": "3597",
+    "name": "映興電子",
+    "market": "otc"
+  },
+  {
+    "code": "3609",
+    "name": "三一東林科技",
+    "market": "otc"
+  },
+  {
+    "code": "3611",
+    "name": "鼎翰科技",
+    "market": "otc"
+  },
+  {
+    "code": "3615",
+    "name": "安可光電",
+    "market": "otc"
+  },
+  {
+    "code": "3623",
+    "name": "富晶通科技",
+    "market": "otc"
+  },
+  {
+    "code": "3624",
+    "name": "光頡科技",
+    "market": "otc"
+  },
+  {
+    "code": "3625",
+    "name": "西勝國際",
+    "market": "otc"
+  },
+  {
+    "code": "3628",
+    "name": "盈正豫順電子",
+    "market": "otc"
+  },
+  {
+    "code": "3629",
+    "name": "地心引力",
+    "market": "otc"
+  },
+  {
+    "code": "3630",
+    "name": "新鉅科技",
+    "market": "otc"
+  },
+  {
+    "code": "3631",
+    "name": "晟楠科技",
+    "market": "otc"
+  },
+  {
+    "code": "3632",
+    "name": "研勤科技",
+    "market": "otc"
+  },
+  {
+    "code": "3646",
+    "name": "艾恩特精密工業",
+    "market": "otc"
+  },
+  {
+    "code": "3663",
+    "name": "鑫科材料科技",
+    "market": "otc"
+  },
+  {
+    "code": "3664",
+    "name": "安瑞科技",
+    "market": "otc"
+  },
+  {
+    "code": "3666",
+    "name": "光耀科技",
+    "market": "otc"
+  },
+  {
+    "code": "3672",
+    "name": "康聯訊科技",
+    "market": "otc"
+  },
+  {
+    "code": "3675",
+    "name": "德微科技",
+    "market": "otc"
+  },
+  {
+    "code": "3680",
+    "name": "家登精密工業",
+    "market": "otc"
+  },
+  {
+    "code": "3684",
+    "name": "榮昌科技",
+    "market": "otc"
+  },
+  {
+    "code": "3685",
+    "name": "元創精密車業",
+    "market": "otc"
+  },
+  {
+    "code": "3687",
+    "name": "茂為歐買尬數位科技",
+    "market": "otc"
+  },
+  {
+    "code": "3689",
+    "name": "湧德電子",
+    "market": "otc"
+  },
+  {
+    "code": "3691",
+    "name": "碩禾電子材料",
+    "market": "otc"
+  },
+  {
+    "code": "3693",
+    "name": "營邦企業",
+    "market": "otc"
+  },
+  {
+    "code": "3707",
+    "name": "漢磊科技",
+    "market": "otc"
+  },
+  {
+    "code": "3709",
+    "name": "鑫聯大投資控股",
+    "market": "otc"
+  },
+  {
+    "code": "3710",
+    "name": "連展投資控股",
+    "market": "otc"
+  },
+  {
+    "code": "3713",
+    "name": "新晶投資控股",
+    "market": "otc"
+  },
+  {
+    "code": "4102",
+    "name": "永日化學工業",
+    "market": "otc"
+  },
+  {
+    "code": "4105",
+    "name": "台灣東洋藥品工業",
+    "market": "otc"
+  },
+  {
+    "code": "4107",
+    "name": "邦特生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "4109",
+    "name": "加捷生醫",
+    "market": "otc"
+  },
+  {
+    "code": "4111",
+    "name": "濟生醫藥生技",
+    "market": "otc"
+  },
+  {
+    "code": "4113",
+    "name": "聯上實業",
+    "market": "otc"
+  },
+  {
+    "code": "4114",
+    "name": "健喬信元醫藥生技",
+    "market": "otc"
+  },
+  {
+    "code": "4116",
+    "name": "明基三豐醫療器材",
+    "market": "otc"
+  },
+  {
+    "code": "4120",
+    "name": "友華生技醫藥",
+    "market": "otc"
+  },
+  {
+    "code": "4121",
+    "name": "優盛醫學科技",
+    "market": "otc"
+  },
+  {
+    "code": "4123",
+    "name": "晟德大藥廠",
+    "market": "otc"
+  },
+  {
+    "code": "4126",
+    "name": "太平洋醫材",
+    "market": "otc"
+  },
+  {
+    "code": "4127",
+    "name": "天良生物科技企業",
+    "market": "otc"
+  },
+  {
+    "code": "4128",
+    "name": "中天生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "4129",
+    "name": "聯合骨科器材",
+    "market": "otc"
+  },
+  {
+    "code": "4130",
+    "name": "健亞生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "4131",
+    "name": "浩泰精準",
+    "market": "otc"
+  },
+  {
+    "code": "4138",
+    "name": "曜亞國際",
+    "market": "otc"
+  },
+  {
+    "code": "4139",
+    "name": "馬光保健控股",
+    "market": "otc"
+  },
+  {
+    "code": "4147",
+    "name": "中裕新藥",
+    "market": "otc"
+  },
+  {
+    "code": "4153",
+    "name": "鈺緯科技開發",
+    "market": "otc"
+  },
+  {
+    "code": "4154",
+    "name": "樂威科",
+    "market": "otc"
+  },
+  {
+    "code": "4157",
+    "name": "太景醫藥研發控股",
+    "market": "otc"
+  },
+  {
+    "code": "4160",
+    "name": "訊聯基因數位",
+    "market": "otc"
+  },
+  {
+    "code": "4161",
+    "name": "聿新生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "4162",
+    "name": "智擎生技製藥",
+    "market": "otc"
+  },
+  {
+    "code": "4163",
+    "name": "鐿鈦科技",
+    "market": "otc"
+  },
+  {
+    "code": "4166",
+    "name": "友霖生技醫藥",
+    "market": "otc"
+  },
+  {
+    "code": "4167",
+    "name": "松瑞製藥",
+    "market": "otc"
+  },
+  {
+    "code": "4168",
+    "name": "台灣醣聯生技醫藥",
+    "market": "otc"
+  },
+  {
+    "code": "4171",
+    "name": "瑞基海洋生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "4173",
+    "name": "久裕企業",
+    "market": "otc"
+  },
+  {
+    "code": "4174",
+    "name": "台灣浩鼎生技",
+    "market": "otc"
+  },
+  {
+    "code": "4175",
+    "name": "杏一醫療用品",
+    "market": "otc"
+  },
+  {
+    "code": "4183",
+    "name": "福永生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "4188",
+    "name": "安克生醫",
+    "market": "otc"
+  },
+  {
+    "code": "4192",
+    "name": "杏國新藥",
+    "market": "otc"
+  },
+  {
+    "code": "4198",
+    "name": "欣大健康投資控股",
+    "market": "otc"
+  },
+  {
+    "code": "4205",
+    "name": "中華食品實業",
+    "market": "otc"
+  },
+  {
+    "code": "4207",
+    "name": "環泰企業",
+    "market": "otc"
+  },
+  {
+    "code": "4303",
+    "name": "信立化學工業",
+    "market": "otc"
+  },
+  {
+    "code": "4304",
+    "name": "勝昱科技",
+    "market": "otc"
+  },
+  {
+    "code": "4305",
+    "name": "世坤塑膠",
+    "market": "otc"
+  },
+  {
+    "code": "4401",
+    "name": "東隆興業",
+    "market": "otc"
+  },
+  {
+    "code": "4402",
+    "name": "郡都開發",
+    "market": "otc"
+  },
+  {
+    "code": "4406",
+    "name": "新昕纖維",
+    "market": "otc"
+  },
+  {
+    "code": "4413",
+    "name": "飛寶企業",
+    "market": "otc"
+  },
+  {
+    "code": "4416",
+    "name": "三圓建設",
+    "market": "otc"
+  },
+  {
+    "code": "4417",
+    "name": "金洲海洋科技",
+    "market": "otc"
+  },
+  {
+    "code": "4419",
+    "name": "皇家國際美食",
+    "market": "otc"
+  },
+  {
+    "code": "4420",
+    "name": "光明絲織廠",
+    "market": "otc"
+  },
+  {
+    "code": "4430",
+    "name": "耀億工業",
+    "market": "otc"
+  },
+  {
+    "code": "4432",
+    "name": "銘旺實業",
+    "market": "otc"
+  },
+  {
+    "code": "4433",
+    "name": "興采實業",
+    "market": "otc"
+  },
+  {
+    "code": "4442",
+    "name": "開曼群島商竣邦國際",
+    "market": "otc"
+  },
+  {
+    "code": "4502",
+    "name": "健信科技工業",
+    "market": "otc"
+  },
+  {
+    "code": "4503",
+    "name": "金雨企業",
+    "market": "otc"
+  },
+  {
+    "code": "4506",
+    "name": "崇友實業(股)公司",
+    "market": "otc"
+  },
+  {
+    "code": "4510",
+    "name": "高鋒工業",
+    "market": "otc"
+  },
+  {
+    "code": "4513",
+    "name": "福裕事業",
+    "market": "otc"
+  },
+  {
+    "code": "4523",
+    "name": "永彰科技",
+    "market": "otc"
+  },
+  {
+    "code": "4527",
+    "name": "(方方土)霖冷凍機械",
+    "market": "otc"
+  },
+  {
+    "code": "4528",
+    "name": "江興鍛壓工業",
+    "market": "otc"
+  },
+  {
+    "code": "4529",
+    "name": "淳紳",
+    "market": "otc"
+  },
+  {
+    "code": "4530",
+    "name": "宏易創新國際",
+    "market": "otc"
+  },
+  {
+    "code": "4533",
+    "name": "協易機械工業",
+    "market": "otc"
+  },
+  {
+    "code": "4534",
+    "name": "慶騰精密科技",
+    "market": "otc"
+  },
+  {
+    "code": "4535",
+    "name": "至興精機",
+    "market": "otc"
+  },
+  {
+    "code": "4538",
+    "name": "大詠城機械",
+    "market": "otc"
+  },
+  {
+    "code": "4541",
+    "name": "晟田科技工業",
+    "market": "otc"
+  },
+  {
+    "code": "4542",
+    "name": "科嶠工業",
+    "market": "otc"
+  },
+  {
+    "code": "4543",
+    "name": "萬在工業",
+    "market": "otc"
+  },
+  {
+    "code": "4549",
+    "name": "桓達科技",
+    "market": "otc"
+  },
+  {
+    "code": "4550",
+    "name": "長佳機電工程",
+    "market": "otc"
+  },
+  {
+    "code": "4554",
+    "name": "橙的電子",
+    "market": "otc"
+  },
+  {
+    "code": "4556",
+    "name": "旭然國際",
+    "market": "otc"
+  },
+  {
+    "code": "4558",
+    "name": "寶緯工業",
+    "market": "otc"
+  },
+  {
+    "code": "4561",
+    "name": "健椿工業",
+    "market": "otc"
+  },
+  {
+    "code": "4563",
+    "name": "百德機械",
+    "market": "otc"
+  },
+  {
+    "code": "4568",
+    "name": "科際精密",
+    "market": "otc"
+  },
+  {
+    "code": "4577",
+    "name": "達航科技",
+    "market": "otc"
+  },
+  {
+    "code": "4580",
+    "name": "捷流閥業",
+    "market": "otc"
+  },
+  {
+    "code": "4584",
+    "name": "君帆工業",
+    "market": "otc"
+  },
+  {
+    "code": "4609",
+    "name": "唐鋒實業",
+    "market": "otc"
+  },
+  {
+    "code": "4702",
+    "name": "中美聯合實業",
+    "market": "otc"
+  },
+  {
+    "code": "4706",
+    "name": "大恭化學工業",
+    "market": "otc"
+  },
+  {
+    "code": "4707",
+    "name": "磐亞",
+    "market": "otc"
+  },
+  {
+    "code": "4711",
+    "name": "永純化學工業",
+    "market": "otc"
+  },
+  {
+    "code": "4714",
+    "name": "永捷創新科技",
+    "market": "otc"
+  },
+  {
+    "code": "4716",
+    "name": "大立高分子工業",
+    "market": "otc"
+  },
+  {
+    "code": "4721",
+    "name": "美琪瑪國際",
+    "market": "otc"
+  },
+  {
+    "code": "4726",
+    "name": "永昕生物醫藥",
+    "market": "otc"
+  },
+  {
+    "code": "4728",
+    "name": "雙美生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "4729",
+    "name": "熒茂光學",
+    "market": "otc"
+  },
+  {
+    "code": "4735",
+    "name": "豪展醫療科技",
+    "market": "otc"
+  },
+  {
+    "code": "4741",
+    "name": "泓瀚科技",
+    "market": "otc"
+  },
+  {
+    "code": "4743",
+    "name": "合一生技",
+    "market": "otc"
+  },
+  {
+    "code": "4744",
+    "name": "皇將科技",
+    "market": "otc"
+  },
+  {
+    "code": "4745",
+    "name": "合富醫療控股",
+    "market": "otc"
+  },
+  {
+    "code": "4747",
+    "name": "強生化學製藥廠",
+    "market": "otc"
+  },
+  {
+    "code": "4749",
+    "name": "新應材",
+    "market": "otc"
+  },
+  {
+    "code": "4754",
+    "name": "國碳科技",
+    "market": "otc"
+  },
+  {
+    "code": "4760",
+    "name": "勤凱科技",
+    "market": "otc"
+  },
+  {
+    "code": "4767",
+    "name": "誠泰工業科技",
+    "market": "otc"
+  },
+  {
+    "code": "4768",
+    "name": "晶呈科技",
+    "market": "otc"
+  },
+  {
+    "code": "4772",
+    "name": "台灣特品化學",
+    "market": "otc"
+  },
+  {
+    "code": "4804",
+    "name": "大略國際控股",
+    "market": "otc"
+  },
+  {
+    "code": "4806",
+    "name": "桂田文創娛樂",
+    "market": "otc"
+  },
+  {
+    "code": "4903",
+    "name": "聯合光纖通信",
+    "market": "otc"
+  },
+  {
+    "code": "4905",
+    "name": "台聯電訊",
+    "market": "otc"
+  },
+  {
+    "code": "4907",
+    "name": "富宇地產",
+    "market": "otc"
+  },
+  {
+    "code": "4908",
+    "name": "前鼎光電",
+    "market": "otc"
+  },
+  {
+    "code": "4909",
+    "name": "新復興微波通訊",
+    "market": "otc"
+  },
+  {
+    "code": "4911",
+    "name": "德英生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "4923",
+    "name": "力士科技",
+    "market": "otc"
+  },
+  {
+    "code": "4924",
+    "name": "欣厚科技",
+    "market": "otc"
+  },
+  {
+    "code": "4931",
+    "name": "新盛力科技",
+    "market": "otc"
+  },
+  {
+    "code": "4933",
+    "name": "友輝光電",
+    "market": "otc"
+  },
+  {
+    "code": "4939",
+    "name": "亞洲電材",
+    "market": "otc"
+  },
+  {
+    "code": "4946",
+    "name": "紅心辣椒娛樂科技",
+    "market": "otc"
+  },
+  {
+    "code": "4950",
+    "name": "金耘國際",
+    "market": "otc"
+  },
+  {
+    "code": "4951",
+    "name": "精拓科技",
+    "market": "otc"
+  },
+  {
+    "code": "4953",
+    "name": "緯創軟體",
+    "market": "otc"
+  },
+  {
+    "code": "4966",
+    "name": "譜瑞科技",
+    "market": "otc"
+  },
+  {
+    "code": "4971",
+    "name": "英特磊科技",
+    "market": "otc"
+  },
+  {
+    "code": "4972",
+    "name": "湯石照明科技",
+    "market": "otc"
+  },
+  {
+    "code": "4973",
+    "name": "廣穎電通",
+    "market": "otc"
+  },
+  {
+    "code": "4974",
+    "name": "亞泰影像科技",
+    "market": "otc"
+  },
+  {
+    "code": "4979",
+    "name": "華星光通科技",
+    "market": "otc"
+  },
+  {
+    "code": "4987",
+    "name": "科誠",
+    "market": "otc"
+  },
+  {
+    "code": "4991",
+    "name": "環宇通訊半導體控股",
+    "market": "otc"
+  },
+  {
+    "code": "4995",
+    "name": "晶達光電",
+    "market": "otc"
+  },
+  {
+    "code": "5009",
+    "name": "榮剛材料科技",
+    "market": "otc"
+  },
+  {
+    "code": "5011",
+    "name": "久陽精密",
+    "market": "otc"
+  },
+  {
+    "code": "5013",
+    "name": "強新工業",
+    "market": "otc"
+  },
+  {
+    "code": "5014",
+    "name": "建錩實業",
+    "market": "otc"
+  },
+  {
+    "code": "5015",
+    "name": "華祺工業",
+    "market": "otc"
+  },
+  {
+    "code": "5016",
+    "name": "松和工業",
+    "market": "otc"
+  },
+  {
+    "code": "5201",
+    "name": "凱衛資訊",
+    "market": "otc"
+  },
+  {
+    "code": "5202",
+    "name": "力新國際科技",
+    "market": "otc"
+  },
+  {
+    "code": "5205",
+    "name": "中茂能資系統整合科技(股)公司",
+    "market": "otc"
+  },
+  {
+    "code": "5206",
+    "name": "坤悅開發",
+    "market": "otc"
+  },
+  {
+    "code": "5209",
+    "name": "新鼎系統",
+    "market": "otc"
+  },
+  {
+    "code": "5210",
+    "name": "寶碩財務科技",
+    "market": "otc"
+  },
+  {
+    "code": "5211",
+    "name": "蒙恬科技",
+    "market": "otc"
+  },
+  {
+    "code": "5212",
+    "name": "凌網科技",
+    "market": "otc"
+  },
+  {
+    "code": "5213",
+    "name": "亞昕國際開發",
+    "market": "otc"
+  },
+  {
+    "code": "5220",
+    "name": "萬達光電科技",
+    "market": "otc"
+  },
+  {
+    "code": "5223",
+    "name": "安力國際",
+    "market": "otc"
+  },
+  {
+    "code": "5227",
+    "name": "蓋曼立凱電能科技(股)公司",
+    "market": "otc"
+  },
+  {
+    "code": "5228",
+    "name": "鈺鎧科技",
+    "market": "otc"
+  },
+  {
+    "code": "5230",
+    "name": "雷笛克光學",
+    "market": "otc"
+  },
+  {
+    "code": "5236",
+    "name": "凌陽創新科技",
+    "market": "otc"
+  },
+  {
+    "code": "5245",
+    "name": "智晶光電",
+    "market": "otc"
+  },
+  {
+    "code": "5251",
+    "name": "天鉞電子",
+    "market": "otc"
+  },
+  {
+    "code": "5263",
+    "name": "智崴資訊科技",
+    "market": "otc"
+  },
+  {
+    "code": "5272",
+    "name": "笙科電子",
+    "market": "otc"
+  },
+  {
+    "code": "5274",
+    "name": "信驊科技",
+    "market": "otc"
+  },
+  {
+    "code": "5276",
+    "name": "達輝",
+    "market": "otc"
+  },
+  {
+    "code": "5278",
+    "name": "尚凡國際創新科技",
+    "market": "otc"
+  },
+  {
+    "code": "5287",
+    "name": "數字科技",
+    "market": "otc"
+  },
+  {
+    "code": "5289",
+    "name": "宜鼎國際",
+    "market": "otc"
+  },
+  {
+    "code": "5291",
+    "name": "邑昇實業",
+    "market": "otc"
+  },
+  {
+    "code": "5299",
+    "name": "杰力科技",
+    "market": "otc"
+  },
+  {
+    "code": "5301",
+    "name": "寶得利國際",
+    "market": "otc"
+  },
+  {
+    "code": "5302",
+    "name": "太欣半導體",
+    "market": "otc"
+  },
+  {
+    "code": "5309",
+    "name": "系統電子工業",
+    "market": "otc"
+  },
+  {
+    "code": "5310",
+    "name": "天剛資訊",
+    "market": "otc"
+  },
+  {
+    "code": "5312",
+    "name": "寶島光學科技",
+    "market": "otc"
+  },
+  {
+    "code": "5314",
+    "name": "世紀民生科技",
+    "market": "otc"
+  },
+  {
+    "code": "5315",
+    "name": "光聯科技",
+    "market": "otc"
+  },
+  {
+    "code": "5321",
+    "name": "美而快國際",
+    "market": "otc"
+  },
+  {
+    "code": "5324",
+    "name": "士林開發",
+    "market": "otc"
+  },
+  {
+    "code": "5328",
+    "name": "華容",
+    "market": "otc"
+  },
+  {
+    "code": "5340",
+    "name": "建榮工業材料",
+    "market": "otc"
+  },
+  {
+    "code": "5344",
+    "name": "立衛科技",
+    "market": "otc"
+  },
+  {
+    "code": "5345",
+    "name": "馥鴻建設",
+    "market": "otc"
+  },
+  {
+    "code": "5347",
+    "name": "世界先進積體電路",
+    "market": "otc"
+  },
+  {
+    "code": "5348",
+    "name": "正能量智能",
+    "market": "otc"
+  },
+  {
+    "code": "5351",
+    "name": "鈺創科技",
+    "market": "otc"
+  },
+  {
+    "code": "5353",
+    "name": "台林電通",
+    "market": "otc"
+  },
+  {
+    "code": "5355",
+    "name": "佳總興業",
+    "market": "otc"
+  },
+  {
+    "code": "5356",
+    "name": "協益電子",
+    "market": "otc"
+  },
+  {
+    "code": "5364",
+    "name": "力麗觀光開發",
+    "market": "otc"
+  },
+  {
+    "code": "5371",
+    "name": "中強光電",
+    "market": "otc"
+  },
+  {
+    "code": "5381",
+    "name": "光譜電工",
+    "market": "otc"
+  },
+  {
+    "code": "5386",
+    "name": "青雲國際科技",
+    "market": "otc"
+  },
+  {
+    "code": "5392",
+    "name": "能率創新",
+    "market": "otc"
+  },
+  {
+    "code": "5398",
+    "name": "慕康生技醫藥",
+    "market": "otc"
+  },
+  {
+    "code": "5403",
+    "name": "中菲電腦",
+    "market": "otc"
+  },
+  {
+    "code": "5410",
+    "name": "國眾電腦",
+    "market": "otc"
+  },
+  {
+    "code": "5425",
+    "name": "台灣半導體",
+    "market": "otc"
+  },
+  {
+    "code": "5426",
+    "name": "振發實業",
+    "market": "otc"
+  },
+  {
+    "code": "5432",
+    "name": "新門科技",
+    "market": "otc"
+  },
+  {
+    "code": "5438",
+    "name": "東友科技",
+    "market": "otc"
+  },
+  {
+    "code": "5439",
+    "name": "高技企業",
+    "market": "otc"
+  },
+  {
+    "code": "5443",
+    "name": "均豪精密工業",
+    "market": "otc"
+  },
+  {
+    "code": "5450",
+    "name": "南良國際",
+    "market": "otc"
+  },
+  {
+    "code": "5452",
+    "name": "佶優科技",
+    "market": "otc"
+  },
+  {
+    "code": "5455",
+    "name": "昇益開發",
+    "market": "otc"
+  },
+  {
+    "code": "5457",
+    "name": "宣德科技",
+    "market": "otc"
+  },
+  {
+    "code": "5460",
+    "name": "同協電子",
+    "market": "otc"
+  },
+  {
+    "code": "5464",
+    "name": "霖宏科技",
+    "market": "otc"
+  },
+  {
+    "code": "5465",
+    "name": "富驊企業",
+    "market": "otc"
+  },
+  {
+    "code": "5468",
+    "name": "凱鈺科技",
+    "market": "otc"
+  },
+  {
+    "code": "5474",
+    "name": "聰泰科技開發",
+    "market": "otc"
+  },
+  {
+    "code": "5475",
+    "name": "德宏工業",
+    "market": "otc"
+  },
+  {
+    "code": "5478",
+    "name": "智冠科技",
+    "market": "otc"
+  },
+  {
+    "code": "5481",
+    "name": "新華泰富",
+    "market": "otc"
+  },
+  {
+    "code": "5483",
+    "name": "中美矽晶製品",
+    "market": "otc"
+  },
+  {
+    "code": "5487",
+    "name": "通泰積體電路",
+    "market": "otc"
+  },
+  {
+    "code": "5488",
+    "name": "松普科技",
+    "market": "otc"
+  },
+  {
+    "code": "5489",
+    "name": "彩富電子",
+    "market": "otc"
+  },
+  {
+    "code": "5490",
+    "name": "同亨科技",
+    "market": "otc"
+  },
+  {
+    "code": "5493",
+    "name": "三聯科技",
+    "market": "otc"
+  },
+  {
+    "code": "5498",
+    "name": "凱崴電子",
+    "market": "otc"
+  },
+  {
+    "code": "5508",
+    "name": "永信建設開發",
+    "market": "otc"
+  },
+  {
+    "code": "5511",
+    "name": "德昌營造",
+    "market": "otc"
+  },
+  {
+    "code": "5512",
+    "name": "力麒建設",
+    "market": "otc"
+  },
+  {
+    "code": "5514",
+    "name": "三豐建設",
+    "market": "otc"
+  },
+  {
+    "code": "5516",
+    "name": "雙喜營造",
+    "market": "otc"
+  },
+  {
+    "code": "5520",
+    "name": "力泰建設企業",
+    "market": "otc"
+  },
+  {
+    "code": "5523",
+    "name": "豐謙建設",
+    "market": "otc"
+  },
+  {
+    "code": "5529",
+    "name": "鉅陞國際開發",
+    "market": "otc"
+  },
+  {
+    "code": "5530",
+    "name": "龍巖",
+    "market": "otc"
+  },
+  {
+    "code": "5536",
+    "name": "聖暉工程科技",
+    "market": "otc"
+  },
+  {
+    "code": "5543",
+    "name": "桓鼎",
+    "market": "otc"
+  },
+  {
+    "code": "5547",
+    "name": "久舜營造",
+    "market": "otc"
+  },
+  {
+    "code": "5548",
+    "name": "安倉營造",
+    "market": "otc"
+  },
+  {
+    "code": "5601",
+    "name": "臺聯貨櫃通運",
+    "market": "otc"
+  },
+  {
+    "code": "5603",
+    "name": "陸海",
+    "market": "otc"
+  },
+  {
+    "code": "5604",
+    "name": "中連誠企業",
+    "market": "otc"
+  },
+  {
+    "code": "5609",
+    "name": "中菲行國際物流",
+    "market": "otc"
+  },
+  {
+    "code": "5701",
+    "name": "劍湖山世界",
+    "market": "otc"
+  },
+  {
+    "code": "5703",
+    "name": "亞都麗緻大飯店",
+    "market": "otc"
+  },
+  {
+    "code": "5704",
+    "name": "知本老爺大酒店",
+    "market": "otc"
+  },
+  {
+    "code": "5864",
+    "name": "致和證券",
+    "market": "otc"
+  },
+  {
+    "code": "5878",
+    "name": "台名保險經紀人",
+    "market": "otc"
+  },
+  {
+    "code": "5902",
+    "name": "德記洋行",
+    "market": "otc"
+  },
+  {
+    "code": "5903",
+    "name": "全家便利商店",
+    "market": "otc"
+  },
+  {
+    "code": "5904",
+    "name": "寶雅國際",
+    "market": "otc"
+  },
+  {
+    "code": "5905",
+    "name": "南仁湖育樂",
+    "market": "otc"
+  },
+  {
+    "code": "6015",
+    "name": "宏遠證券",
+    "market": "otc"
+  },
+  {
+    "code": "6016",
+    "name": "康和綜合證券",
+    "market": "otc"
+  },
+  {
+    "code": "6020",
+    "name": "大展證券",
+    "market": "otc"
+  },
+  {
+    "code": "6021",
+    "name": "美好證券",
+    "market": "otc"
+  },
+  {
+    "code": "6023",
+    "name": "元大期貨",
+    "market": "otc"
+  },
+  {
+    "code": "6026",
+    "name": "福邦證券",
+    "market": "otc"
+  },
+  {
+    "code": "6028",
+    "name": "公勝保險經紀人",
+    "market": "otc"
+  },
+  {
+    "code": "6101",
+    "name": "寬魚國際",
+    "market": "otc"
+  },
+  {
+    "code": "6103",
+    "name": "合邦電子",
+    "market": "otc"
+  },
+  {
+    "code": "6104",
+    "name": "創惟科技",
+    "market": "otc"
+  },
+  {
+    "code": "6109",
+    "name": "亞元科技",
+    "market": "otc"
+  },
+  {
+    "code": "6111",
+    "name": "光聚晶電聯合",
+    "market": "otc"
+  },
+  {
+    "code": "6113",
+    "name": "亞矽科技",
+    "market": "otc"
+  },
+  {
+    "code": "6114",
+    "name": "久威國際",
+    "market": "otc"
+  },
+  {
+    "code": "6118",
+    "name": "建達國際",
+    "market": "otc"
+  },
+  {
+    "code": "6121",
+    "name": "新普科技",
+    "market": "otc"
+  },
+  {
+    "code": "6122",
+    "name": "擎邦國際科技工程",
+    "market": "otc"
+  },
+  {
+    "code": "6123",
+    "name": "上奇科技",
+    "market": "otc"
+  },
+  {
+    "code": "6124",
+    "name": "業強科技",
+    "market": "otc"
+  },
+  {
+    "code": "6125",
+    "name": "廣運機械工程",
+    "market": "otc"
+  },
+  {
+    "code": "6126",
+    "name": "信音企業",
+    "market": "otc"
+  },
+  {
+    "code": "6127",
+    "name": "九豪精密陶瓷",
+    "market": "otc"
+  },
+  {
+    "code": "6129",
+    "name": "普誠科技",
+    "market": "otc"
+  },
+  {
+    "code": "6130",
+    "name": "上亞科技",
+    "market": "otc"
+  },
+  {
+    "code": "6134",
+    "name": "萬旭電業",
+    "market": "otc"
+  },
+  {
+    "code": "6138",
+    "name": "茂達電子",
+    "market": "otc"
+  },
+  {
+    "code": "6140",
+    "name": "訊達電腦",
+    "market": "otc"
+  },
+  {
+    "code": "6143",
+    "name": "振曜科技",
+    "market": "otc"
+  },
+  {
+    "code": "6144",
+    "name": "得利影視",
+    "market": "otc"
+  },
+  {
+    "code": "6146",
+    "name": "耕興",
+    "market": "otc"
+  },
+  {
+    "code": "6147",
+    "name": "頎邦科技",
+    "market": "otc"
+  },
+  {
+    "code": "6148",
+    "name": "驊宏資通",
+    "market": "otc"
+  },
+  {
+    "code": "6150",
+    "name": "撼訊科技",
+    "market": "otc"
+  },
+  {
+    "code": "6151",
+    "name": "晉倫科技",
+    "market": "otc"
+  },
+  {
+    "code": "6154",
+    "name": "順發電腦",
+    "market": "otc"
+  },
+  {
+    "code": "6156",
+    "name": "松上電子",
+    "market": "otc"
+  },
+  {
+    "code": "6158",
+    "name": "禾昌興業",
+    "market": "otc"
+  },
+  {
+    "code": "6160",
+    "name": "欣技資訊",
+    "market": "otc"
+  },
+  {
+    "code": "6161",
+    "name": "捷波資訊",
+    "market": "otc"
+  },
+  {
+    "code": "6163",
+    "name": "華電聯網",
+    "market": "otc"
+  },
+  {
+    "code": "6167",
+    "name": "久正光電",
+    "market": "otc"
+  },
+  {
+    "code": "6169",
+    "name": "昱泉國際",
+    "market": "otc"
+  },
+  {
+    "code": "6170",
+    "name": "統振",
+    "market": "otc"
+  },
+  {
+    "code": "6171",
+    "name": "大城地產",
+    "market": "otc"
+  },
+  {
+    "code": "6173",
+    "name": "信昌電子陶瓷",
+    "market": "otc"
+  },
+  {
+    "code": "6174",
+    "name": "安碁科技",
+    "market": "otc"
+  },
+  {
+    "code": "6175",
+    "name": "立敦科技",
+    "market": "otc"
+  },
+  {
+    "code": "6179",
+    "name": "亞通利大能源",
+    "market": "otc"
+  },
+  {
+    "code": "6180",
+    "name": "遊戲橘子數位科技",
+    "market": "otc"
+  },
+  {
+    "code": "6182",
+    "name": "合晶科技",
+    "market": "otc"
+  },
+  {
+    "code": "6185",
+    "name": "幃翔精密",
+    "market": "otc"
+  },
+  {
+    "code": "6186",
+    "name": "新潤興業",
+    "market": "otc"
+  },
+  {
+    "code": "6187",
+    "name": "萬潤科技",
+    "market": "otc"
+  },
+  {
+    "code": "6188",
+    "name": "廣明光電",
+    "market": "otc"
+  },
+  {
+    "code": "6190",
+    "name": "萬泰科技",
+    "market": "otc"
+  },
+  {
+    "code": "6194",
+    "name": "育富電子",
+    "market": "otc"
+  },
+  {
+    "code": "6195",
+    "name": "詩肯",
+    "market": "otc"
+  },
+  {
+    "code": "6198",
+    "name": "瑞築建設",
+    "market": "otc"
+  },
+  {
+    "code": "6199",
+    "name": "天品聯合企業",
+    "market": "otc"
+  },
+  {
+    "code": "6203",
+    "name": "海韻電子工業",
+    "market": "otc"
+  },
+  {
+    "code": "6204",
+    "name": "台灣艾華電子工業",
+    "market": "otc"
+  },
+  {
+    "code": "6207",
+    "name": "雷科",
+    "market": "otc"
+  },
+  {
+    "code": "6208",
+    "name": "日揚科技",
+    "market": "otc"
+  },
+  {
+    "code": "6210",
+    "name": "慶生電子",
+    "market": "otc"
+  },
+  {
+    "code": "6212",
+    "name": "理銘開發",
+    "market": "otc"
+  },
+  {
+    "code": "6217",
+    "name": "中國探針",
+    "market": "otc"
+  },
+  {
+    "code": "6218",
+    "name": "豪勉科技",
+    "market": "otc"
+  },
+  {
+    "code": "6219",
+    "name": "富旺國際開發",
+    "market": "otc"
+  },
+  {
+    "code": "6220",
+    "name": "岳豐科技",
+    "market": "otc"
+  },
+  {
+    "code": "6221",
+    "name": "晉泰科技",
+    "market": "otc"
+  },
+  {
+    "code": "6222",
+    "name": "立軒開發建設",
+    "market": "otc"
+  },
+  {
+    "code": "6223",
+    "name": "旺矽科技",
+    "market": "otc"
+  },
+  {
+    "code": "6227",
+    "name": "茂綸",
+    "market": "otc"
+  },
+  {
+    "code": "6228",
+    "name": "全譜科技",
+    "market": "otc"
+  },
+  {
+    "code": "6229",
+    "name": "研通科技",
+    "market": "otc"
+  },
+  {
+    "code": "6231",
+    "name": "系微",
+    "market": "otc"
+  },
+  {
+    "code": "6233",
+    "name": "旺玖科技",
+    "market": "otc"
+  },
+  {
+    "code": "6234",
+    "name": "高僑自動化科技",
+    "market": "otc"
+  },
+  {
+    "code": "6236",
+    "name": "中湛",
+    "market": "otc"
+  },
+  {
+    "code": "6237",
+    "name": "驊訊電子企業",
+    "market": "otc"
+  },
+  {
+    "code": "6240",
+    "name": "松崗國際興業",
+    "market": "otc"
+  },
+  {
+    "code": "6241",
+    "name": "鑫永洋科技",
+    "market": "otc"
+  },
+  {
+    "code": "6242",
+    "name": "立康生醫事業",
+    "market": "otc"
+  },
+  {
+    "code": "6244",
+    "name": "茂迪",
+    "market": "otc"
+  },
+  {
+    "code": "6245",
+    "name": "立端科技",
+    "market": "otc"
+  },
+  {
+    "code": "6246",
+    "name": "臺龍電子",
+    "market": "otc"
+  },
+  {
+    "code": "6248",
+    "name": "沛波鋼鐵",
+    "market": "otc"
+  },
+  {
+    "code": "6259",
+    "name": "百徽",
+    "market": "otc"
+  },
+  {
+    "code": "6261",
+    "name": "久元電子",
+    "market": "otc"
+  },
+  {
+    "code": "6263",
+    "name": "普萊德科技",
+    "market": "otc"
+  },
+  {
+    "code": "6264",
+    "name": "富裔實業",
+    "market": "otc"
+  },
+  {
+    "code": "6265",
+    "name": "方土昶",
+    "market": "otc"
+  },
+  {
+    "code": "6266",
+    "name": "泰詠電子",
+    "market": "otc"
+  },
+  {
+    "code": "6270",
+    "name": "倍微科技",
+    "market": "otc"
+  },
+  {
+    "code": "6274",
+    "name": "台燿科技",
+    "market": "otc"
+  },
+  {
+    "code": "6275",
+    "name": "元山科技工業",
+    "market": "otc"
+  },
+  {
+    "code": "6276",
+    "name": "安鈦克科技",
+    "market": "otc"
+  },
+  {
+    "code": "6279",
+    "name": "胡連精密",
+    "market": "otc"
+  },
+  {
+    "code": "6284",
+    "name": "佳邦科技",
+    "market": "otc"
+  },
+  {
+    "code": "6290",
+    "name": "良維科技",
+    "market": "otc"
+  },
+  {
+    "code": "6291",
+    "name": "沛亨半導體",
+    "market": "otc"
+  },
+  {
+    "code": "6292",
+    "name": "迅德興業",
+    "market": "otc"
+  },
+  {
+    "code": "6294",
+    "name": "智基科技開發",
+    "market": "otc"
+  },
+  {
+    "code": "6411",
+    "name": "晶焱科技",
+    "market": "otc"
+  },
+  {
+    "code": "6417",
+    "name": "韋僑科技",
+    "market": "otc"
+  },
+  {
+    "code": "6418",
+    "name": "詠昇電子",
+    "market": "otc"
+  },
+  {
+    "code": "6419",
+    "name": "京晨科技",
+    "market": "otc"
+  },
+  {
+    "code": "6423",
+    "name": "億而得微電子",
+    "market": "otc"
+  },
+  {
+    "code": "6425",
+    "name": "易發精機",
+    "market": "otc"
+  },
+  {
+    "code": "6432",
+    "name": "今展科技",
+    "market": "otc"
+  },
+  {
+    "code": "6435",
+    "name": "大中積體電路",
+    "market": "otc"
+  },
+  {
+    "code": "6441",
+    "name": "廣錠科技",
+    "market": "otc"
+  },
+  {
+    "code": "6461",
+    "name": "益得生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "6462",
+    "name": "神盾",
+    "market": "otc"
+  },
+  {
+    "code": "6465",
+    "name": "威潤科技",
+    "market": "otc"
+  },
+  {
+    "code": "6469",
+    "name": "大樹醫藥",
+    "market": "otc"
+  },
+  {
+    "code": "6470",
+    "name": "宇智網通",
+    "market": "otc"
+  },
+  {
+    "code": "6474",
+    "name": "華豫寧",
+    "market": "otc"
+  },
+  {
+    "code": "6482",
+    "name": "弘煜科技事業",
+    "market": "otc"
+  },
+  {
+    "code": "6485",
+    "name": "點序科技",
+    "market": "otc"
+  },
+  {
+    "code": "6486",
+    "name": "互動國際數位",
+    "market": "otc"
+  },
+  {
+    "code": "6488",
+    "name": "環球晶圓",
+    "market": "otc"
+  },
+  {
+    "code": "6492",
+    "name": "生華生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "6494",
+    "name": "九齊科技",
+    "market": "otc"
+  },
+  {
+    "code": "6496",
+    "name": "科懋生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "6498",
+    "name": "久禾光電",
+    "market": "otc"
+  },
+  {
+    "code": "6499",
+    "name": "益安生醫",
+    "market": "otc"
+  },
+  {
+    "code": "6506",
+    "name": "雙邦實業",
+    "market": "otc"
+  },
+  {
+    "code": "6508",
+    "name": "惠光",
+    "market": "otc"
+  },
+  {
+    "code": "6509",
+    "name": "聚和國際",
+    "market": "otc"
+  },
+  {
+    "code": "6510",
+    "name": "中華精測科技",
+    "market": "otc"
+  },
+  {
+    "code": "6512",
+    "name": "啟發電子",
+    "market": "otc"
+  },
+  {
+    "code": "6516",
+    "name": "勤崴國際科技",
+    "market": "otc"
+  },
+  {
+    "code": "6517",
+    "name": "保勝光學",
+    "market": "otc"
+  },
+  {
+    "code": "6523",
+    "name": "達爾膚生醫科技",
+    "market": "otc"
+  },
+  {
+    "code": "6527",
+    "name": "明達醫學科技",
+    "market": "otc"
+  },
+  {
+    "code": "6530",
+    "name": "創威光電",
+    "market": "otc"
+  },
+  {
+    "code": "6532",
+    "name": "瑞耘科技",
+    "market": "otc"
+  },
+  {
+    "code": "6535",
+    "name": "順天醫藥生技",
+    "market": "otc"
+  },
+  {
+    "code": "6538",
+    "name": "倉和",
+    "market": "otc"
+  },
+  {
+    "code": "6542",
+    "name": "隆中網絡",
+    "market": "otc"
+  },
+  {
+    "code": "6546",
+    "name": "正基科技",
+    "market": "otc"
+  },
+  {
+    "code": "6547",
+    "name": "高端疫苗生物製劑",
+    "market": "otc"
+  },
+  {
+    "code": "6548",
+    "name": "長華科技",
+    "market": "otc"
+  },
+  {
+    "code": "6556",
+    "name": "勝品電通",
+    "market": "otc"
+  },
+  {
+    "code": "6560",
+    "name": "欣普羅光電",
+    "market": "otc"
+  },
+  {
+    "code": "6561",
+    "name": "是方電訊",
+    "market": "otc"
+  },
+  {
+    "code": "6568",
+    "name": "宏觀微電子",
+    "market": "otc"
+  },
+  {
+    "code": "6569",
+    "name": "醫揚科技",
+    "market": "otc"
+  },
+  {
+    "code": "6570",
+    "name": "維田科技",
+    "market": "otc"
+  },
+  {
+    "code": "6574",
+    "name": "霈方國際",
+    "market": "otc"
+  },
+  {
+    "code": "6576",
+    "name": "逸達生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "6577",
+    "name": "勁豐電子",
+    "market": "otc"
+  },
+  {
+    "code": "6578",
+    "name": "達邦蛋白生技",
+    "market": "otc"
+  },
+  {
+    "code": "6584",
+    "name": "南俊國際",
+    "market": "otc"
+  },
+  {
+    "code": "6588",
+    "name": "東典光電科技",
+    "market": "otc"
+  },
+  {
+    "code": "6590",
+    "name": "普鴻資訊",
+    "market": "otc"
+  },
+  {
+    "code": "6593",
+    "name": "台灣銘板",
+    "market": "otc"
+  },
+  {
+    "code": "6596",
+    "name": "寬宏藝術經紀",
+    "market": "otc"
+  },
+  {
+    "code": "6597",
+    "name": "立誠光電",
+    "market": "otc"
+  },
+  {
+    "code": "6603",
+    "name": "富強鑫精密工業",
+    "market": "otc"
+  },
+  {
+    "code": "6609",
+    "name": "台灣瀧澤科技",
+    "market": "otc"
+  },
+  {
+    "code": "6612",
+    "name": "應用奈米醫材科技",
+    "market": "otc"
+  },
+  {
+    "code": "6613",
+    "name": "朋億",
+    "market": "otc"
+  },
+  {
+    "code": "6615",
+    "name": "慧智基因",
+    "market": "otc"
+  },
+  {
+    "code": "6616",
+    "name": "特昇國際",
+    "market": "otc"
+  },
+  {
+    "code": "6617",
+    "name": "共信醫藥科技控股",
+    "market": "otc"
+  },
+  {
+    "code": "6620",
+    "name": "漢達生技醫藥",
+    "market": "otc"
+  },
+  {
+    "code": "6624",
+    "name": "萬年清環境工程",
+    "market": "otc"
+  },
+  {
+    "code": "6629",
+    "name": "泰金投資控股",
+    "market": "otc"
+  },
+  {
+    "code": "6637",
+    "name": "醫影",
+    "market": "otc"
+  },
+  {
+    "code": "6640",
+    "name": "均華精密工業",
+    "market": "otc"
+  },
+  {
+    "code": "6642",
+    "name": "富致科技",
+    "market": "otc"
+  },
+  {
+    "code": "6643",
+    "name": "&#20870;星科技",
+    "market": "otc"
+  },
+  {
+    "code": "6649",
+    "name": "台灣生醫材料",
+    "market": "otc"
+  },
+  {
+    "code": "6651",
+    "name": "全宇昕科技",
+    "market": "otc"
+  },
+  {
+    "code": "6654",
+    "name": "天正國際精密機械",
+    "market": "otc"
+  },
+  {
+    "code": "6661",
+    "name": "威健",
+    "market": "otc"
+  },
+  {
+    "code": "6662",
+    "name": "樂斯科生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "6664",
+    "name": "群翊工業",
+    "market": "otc"
+  },
+  {
+    "code": "6667",
+    "name": "信紘科技",
+    "market": "otc"
+  },
+  {
+    "code": "6679",
+    "name": "鈺太科技",
+    "market": "otc"
+  },
+  {
+    "code": "6680",
+    "name": "鑫創電子",
+    "market": "otc"
+  },
+  {
+    "code": "6683",
+    "name": "雍智科技",
+    "market": "otc"
+  },
+  {
+    "code": "6684",
+    "name": "安格科技",
+    "market": "otc"
+  },
+  {
+    "code": "6690",
+    "name": "安碁資訊",
+    "market": "otc"
+  },
+  {
+    "code": "6692",
+    "name": "進金生能源服務",
+    "market": "otc"
+  },
+  {
+    "code": "6693",
+    "name": "廣閎科技",
+    "market": "otc"
+  },
+  {
+    "code": "6697",
+    "name": "東捷資訊服務",
+    "market": "otc"
+  },
+  {
+    "code": "6703",
+    "name": "軒郁國際",
+    "market": "otc"
+  },
+  {
+    "code": "6708",
+    "name": "天擎積體電路",
+    "market": "otc"
+  },
+  {
+    "code": "6712",
+    "name": "長聖國際生技",
+    "market": "otc"
+  },
+  {
+    "code": "6716",
+    "name": "應廣科技",
+    "market": "otc"
+  },
+  {
+    "code": "6720",
+    "name": "久昌科技",
+    "market": "otc"
+  },
+  {
+    "code": "6721",
+    "name": "信實保全",
+    "market": "otc"
+  },
+  {
+    "code": "6725",
+    "name": "台灣矽科宏晟科技",
+    "market": "otc"
+  },
+  {
+    "code": "6727",
+    "name": "亞泰金屬工業",
+    "market": "otc"
+  },
+  {
+    "code": "6728",
+    "name": "上洋產業",
+    "market": "otc"
+  },
+  {
+    "code": "6730",
+    "name": "常廣",
+    "market": "otc"
+  },
+  {
+    "code": "6732",
+    "name": "昇佳電子",
+    "market": "otc"
+  },
+  {
+    "code": "6733",
+    "name": "博晟生醫",
+    "market": "otc"
+  },
+  {
+    "code": "6735",
+    "name": "美達科技",
+    "market": "otc"
+  },
+  {
+    "code": "6739",
+    "name": "竹陞科技",
+    "market": "otc"
+  },
+  {
+    "code": "6741",
+    "name": "91APP, Inc.",
+    "market": "otc"
+  },
+  {
+    "code": "6751",
+    "name": "智聯服務",
+    "market": "otc"
+  },
+  {
+    "code": "6752",
+    "name": "叡揚資訊",
+    "market": "otc"
+  },
+  {
+    "code": "6761",
+    "name": "穩得實業",
+    "market": "otc"
+  },
+  {
+    "code": "6762",
+    "name": "達亞國際",
+    "market": "otc"
+  },
+  {
+    "code": "6763",
+    "name": "綠界科技",
+    "market": "otc"
+  },
+  {
+    "code": "6767",
+    "name": "台灣微創醫療器材",
+    "market": "otc"
+  },
+  {
+    "code": "6785",
+    "name": "昱展新藥生技",
+    "market": "otc"
+  },
+  {
+    "code": "6788",
+    "name": "華景電通",
+    "market": "otc"
+  },
+  {
+    "code": "6791",
+    "name": "虎門科技",
+    "market": "otc"
+  },
+  {
+    "code": "6803",
+    "name": "崑鼎綠能環保",
+    "market": "otc"
+  },
+  {
+    "code": "6804",
+    "name": "明係事業",
+    "market": "otc"
+  },
+  {
+    "code": "6811",
+    "name": "宏碁資訊服務",
+    "market": "otc"
+  },
+  {
+    "code": "6821",
+    "name": "聯寶電子",
+    "market": "otc"
+  },
+  {
+    "code": "6823",
+    "name": "濾能",
+    "market": "otc"
+  },
+  {
+    "code": "6829",
+    "name": "千附精密",
+    "market": "otc"
+  },
+  {
+    "code": "6840",
+    "name": "東研信超",
+    "market": "otc"
+  },
+  {
+    "code": "6841",
+    "name": "長佳智能",
+    "market": "otc"
+  },
+  {
+    "code": "6843",
+    "name": "進典工業",
+    "market": "otc"
+  },
+  {
+    "code": "6844",
+    "name": "諾貝兒寶貝",
+    "market": "otc"
+  },
+  {
+    "code": "6846",
+    "name": "綠茵生技",
+    "market": "otc"
+  },
+  {
+    "code": "6855",
+    "name": "數泓科技",
+    "market": "otc"
+  },
+  {
+    "code": "6856",
+    "name": "鑫傳國際多媒體科技",
+    "market": "otc"
+  },
+  {
+    "code": "6859",
+    "name": "伯特光電",
+    "market": "otc"
+  },
+  {
+    "code": "6865",
+    "name": "偉康科技",
+    "market": "otc"
+  },
+  {
+    "code": "6870",
+    "name": "騰雲科技服務",
+    "market": "otc"
+  },
+  {
+    "code": "6872",
+    "name": "浩宇生醫",
+    "market": "otc"
+  },
+  {
+    "code": "6874",
+    "name": "倍力資訊",
+    "market": "otc"
+  },
+  {
+    "code": "6875",
+    "name": "國邑藥品科技",
+    "market": "otc"
+  },
+  {
+    "code": "6877",
+    "name": "鏵友益科技",
+    "market": "otc"
+  },
+  {
+    "code": "6881",
+    "name": "潤德室內裝修設計工程(股)公司",
+    "market": "otc"
+  },
+  {
+    "code": "6884",
+    "name": "海柏特",
+    "market": "otc"
+  },
+  {
+    "code": "6894",
+    "name": "衛司特科技",
+    "market": "otc"
+  },
+  {
+    "code": "6895",
+    "name": "宏碩系統",
+    "market": "otc"
+  },
+  {
+    "code": "6899",
+    "name": "創為精密材料",
+    "market": "otc"
+  },
+  {
+    "code": "6903",
+    "name": "巨漢系統科技",
+    "market": "otc"
+  },
+  {
+    "code": "6904",
+    "name": "伯鑫工具",
+    "market": "otc"
+  },
+  {
+    "code": "6907",
+    "name": "雅特力科技(開曼)",
+    "market": "otc"
+  },
+  {
+    "code": "6910",
+    "name": "德鴻科技",
+    "market": "otc"
+  },
+  {
+    "code": "6913",
+    "name": "鴻呈實業",
+    "market": "otc"
+  },
+  {
+    "code": "6922",
+    "name": "宸曜科技",
+    "market": "otc"
+  },
+  {
+    "code": "6925",
+    "name": "意藍資訊",
+    "market": "otc"
+  },
+  {
+    "code": "6929",
+    "name": "佑全藥品",
+    "market": "otc"
+  },
+  {
+    "code": "6953",
+    "name": "家碩科技",
+    "market": "otc"
+  },
+  {
+    "code": "6961",
+    "name": "旅天下聯合國際旅行社(股)公司",
+    "market": "otc"
+  },
+  {
+    "code": "6967",
+    "name": "汎瑋材料科技",
+    "market": "otc"
+  },
+  {
+    "code": "6968",
+    "name": "萬達寵物事業",
+    "market": "otc"
+  },
+  {
+    "code": "6971",
+    "name": "惠民實業",
+    "market": "otc"
+  },
+  {
+    "code": "6982",
+    "name": "大井泵浦工業",
+    "market": "otc"
+  },
+  {
+    "code": "6996",
+    "name": "力領科技",
+    "market": "otc"
+  },
+  {
+    "code": "6997",
+    "name": "博弘雲端科技",
+    "market": "otc"
+  },
+  {
+    "code": "7402",
+    "name": "邑錡",
+    "market": "otc"
+  },
+  {
+    "code": "7547",
+    "name": "碩網資訊",
+    "market": "otc"
+  },
+  {
+    "code": "7556",
+    "name": "意德士科技",
+    "market": "otc"
+  },
+  {
+    "code": "7584",
+    "name": "樂意傳播",
+    "market": "otc"
+  },
+  {
+    "code": "7642",
+    "name": "昶瑞機電",
+    "market": "otc"
+  },
+  {
+    "code": "7703",
+    "name": "銳澤實業",
+    "market": "otc"
+  },
+  {
+    "code": "7704",
+    "name": "明遠精密科技",
+    "market": "otc"
+  },
+  {
+    "code": "7708",
+    "name": "全家國際餐飲",
+    "market": "otc"
+  },
+  {
+    "code": "7709",
+    "name": "榮田精機",
+    "market": "otc"
+  },
+  {
+    "code": "7712",
+    "name": "博盛半導體",
+    "market": "otc"
+  },
+  {
+    "code": "7713",
+    "name": "威力德生醫",
+    "market": "otc"
+  },
+  {
+    "code": "7714",
+    "name": "創泓科技",
+    "market": "otc"
+  },
+  {
+    "code": "7715",
+    "name": "裕山環境工程",
+    "market": "otc"
+  },
+  {
+    "code": "7716",
+    "name": "昱臺國際",
+    "market": "otc"
+  },
+  {
+    "code": "7717",
+    "name": "英屬開曼群島商萊德光電(股)公司",
+    "market": "otc"
+  },
+  {
+    "code": "7718",
+    "name": "友鋮",
+    "market": "otc"
+  },
+  {
+    "code": "7723",
+    "name": "築間餐飲事業",
+    "market": "otc"
+  },
+  {
+    "code": "7728",
+    "name": "光焱科技",
+    "market": "otc"
+  },
+  {
+    "code": "7734",
+    "name": "印能科技",
+    "market": "otc"
+  },
+  {
+    "code": "7738",
+    "name": "東聯互動",
+    "market": "otc"
+  },
+  {
+    "code": "7743",
+    "name": "金利食安科技",
+    "market": "otc"
+  },
+  {
+    "code": "7744",
+    "name": "崴寶精密科技",
+    "market": "otc"
+  },
+  {
+    "code": "7747",
+    "name": "昕奇雲端科技",
+    "market": "otc"
+  },
+  {
+    "code": "7751",
+    "name": "竑騰科技",
+    "market": "otc"
+  },
+  {
+    "code": "7753",
+    "name": "星亞視覺",
+    "market": "otc"
+  },
+  {
+    "code": "7757",
+    "name": "金色三麥餐飲",
+    "market": "otc"
+  },
+  {
+    "code": "7767",
+    "name": "仁大資訊",
+    "market": "otc"
+  },
+  {
+    "code": "7770",
+    "name": "君曜科技",
+    "market": "otc"
+  },
+  {
+    "code": "7777",
+    "name": "能率亞洲資本",
+    "market": "otc"
+  },
+  {
+    "code": "7782",
+    "name": "光速火箭",
+    "market": "otc"
+  },
+  {
+    "code": "7792",
+    "name": "安葆國際實業",
+    "market": "otc"
+  },
+  {
+    "code": "7805",
+    "name": "威聯通科技",
+    "market": "otc"
+  },
+  {
+    "code": "7810",
+    "name": "捷創科技",
+    "market": "otc"
+  },
+  {
+    "code": "7811",
+    "name": "民盛應用企業",
+    "market": "otc"
+  },
+  {
+    "code": "8024",
+    "name": "佑華微電子",
+    "market": "otc"
+  },
+  {
+    "code": "8027",
+    "name": "鈦昇科技",
+    "market": "otc"
+  },
+  {
+    "code": "8032",
+    "name": "光菱電子",
+    "market": "otc"
+  },
+  {
+    "code": "8034",
+    "name": "榮群電訊",
+    "market": "otc"
+  },
+  {
+    "code": "8038",
+    "name": "長園科技實業",
+    "market": "otc"
+  },
+  {
+    "code": "8040",
+    "name": "九暘電子",
+    "market": "otc"
+  },
+  {
+    "code": "8042",
+    "name": "臺灣金山電子工業",
+    "market": "otc"
+  },
+  {
+    "code": "8043",
+    "name": "蜜望實企業",
+    "market": "otc"
+  },
+  {
+    "code": "8044",
+    "name": "網路家庭國際資訊",
+    "market": "otc"
+  },
+  {
+    "code": "8047",
+    "name": "星雲電腦",
+    "market": "otc"
+  },
+  {
+    "code": "8048",
+    "name": "德勝科技",
+    "market": "otc"
+  },
+  {
+    "code": "8049",
+    "name": "晶采光電科技",
+    "market": "otc"
+  },
+  {
+    "code": "8050",
+    "name": "廣積科技",
+    "market": "otc"
+  },
+  {
+    "code": "8054",
+    "name": "安國國際科技",
+    "market": "otc"
+  },
+  {
+    "code": "8059",
+    "name": "凱碩科技",
+    "market": "otc"
+  },
+  {
+    "code": "8064",
+    "name": "東捷科技",
+    "market": "otc"
+  },
+  {
+    "code": "8066",
+    "name": "來思達國際企業",
+    "market": "otc"
+  },
+  {
+    "code": "8067",
+    "name": "志旭國際",
+    "market": "otc"
+  },
+  {
+    "code": "8068",
+    "name": "全達國際",
+    "market": "otc"
+  },
+  {
+    "code": "8069",
+    "name": "元太科技工業",
+    "market": "otc"
+  },
+  {
+    "code": "8071",
+    "name": "能率網通",
+    "market": "otc"
+  },
+  {
+    "code": "8074",
+    "name": "鉅橡企業",
+    "market": "otc"
+  },
+  {
+    "code": "8076",
+    "name": "伍豐科技",
+    "market": "otc"
+  },
+  {
+    "code": "8077",
+    "name": "洛碁實業",
+    "market": "otc"
+  },
+  {
+    "code": "8080",
+    "name": "泰霖事業",
+    "market": "otc"
+  },
+  {
+    "code": "8083",
+    "name": "瑞穎",
+    "market": "otc"
+  },
+  {
+    "code": "8084",
+    "name": "巨虹電子",
+    "market": "otc"
+  },
+  {
+    "code": "8085",
+    "name": "福華電子",
+    "market": "otc"
+  },
+  {
+    "code": "8086",
+    "name": "宏捷科技",
+    "market": "otc"
+  },
+  {
+    "code": "8087",
+    "name": "麗升能源科技",
+    "market": "otc"
+  },
+  {
+    "code": "8088",
+    "name": "品安科技",
+    "market": "otc"
+  },
+  {
+    "code": "8089",
+    "name": "康全電訊",
+    "market": "otc"
+  },
+  {
+    "code": "8091",
+    "name": "翔名科技",
+    "market": "otc"
+  },
+  {
+    "code": "8092",
+    "name": "建暐精密科技",
+    "market": "otc"
+  },
+  {
+    "code": "8093",
+    "name": "保銳科技",
+    "market": "otc"
+  },
+  {
+    "code": "8096",
+    "name": "擎亞電子",
+    "market": "otc"
+  },
+  {
+    "code": "8097",
+    "name": "常珵科技",
+    "market": "otc"
+  },
+  {
+    "code": "8099",
+    "name": "大同世界科技",
+    "market": "otc"
+  },
+  {
+    "code": "8102",
+    "name": "傑霖科技",
+    "market": "otc"
+  },
+  {
+    "code": "8107",
+    "name": "大億金茂",
+    "market": "otc"
+  },
+  {
+    "code": "8109",
+    "name": "博大科技",
+    "market": "otc"
+  },
+  {
+    "code": "8111",
+    "name": "立碁電子工業",
+    "market": "otc"
+  },
+  {
+    "code": "8121",
+    "name": "越峰電子材料",
+    "market": "otc"
+  },
+  {
+    "code": "8147",
+    "name": "正淩精密工業",
+    "market": "otc"
+  },
+  {
+    "code": "8155",
+    "name": "博智電子",
+    "market": "otc"
+  },
+  {
+    "code": "8171",
+    "name": "天宇工業",
+    "market": "otc"
+  },
+  {
+    "code": "8176",
+    "name": "智捷科技",
+    "market": "otc"
+  },
+  {
+    "code": "8182",
+    "name": "加高電子",
+    "market": "otc"
+  },
+  {
+    "code": "8183",
+    "name": "台灣精星科技",
+    "market": "otc"
+  },
+  {
+    "code": "8227",
+    "name": "巨有科技",
+    "market": "otc"
+  },
+  {
+    "code": "8234",
+    "name": "新漢",
+    "market": "otc"
+  },
+  {
+    "code": "8240",
+    "name": "華宏新技",
+    "market": "otc"
+  },
+  {
+    "code": "8255",
+    "name": "朋程科技",
+    "market": "otc"
+  },
+  {
+    "code": "8272",
+    "name": "全景軟體",
+    "market": "otc"
+  },
+  {
+    "code": "8277",
+    "name": "商丞科技",
+    "market": "otc"
+  },
+  {
+    "code": "8279",
+    "name": "生展生物科技",
+    "market": "otc"
+  },
+  {
+    "code": "8284",
+    "name": "三竹資訊",
+    "market": "otc"
+  },
+  {
+    "code": "8289",
+    "name": "泰藝電子",
+    "market": "otc"
+  },
+  {
+    "code": "8291",
+    "name": "尚茂電子材料",
+    "market": "otc"
+  },
+  {
+    "code": "8299",
+    "name": "群聯電子",
+    "market": "otc"
+  },
+  {
+    "code": "8342",
+    "name": "益張實業",
+    "market": "otc"
+  },
+  {
+    "code": "8349",
+    "name": "恒耀國際",
+    "market": "otc"
+  },
+  {
+    "code": "8354",
+    "name": "冠好科技",
+    "market": "otc"
+  },
+  {
+    "code": "8358",
+    "name": "金居開發",
+    "market": "otc"
+  },
+  {
+    "code": "8383",
+    "name": "千附實業",
+    "market": "otc"
+  },
+  {
+    "code": "8390",
+    "name": "金益鼎企業",
+    "market": "otc"
+  },
+  {
+    "code": "8401",
+    "name": "白紗科技印刷",
+    "market": "otc"
+  },
+  {
+    "code": "8403",
+    "name": "盛弘醫藥",
+    "market": "otc"
+  },
+  {
+    "code": "8409",
+    "name": "商之器科技",
+    "market": "otc"
+  },
+  {
+    "code": "8410",
+    "name": "森田印刷廠",
+    "market": "otc"
+  },
+  {
+    "code": "8415",
+    "name": "大成國際鋼鐵",
+    "market": "otc"
+  },
+  {
+    "code": "8416",
+    "name": "實威國際",
+    "market": "otc"
+  },
+  {
+    "code": "8421",
+    "name": "旭源包裝科技",
+    "market": "otc"
+  },
+  {
+    "code": "8423",
+    "name": "保綠資源",
+    "market": "otc"
+  },
+  {
+    "code": "8424",
+    "name": "惠普",
+    "market": "otc"
+  },
+  {
+    "code": "8426",
+    "name": "紅木集團",
+    "market": "otc"
+  },
+  {
+    "code": "8431",
+    "name": "匯鑽科技",
+    "market": "otc"
+  },
+  {
+    "code": "8432",
+    "name": "東生華製藥",
+    "market": "otc"
+  },
+  {
+    "code": "8433",
+    "name": "弘帆",
+    "market": "otc"
+  },
+  {
+    "code": "8435",
+    "name": "台灣鉅邁",
+    "market": "otc"
+  },
+  {
+    "code": "8436",
+    "name": "大江生醫",
+    "market": "otc"
+  },
+  {
+    "code": "8437",
+    "name": "大地幼教",
+    "market": "otc"
+  },
+  {
+    "code": "8440",
+    "name": "綠電再生",
+    "market": "otc"
+  },
+  {
+    "code": "8444",
+    "name": "綠河",
+    "market": "otc"
+  },
+  {
+    "code": "8446",
+    "name": "華研國際音樂",
+    "market": "otc"
+  },
+  {
+    "code": "8450",
+    "name": "霹靂國際多媒體",
+    "market": "otc"
+  },
+  {
+    "code": "8455",
+    "name": "蓋曼群島商日本大拓",
+    "market": "otc"
+  },
+  {
+    "code": "8472",
+    "name": "夠麻吉",
+    "market": "otc"
+  },
+  {
+    "code": "8477",
+    "name": "創業家數位",
+    "market": "otc"
+  },
+  {
+    "code": "8489",
+    "name": "三貝德數位文創",
+    "market": "otc"
+  },
+  {
+    "code": "8905",
+    "name": "裕國冷凍冷藏",
+    "market": "otc"
+  },
+  {
+    "code": "8906",
+    "name": "花王企業",
+    "market": "otc"
+  },
+  {
+    "code": "8908",
+    "name": "欣雄天然氣",
+    "market": "otc"
+  },
+  {
+    "code": "8916",
+    "name": "光隆實業",
+    "market": "otc"
+  },
+  {
+    "code": "8917",
+    "name": "欣泰石油氣",
+    "market": "otc"
+  },
+  {
+    "code": "8921",
+    "name": "沈氏藝術印刷",
+    "market": "otc"
+  },
+  {
+    "code": "8923",
+    "name": "時報文化出版企業",
+    "market": "otc"
+  },
+  {
+    "code": "8924",
+    "name": "大田精密工業",
+    "market": "otc"
+  },
+  {
+    "code": "8927",
+    "name": "北基國際",
+    "market": "otc"
+  },
+  {
+    "code": "8928",
+    "name": "鉅明",
+    "market": "otc"
+  },
+  {
+    "code": "8929",
+    "name": "富堡工業",
+    "market": "otc"
+  },
+  {
+    "code": "8930",
+    "name": "青鋼應用材料",
+    "market": "otc"
+  },
+  {
+    "code": "8931",
+    "name": "大園汽電共生",
+    "market": "otc"
+  },
+  {
+    "code": "8932",
+    "name": "智通科創",
+    "market": "otc"
+  },
+  {
+    "code": "8933",
+    "name": "愛地雅工業",
+    "market": "otc"
+  },
+  {
+    "code": "8935",
+    "name": "邦泰複合材料",
+    "market": "otc"
+  },
+  {
+    "code": "8936",
+    "name": "國統國際",
+    "market": "otc"
+  },
+  {
+    "code": "8937",
+    "name": "合騏工業",
+    "market": "otc"
+  },
+  {
+    "code": "8938",
+    "name": "明安國際企業",
+    "market": "otc"
+  },
+  {
+    "code": "8941",
+    "name": "關中",
+    "market": "otc"
+  },
+  {
+    "code": "8942",
+    "name": "森鉅科技材料",
+    "market": "otc"
+  },
+  {
+    "code": "9949",
+    "name": "琉園",
+    "market": "otc"
+  },
+  {
+    "code": "9950",
+    "name": "萬國通路",
+    "market": "otc"
+  },
+  {
+    "code": "9951",
+    "name": "皇田工業",
+    "market": "otc"
+  },
+  {
+    "code": "9960",
+    "name": "邁達康網路事業",
+    "market": "otc"
+  },
+  {
+    "code": "9962",
+    "name": "有益鋼鐵",
+    "market": "otc"
+  }
+]

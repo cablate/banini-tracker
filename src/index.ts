@@ -17,6 +17,7 @@ import { sendTelegramMessageWithConfig, formatReport, formatFallbackReport } fro
 import { filterNewPosts as filterNew, markPostsSeen } from './seen.js';
 import { withRetry } from './retry.js';
 import { createTranscriber, transcribeVideoPosts, type TranscriberType } from './transcribe.js';
+import { recordPredictions, updateTracking } from './tracker.js';
 
 // ── Config ──────────────────────────────────────────────────
 const FB_PAGE_URL = 'https://www.facebook.com/DieWithoutBang/';
@@ -246,7 +247,22 @@ async function runInner(opts: RunOptions) {
     console.log('[Telegram] 未設定 TG_BOT_TOKEN / TG_CHANNEL_ID，跳過通知');
   }
 
-  // 8. 存檔
+  // 8. 預測追蹤記錄
+  if (analysis.hasInvestmentContent && !llmFailed) {
+    try {
+      const postInfos = newPosts.map((p) => ({
+        id: p.id,
+        url: p.url,
+        timestamp: p.timestamp,
+      }));
+      const count = await recordPredictions(analysis, postInfos);
+      if (count > 0) console.log(`[tracker] 已記錄 ${count} 筆預測`);
+    } catch (err) {
+      console.error(`[tracker] 記錄預測失敗: ${err instanceof Error ? err.message : err}`);
+    }
+  }
+
+  // 9. 存檔
   mkdirSync(DATA_DIR, { recursive: true });
   const outFile = join(DATA_DIR, `report-${new Date().toISOString().slice(0, 19).replace(/:/g, '')}.json`);
   writeFileSync(outFile, JSON.stringify({ timestamp: new Date().toISOString(), posts: newPosts, analysis }, null, 2), 'utf-8');
@@ -267,6 +283,12 @@ if (isCronMode) {
       .catch((err) => console.error('[盤中] 執行失敗:', err));
   }, { timezone: 'Asia/Taipei' });
 
+  // 追蹤更新：週一到五 15:00（收盤後更新預測追蹤）
+  cron.schedule('0 15 * * 1-5', () => {
+    updateTracking()
+      .catch((err) => console.error('[追蹤更新] 執行失敗:', err));
+  }, { timezone: 'Asia/Taipei' });
+
   // 盤後：每天晚上 23:00，FB 3 篇
   cron.schedule('3 23 * * *', () => {
     run({ maxPosts: 3, isDryRun: false, label: '盤後' })
@@ -275,6 +297,7 @@ if (isCronMode) {
 
   console.log('=== 巴逆逆排程已啟動 ===');
   console.log('  盤中：週一~五 09:07/09:37/10:07/.../13:07（FB, 1 篇）');
+  console.log('  追蹤更新：週一~五 15:00（預測追蹤判定）');
   console.log('  盤後：每天 23:03（FB, 3 篇）');
   console.log('  按 Ctrl+C 停止\n');
 

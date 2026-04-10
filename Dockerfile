@@ -1,7 +1,7 @@
 FROM node:20-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3 ffmpeg curl ca-certificates \
+    python3 ffmpeg curl ca-certificates build-essential \
     && curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp \
     && chmod a+rx /usr/local/bin/yt-dlp \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -13,6 +13,7 @@ RUN npm install
 
 COPY tsconfig.json ./
 COPY src/ ./src/
+COPY data/ ./data/
 
 RUN npm run build
 
