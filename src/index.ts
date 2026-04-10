@@ -14,8 +14,9 @@ import cron from 'node-cron';
 import { fetchThreadsPosts, type ThreadsPost } from './threads.js';
 import { fetchFacebookPosts, type FacebookPost } from './facebook.js';
 import { analyzePosts } from './analyze.js';
-import { sendTelegramMessageWithConfig, formatReport } from './telegram.js';
+import { sendTelegramMessageWithConfig, formatReport, formatFallbackReport } from './telegram.js';
 import { filterNewPosts as filterNew, markPostsSeen } from './seen.js';
+import { withRetry } from './retry.js';
 
 // ── Config ──────────────────────────────────────────────────
 const THREADS_USERNAME = 'banini31';
@@ -106,20 +107,26 @@ async function runInner(opts: RunOptions) {
   const apifyToken = env('APIFY_TOKEN');
   const allPosts: UnifiedPost[] = [];
 
-  // 1. 抓取 Threads
+  // 1. 抓取 Threads（含 retry）
   if (!opts.fbOnly) {
     try {
-      const threadsPosts = await fetchThreadsPosts(THREADS_USERNAME, apifyToken, opts.maxPosts);
+      const threadsPosts = await withRetry(
+        () => fetchThreadsPosts(THREADS_USERNAME, apifyToken, opts.maxPosts),
+        { label: 'Threads', maxRetries: 2, baseDelayMs: 5000 },
+      );
       allPosts.push(...threadsPosts.map(fromThreads));
     } catch (err) {
       console.error(`[Threads] 抓取失敗: ${err instanceof Error ? err.message : err}`);
     }
   }
 
-  // 2. 抓取 Facebook
+  // 2. 抓取 Facebook（含 retry）
   if (!opts.threadsOnly) {
     try {
-      const fbPosts = await fetchFacebookPosts(FB_PAGE_URL, apifyToken, opts.maxPosts);
+      const fbPosts = await withRetry(
+        () => fetchFacebookPosts(FB_PAGE_URL, apifyToken, opts.maxPosts),
+        { label: 'Facebook', maxRetries: 2, baseDelayMs: 5000 },
+      );
       allPosts.push(...fbPosts.map(fromFacebook));
     } catch (err) {
       console.error(`[Facebook] 抓取失敗: ${err instanceof Error ? err.message : err}`);
@@ -188,11 +195,22 @@ async function runInner(opts: RunOptions) {
     return;
   }
 
-  const analysis = await analyzePosts(textsForAnalysis, {
-    baseUrl: env('LLM_BASE_URL', 'https://api.deepinfra.com/v1/openai'),
-    apiKey: env('LLM_API_KEY'),
-    model: env('LLM_MODEL', 'MiniMaxAI/MiniMax-M2.5'),
-  });
+  let analysis: Awaited<ReturnType<typeof analyzePosts>>;
+  let llmFailed = false;
+  try {
+    analysis = await withRetry(
+      () => analyzePosts(textsForAnalysis, {
+        baseUrl: env('LLM_BASE_URL', 'https://api.deepinfra.com/v1/openai'),
+        apiKey: env('LLM_API_KEY'),
+        model: env('LLM_MODEL', 'MiniMaxAI/MiniMax-M2.5'),
+      }),
+      { label: 'LLM', maxRetries: 3, baseDelayMs: 5000 },
+    );
+  } catch (err) {
+    console.error(`[LLM] 分析失敗，將推送純貼文摘要: ${err instanceof Error ? err.message : err}`);
+    llmFailed = true;
+    analysis = { hasInvestmentContent: false, summary: '（LLM 分析失敗，以下為原始貼文）' };
+  }
 
   // 6. 輸出結果
   console.log('========================================');
@@ -232,11 +250,16 @@ async function runInner(opts: RunOptions) {
         text: p.text.slice(0, 60),
         url: p.url,
       }));
-      const msg = formatReport(analysis, { threads: threadCount, fb: fbCount }, postSummaries);
-      await sendTelegramMessageWithConfig({ botToken: tgToken, channelId: tgChannelId }, msg);
+      const msg = llmFailed
+        ? formatFallbackReport(postSummaries)
+        : formatReport(analysis, { threads: threadCount, fb: fbCount }, postSummaries);
+      await withRetry(
+        () => sendTelegramMessageWithConfig({ botToken: tgToken, channelId: tgChannelId }, msg),
+        { label: 'Telegram', maxRetries: 3, baseDelayMs: 3000 },
+      );
       console.log('[Telegram] 通知已發送');
     } catch (err) {
-      console.error(`[Telegram] 發送失敗: ${err instanceof Error ? err.message : err}`);
+      console.error(`[Telegram] 發送失敗（已重試 3 次）: ${err instanceof Error ? err.message : err}`);
     }
   } else {
     console.log('[Telegram] 未設定 TG_BOT_TOKEN / TG_CHANNEL_ID，跳過通知');

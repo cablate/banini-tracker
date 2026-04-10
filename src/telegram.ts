@@ -124,3 +124,18 @@ export function formatReport(
   lines.push('\n<i>僅供娛樂參考，不構成投資建議</i>');
   return lines.join('\n');
 }
+
+export function formatFallbackReport(posts: PostSummary[]): string {
+  const lines: string[] = [];
+  lines.push('<b>巴逆逆貼文速報</b>（LLM 分析失敗）');
+  lines.push('');
+  for (const p of posts) {
+    const src = p.source === 'threads' ? 'TH' : 'FB';
+    const todayTag = p.isToday ? ' [今天]' : '';
+    const preview = escapeHtml(p.text.replace(/\n/g, ' ').slice(0, 80));
+    const link = p.url ? ` <a href="${p.url}">原文</a>` : '';
+    lines.push(`${src}${todayTag} ${p.timestamp}｜${preview}${p.text.length > 80 ? '…' : ''}${link}`);
+  }
+  lines.push('\n<i>LLM 服務暫時無法使用，僅列出原始貼文</i>');
+  return lines.join('\n');
+}
