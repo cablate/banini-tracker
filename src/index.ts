@@ -230,6 +230,7 @@ async function runInner(opts: RunOptions) {
         timestamp: new Date(p.timestamp).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' }),
         isToday: isToday(p.timestamp),
         text: p.text.slice(0, 60),
+        url: p.url,
       }));
       const msg = formatReport(analysis, { threads: threadCount, fb: fbCount }, postSummaries);
       await sendTelegramMessageWithConfig({ botToken: tgToken, channelId: tgChannelId }, msg);

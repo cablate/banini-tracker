@@ -2,22 +2,22 @@
 name: banini-tracker
 description: |
   巴逆逆反指標分析。觸發時機：使用者要求追蹤巴逆逆、分析反指標、抓取社群貼文並推送 Telegram 時。
-  能力範圍：透過 CLI 抓取 Threads/Facebook 貼文、反指標邏輯分析、連鎖效應推導、Telegram 推送。
+  能力範圍：透過 CLI 抓取 Facebook 貼文、反指標邏輯分析、連鎖效應推導、Telegram 推送。
   目標：由 Claude 作為分析引擎，產出直白中文的反指標分析報告。
 ---
 
 # banini-tracker — 巴逆逆反指標分析
 
-追蹤「股海冥燈」巴逆逆（8zz）的 Threads / Facebook 貼文，由你（Claude）進行反指標分析，推送結果到 Telegram。
+追蹤「股海冥燈」巴逆逆（8zz）的 Facebook 貼文，由你（Claude）進行反指標分析，推送結果到 Telegram。
 
 ## 前置條件
 
 ```bash
 # 首次使用：初始化設定
-npx banini-tracker init --apify-token <TOKEN> --tg-bot-token <TOKEN> --tg-channel-id <ID>
+npx @cablate/banini-tracker init --apify-token <TOKEN> --tg-bot-token <TOKEN> --tg-channel-id <ID>
 
 # 確認設定
-npx banini-tracker config
+npx @cablate/banini-tracker config
 ```
 
 ## 工作流程
@@ -25,20 +25,13 @@ npx banini-tracker config
 ### Step 1：抓取貼文
 
 ```bash
-# Facebook（便宜，$0.02/次，預設）
-npx banini-tracker fetch -s fb -n 3 --mark-seen
-
-# Threads（$0.15/次，較貴）
-npx banini-tracker fetch -s threads -n 3 --mark-seen
-
-# 兩個都抓
-npx banini-tracker fetch -s both -n 3 --mark-seen
+npx @cablate/banini-tracker fetch -s fb -n 3 --mark-seen
 ```
 
 輸出是 JSON 陣列，每篇貼文包含：
-- `id` / `source`（threads 或 facebook）
+- `id` / `source`
 - `text`（貼文內容）
-- `ocrText`（FB 圖片 OCR 文字，可能包含下單截圖）
+- `ocrText`（圖片 OCR 文字，可能包含下單截圖）
 - `timestamp` / `url` / `likeCount`
 - `mediaType` / `mediaUrl`
 
@@ -72,46 +65,42 @@ npx banini-tracker fetch -s both -n 3 --mark-seen
 
 ### Step 3：推送 Telegram
 
+將分析結果寫入暫存檔再推送（多行訊息用 `-m` 會被 shell 截斷，務必用 `-f`）：
+
 ```bash
-# 直接帶訊息
-npx banini-tracker push -m "你的分析報告文字"
+# 寫入暫存檔後推送（推薦）
+npx @cablate/banini-tracker push -f /tmp/report.txt
 
-# 從檔案讀取
-npx banini-tracker push -f /tmp/report.txt
-
-# pipe 方式
-echo "分析結果" | npx banini-tracker push
-
-# 支援 HTML 格式（預設）
-npx banini-tracker push -m "<b>標題</b>\n內容"
+# 短訊息可用 -m
+npx @cablate/banini-tracker push -m "短訊息"
 
 # 純文字（不解析 HTML）
-npx banini-tracker push -m "純文字" --parse-mode none
+npx @cablate/banini-tracker push -f /tmp/report.txt --parse-mode none
 ```
 
 ## 其他指令
 
 ```bash
 # 去重管理
-npx banini-tracker seen list          # 列出所有已讀 ID
-npx banini-tracker seen mark <id...>  # 手動標記已讀
-npx banini-tracker seen clear         # 清空已讀紀錄
+npx @cablate/banini-tracker seen list          # 列出所有已讀 ID
+npx @cablate/banini-tracker seen mark <id...>  # 手動標記已讀
+npx @cablate/banini-tracker seen clear         # 清空已讀紀錄
 
 # 查看/修改設定
-npx banini-tracker config             # 顯示設定（token 遮蔽）
+npx @cablate/banini-tracker config             # 顯示設定（token 遮蔽）
 # 手動編輯: ~/.banini-tracker.json
 ```
 
 ## 費用參考
 
-| 來源 | 每次費用 | 適合場景 |
-|------|---------|---------|
-| Facebook | ~$0.02 | 日常追蹤（便宜） |
-| Threads | ~$0.15 | 補充抓取（pay-per-event 較貴） |
+Facebook 每次抓取約 $0.02（Apify CU 計費）。Threads 也支援但較貴（$0.15/次），一般不需要用。
 
 ## 報告格式建議
 
-推送到 Telegram 時建議用以下 HTML 格式：
+推送到 Telegram 時建議用以下 HTML 格式。注意：
+- 每篇貼文附上原文連結（從 fetch 的 `url` 欄位取得）
+- `<` `>` `&` 必須轉義（`&lt;` `&gt;` `&amp;`），避免 HTML 解析錯誤
+- 多行內容務必寫入檔案後用 `-f` 推送
 
 ```
 <b>巴逆逆反指標速報</b>
@@ -119,7 +108,10 @@ npx banini-tracker config             # 顯示設定（token 遮蔽）
 
 <b>她的動態</b>
 FB 16:56｜我想好明天要買啥了！大家期待嗎...
+<a href="https://www.facebook.com/...">原文</a>
+
 FB 14:30｜今天又被套了 油正二...
+<a href="https://www.facebook.com/...">原文</a>
 
 <b>反指標分析</b>
 ↓ 原油正二（ETF）

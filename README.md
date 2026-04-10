@@ -6,9 +6,11 @@
 
 追蹤「股海冥燈」巴逆逆（8zz）的 Threads / Facebook 社群貼文，透過 Apify 抓取、AI 反指標分析、Telegram 即時推送。
 
+> **Claude Code 使用者？** 直接把 [`skill/SKILL.md`](skill/SKILL.md) 加到你的 `.claude/skills/` 就能用。Claude 自己當分析引擎，不需要額外 LLM。
+
 支援兩種使用模式：
 - **常駐排程**：Docker 部署，自動盤中/盤後排程 + LLM 分析 + Telegram 推送
-- **CLI 工具**：`npx banini-tracker`，搭配 Claude Code 等 AI 手動執行分析
+- **CLI 工具**：`npx @cablate/banini-tracker`，搭配 Claude Code 等 AI 手動執行分析
 
 ## 快速開始（常駐排程）
 
@@ -57,16 +59,16 @@ TG_CHANNEL_ID=-100...
 
 ```bash
 # 初始化設定
-npx banini-tracker init \
+npx @cablate/banini-tracker init \
   --apify-token YOUR_APIFY_TOKEN \
   --tg-bot-token YOUR_TG_BOT_TOKEN \
   --tg-channel-id YOUR_TG_CHANNEL_ID
 
 # 抓取 Facebook 最新 3 篇
-npx banini-tracker fetch -s fb -n 3 --mark-seen
+npx @cablate/banini-tracker fetch -s fb -n 3 --mark-seen
 
 # 推送結果到 Telegram
-npx banini-tracker push -m "分析結果..."
+npx @cablate/banini-tracker push -m "分析結果..."
 ```
 
 ### CLI 指令

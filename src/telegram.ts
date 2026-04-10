@@ -51,6 +51,7 @@ interface PostSummary {
   timestamp: string;
   isToday: boolean;
   text: string;
+  url: string;
 }
 
 export function formatReport(
@@ -82,7 +83,8 @@ export function formatReport(
     const src = p.source === 'threads' ? 'TH' : 'FB';
     const todayTag = p.isToday ? ' [今天]' : '';
     const preview = escapeHtml(p.text.replace(/\n/g, ' ').slice(0, 50));
-    lines.push(`${src}${todayTag} ${p.timestamp}｜${preview}${p.text.length > 50 ? '…' : ''}`);
+    const link = p.url ? ` <a href="${p.url}">原文</a>` : '';
+    lines.push(`${src}${todayTag} ${p.timestamp}｜${preview}${p.text.length > 50 ? '…' : ''}${link}`);
   }
 
   lines.push('');
