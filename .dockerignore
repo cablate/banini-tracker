@@ -1,5 +1,5 @@
 node_modules
 dist
-data
+data/report-*
 .env
 *.log
