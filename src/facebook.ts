@@ -3,6 +3,7 @@ export interface FacebookPost {
   source: 'facebook';
   text: string;
   ocrText: string;
+  captionText: string;
   timestamp: string;
   likeCount: number;
   commentCount: number;
@@ -29,6 +30,7 @@ export async function fetchFacebookPosts(
     body: JSON.stringify({
       startUrls: [{ url: pageUrl }],
       resultsLimit: maxPosts,
+      captionText: true,
     }),
     signal: AbortSignal.timeout(180_000),
   });
@@ -46,11 +48,18 @@ export async function fetchFacebookPosts(
       .map((m: any) => m.ocrText ?? '')
       .filter((t: string) => t.length > 0);
 
+    // captionText 可能在 media item 或頂層
+    const captionTexts = (item.media ?? [])
+      .map((m: any) => m.captionText ?? '')
+      .filter((t: string) => t.length > 0);
+    const captionText = captionTexts.join('\n') || item.captionText || '';
+
     return {
       id: `fb_${item.postId ?? item.id ?? ''}`,
       source: 'facebook' as const,
       text: item.text ?? item.message ?? '',
       ocrText: ocrTexts.join('\n'),
+      captionText,
       timestamp: item.time ?? new Date().toISOString(),
       likeCount: item.likes ?? 0,
       commentCount: item.comments ?? 0,

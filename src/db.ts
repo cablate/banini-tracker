@@ -28,6 +28,21 @@ export function getDb(): Database.Database {
 
 function migrate(db: Database.Database): void {
   db.exec(`
+    CREATE TABLE IF NOT EXISTS posts (
+      id TEXT PRIMARY KEY,
+      source TEXT NOT NULL DEFAULT 'facebook',
+      text TEXT NOT NULL DEFAULT '',
+      ocr_text TEXT NOT NULL DEFAULT '',
+      transcript_text TEXT NOT NULL DEFAULT '',
+      media_type TEXT NOT NULL DEFAULT 'text',
+      media_url TEXT NOT NULL DEFAULT '',
+      url TEXT NOT NULL DEFAULT '',
+      like_count INTEGER NOT NULL DEFAULT 0,
+      comment_count INTEGER NOT NULL DEFAULT 0,
+      post_timestamp TEXT NOT NULL,
+      fetched_at TEXT NOT NULL
+    );
+
     CREATE TABLE IF NOT EXISTS predictions (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       post_id TEXT NOT NULL,

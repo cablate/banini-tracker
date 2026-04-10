@@ -18,6 +18,7 @@ import { filterNewPosts as filterNew, markPostsSeen } from './seen.js';
 import { withRetry } from './retry.js';
 import { createTranscriber, transcribeVideoPosts, type TranscriberType } from './transcribe.js';
 import { recordPredictions, updateTracking } from './tracker.js';
+import { getDb } from './db.js';
 
 // ── Config ──────────────────────────────────────────────────
 const FB_PAGE_URL = 'https://www.facebook.com/DieWithoutBang/';
@@ -52,7 +53,7 @@ function fromFacebook(p: FacebookPost): UnifiedPost {
     source: 'facebook',
     text: p.text,
     ocrText: p.ocrText,
-    transcriptText: '',
+    transcriptText: p.captionText || '',
     timestamp: p.timestamp,
     likeCount: p.likeCount,
     replyCount: p.commentCount,
@@ -116,15 +117,54 @@ async function runInner(opts: RunOptions) {
     return;
   }
 
-  // 2.5. 影片轉錄
+  // 2.5. 影片轉錄（captionText 有值則跳過 Groq）
   const transcriberType = (process.env.TRANSCRIBER ?? 'noop') as TranscriberType;
   const transcriber = createTranscriber(transcriberType);
   if (transcriber.name !== 'noop') {
-    const transcripts = await transcribeVideoPosts(newPosts, transcriber);
-    for (const p of newPosts) {
-      const result = transcripts.get(p.id);
-      if (result) p.transcriptText = result.text;
+    const needsTranscribe = newPosts.filter((p) => !p.transcriptText);
+    if (needsTranscribe.length > 0) {
+      const transcripts = await transcribeVideoPosts(needsTranscribe, transcriber);
+      for (const p of needsTranscribe) {
+        const result = transcripts.get(p.id);
+        if (result) p.transcriptText = result.text;
+      }
     }
+  }
+
+  // 2.6. 貼文入庫
+  try {
+    const db = getDb();
+    const upsertPost = db.prepare(`
+      INSERT INTO posts (id, source, text, ocr_text, transcript_text, media_type, media_url, url, like_count, comment_count, post_timestamp, fetched_at)
+      VALUES (@id, @source, @text, @ocr_text, @transcript_text, @media_type, @media_url, @url, @like_count, @comment_count, @post_timestamp, @fetched_at)
+      ON CONFLICT(id) DO UPDATE SET
+        transcript_text = CASE WHEN excluded.transcript_text != '' THEN excluded.transcript_text ELSE posts.transcript_text END,
+        like_count = excluded.like_count,
+        comment_count = excluded.comment_count
+    `);
+    const now = new Date().toISOString();
+    const insertMany = db.transaction(() => {
+      for (const p of newPosts) {
+        upsertPost.run({
+          id: p.id,
+          source: p.source,
+          text: p.text,
+          ocr_text: p.ocrText,
+          transcript_text: p.transcriptText,
+          media_type: p.mediaType,
+          media_url: p.mediaUrl,
+          url: p.url,
+          like_count: p.likeCount,
+          comment_count: p.replyCount,
+          post_timestamp: p.timestamp,
+          fetched_at: now,
+        });
+      }
+    });
+    insertMany();
+    console.log(`[DB] 已存入 ${newPosts.length} 篇貼文`);
+  } catch (err) {
+    console.error(`[DB] 貼文入庫失敗: ${err instanceof Error ? err.message : err}`);
   }
 
   // 按時間從新到舊排序
