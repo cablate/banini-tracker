@@ -1,17 +1,16 @@
 /**
  * 巴逆逆（8zz）反指標追蹤器
  *
- *   npm run dev              # 單次執行：Threads + Facebook（各 3 篇）
+ *   npm run dev              # 單次執行：Facebook 3 篇
  *   npm run dry              # 只抓取，不呼叫 LLM
- *   npm run market           # 單次盤中模式：FB only, 1 篇
- *   npm run evening          # 單次盤後模式：Threads + FB, 各 3 篇
+ *   npm run market           # 單次盤中模式：FB 1 篇
+ *   npm run evening          # 單次盤後模式：FB 3 篇
  *   npm run cron             # 常駐排程：盤中每 30 分 + 盤後 23:00
  */
 import 'dotenv/config';
 import { writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 import cron from 'node-cron';
-import { fetchThreadsPosts, type ThreadsPost } from './threads.js';
 import { fetchFacebookPosts, type FacebookPost } from './facebook.js';
 import { analyzePosts } from './analyze.js';
 import { sendTelegramMessageWithConfig, formatReport, formatFallbackReport } from './telegram.js';
@@ -19,7 +18,6 @@ import { filterNewPosts as filterNew, markPostsSeen } from './seen.js';
 import { withRetry } from './retry.js';
 
 // ── Config ──────────────────────────────────────────────────
-const THREADS_USERNAME = 'banini31';
 const FB_PAGE_URL = 'https://www.facebook.com/DieWithoutBang/';
 const DATA_DIR = join(process.cwd(), 'data');
 
@@ -34,7 +32,7 @@ function env(key: string, fallback?: string): string {
 // ── 統一貼文格式 ────────────────────────────────────────────
 interface UnifiedPost {
   id: string;
-  source: 'threads' | 'facebook';
+  source: 'facebook';
   text: string;
   timestamp: string;
   likeCount: number;
@@ -43,21 +41,6 @@ interface UnifiedPost {
   mediaType: string;
   mediaUrl: string;
   ocrText: string;
-}
-
-function fromThreads(p: ThreadsPost): UnifiedPost {
-  return {
-    id: p.id,
-    source: 'threads',
-    text: p.text,
-    timestamp: p.timestamp,
-    likeCount: p.likeCount,
-    replyCount: p.replyCount,
-    url: p.url,
-    mediaType: p.mediaType,
-    mediaUrl: p.mediaUrl,
-    ocrText: p.ocrText,
-  };
 }
 
 function fromFacebook(p: FacebookPost): UnifiedPost {
@@ -80,8 +63,6 @@ let running = false;
 
 // ── 執行邏輯 ──────────────────────────────────────────────
 interface RunOptions {
-  fbOnly: boolean;
-  threadsOnly: boolean;
   maxPosts: number;
   isDryRun: boolean;
   label: string;
@@ -107,30 +88,15 @@ async function runInner(opts: RunOptions) {
   const apifyToken = env('APIFY_TOKEN');
   const allPosts: UnifiedPost[] = [];
 
-  // 1. 抓取 Threads（含 retry）
-  if (!opts.fbOnly) {
-    try {
-      const threadsPosts = await withRetry(
-        () => fetchThreadsPosts(THREADS_USERNAME, apifyToken, opts.maxPosts),
-        { label: 'Threads', maxRetries: 2, baseDelayMs: 5000 },
-      );
-      allPosts.push(...threadsPosts.map(fromThreads));
-    } catch (err) {
-      console.error(`[Threads] 抓取失敗: ${err instanceof Error ? err.message : err}`);
-    }
-  }
-
-  // 2. 抓取 Facebook（含 retry）
-  if (!opts.threadsOnly) {
-    try {
-      const fbPosts = await withRetry(
-        () => fetchFacebookPosts(FB_PAGE_URL, apifyToken, opts.maxPosts),
-        { label: 'Facebook', maxRetries: 2, baseDelayMs: 5000 },
-      );
-      allPosts.push(...fbPosts.map(fromFacebook));
-    } catch (err) {
-      console.error(`[Facebook] 抓取失敗: ${err instanceof Error ? err.message : err}`);
-    }
+  // 1. 抓取 Facebook（含 retry）
+  try {
+    const fbPosts = await withRetry(
+      () => fetchFacebookPosts(FB_PAGE_URL, apifyToken, opts.maxPosts),
+      { label: 'Facebook', maxRetries: 2, baseDelayMs: 5000 },
+    );
+    allPosts.push(...fbPosts.map(fromFacebook));
+  } catch (err) {
+    console.error(`[Facebook] 抓取失敗: ${err instanceof Error ? err.message : err}`);
   }
 
   if (allPosts.length === 0) {
@@ -156,16 +122,15 @@ async function runInner(opts: RunOptions) {
     return postDate === todayStr;
   };
 
-  const threadCount = newPosts.filter((p) => p.source === 'threads').length;
-  const fbCount = newPosts.filter((p) => p.source === 'facebook').length;
+  const fbCount = newPosts.length;
   const todayCount = newPosts.filter((p) => isToday(p.timestamp)).length;
-  console.log(`發現 ${newPosts.length} 篇新貼文（Threads: ${threadCount}, FB: ${fbCount}, 今日: ${todayCount}）\n`);
+  console.log(`發現 ${newPosts.length} 篇新貼文（FB: ${fbCount}, 今日: ${todayCount}）\n`);
 
   markPostsSeen(newPosts.map((p) => p.id));
 
   // 4. 印出貼文
   for (const p of newPosts) {
-    const tag = p.source === 'threads' ? 'TH' : 'FB';
+    const tag = 'FB';
     const todayTag = isToday(p.timestamp) ? ' [今天]' : '';
     const localTime = new Date(p.timestamp).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
     console.log(`--- [${tag}]${todayTag} ${localTime} [${p.mediaType}] ---`);
@@ -183,7 +148,7 @@ async function runInner(opts: RunOptions) {
   const textsForAnalysis = newPosts
     .filter((p) => p.text.trim().length > 0 || p.ocrText.trim().length > 0)
     .map((p) => {
-      const tag = p.source === 'threads' ? 'Threads' : 'Facebook';
+      const tag = 'Facebook';
       const localTime = new Date(p.timestamp).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
       let content = `[${tag}] ${p.text}`;
       if (p.ocrText) content += `\n[圖片 OCR] ${p.ocrText}`;
@@ -252,7 +217,7 @@ async function runInner(opts: RunOptions) {
       }));
       const msg = llmFailed
         ? formatFallbackReport(postSummaries)
-        : formatReport(analysis, { threads: threadCount, fb: fbCount }, postSummaries);
+        : formatReport(analysis, { fb: fbCount }, postSummaries);
       await withRetry(
         () => sendTelegramMessageWithConfig({ botToken: tgToken, channelId: tgChannelId }, msg),
         { label: 'Telegram', maxRetries: 3, baseDelayMs: 3000 },
@@ -277,35 +242,33 @@ if (isCronMode) {
   // 盤中：週一到五 09:00-13:30，每 30 分鐘，FB only 抓 1 篇
   // cron 不支援半小時結束，用 9:00-13:00 每 30 分 + 13:30 單獨一個
   cron.schedule('7,37 9-12 * * 1-5', () => {
-    run({ fbOnly: true, threadsOnly: false, maxPosts: 1, isDryRun: false, label: '盤中' })
+    run({ maxPosts: 1, isDryRun: false, label: '盤中' })
       .catch((err) => console.error('[盤中] 執行失敗:', err));
   }, { timezone: 'Asia/Taipei' });
 
   cron.schedule('7 13 * * 1-5', () => {
-    run({ fbOnly: true, threadsOnly: false, maxPosts: 1, isDryRun: false, label: '盤中' })
+    run({ maxPosts: 1, isDryRun: false, label: '盤中' })
       .catch((err) => console.error('[盤中] 執行失敗:', err));
   }, { timezone: 'Asia/Taipei' });
 
-  // 盤後：每天晚上 23:00，Threads + FB 各 3 篇
+  // 盤後：每天晚上 23:00，FB 3 篇
   cron.schedule('3 23 * * *', () => {
-    run({ fbOnly: false, threadsOnly: false, maxPosts: 3, isDryRun: false, label: '盤後' })
+    run({ maxPosts: 3, isDryRun: false, label: '盤後' })
       .catch((err) => console.error('[盤後] 執行失敗:', err));
   }, { timezone: 'Asia/Taipei' });
 
   console.log('=== 巴逆逆排程已啟動 ===');
-  console.log('  盤中：週一~五 09:07/09:37/10:07/.../13:07（FB only, 1 篇）');
-  console.log('  盤後：每天 23:03（Threads + FB, 各 3 篇）');
+  console.log('  盤中：週一~五 09:07/09:37/10:07/.../13:07（FB, 1 篇）');
+  console.log('  盤後：每天 23:03（FB, 3 篇）');
   console.log('  按 Ctrl+C 停止\n');
 
 } else {
   // 單次執行模式
   const isDryRun = process.argv.includes('--dry');
-  const threadsOnly = process.argv.includes('--threads-only');
-  const fbOnly = process.argv.includes('--fb-only');
   const maxPostsArg = process.argv.find((a) => a.startsWith('--max-posts='));
   const maxPosts = maxPostsArg ? parseInt(maxPostsArg.split('=')[1], 10) : 3;
 
-  run({ fbOnly, threadsOnly, maxPosts, isDryRun, label: '手動' }).catch((err) => {
+  run({ maxPosts, isDryRun, label: '手動' }).catch((err) => {
     console.error('執行失敗:', err);
     process.exit(1);
   });

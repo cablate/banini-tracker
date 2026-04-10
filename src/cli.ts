@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
 import { loadConfig, saveConfig, defaultConfig, getConfigPath, getSeenFile } from './config.js';
-import { fetchThreadsPosts } from './threads.js';
 import { fetchFacebookPosts } from './facebook.js';
 import { sendTelegramMessage } from './telegram.js';
 import { filterNewPosts, markPostsSeen, listSeenIds, clearSeen } from './seen.js';
@@ -20,7 +19,6 @@ program
   .option('--apify-token <token>', 'Apify API token')
   .option('--tg-bot-token <token>', 'Telegram Bot token')
   .option('--tg-channel-id <id>', 'Telegram Channel ID')
-  .option('--threads-username <name>', 'Threads 使用者名稱', 'banini31')
   .option('--fb-page-url <url>', 'Facebook 粉專網址', 'https://www.facebook.com/DieWithoutBang/')
   .action((opts) => {
     const config = defaultConfig();
@@ -31,7 +29,6 @@ program
         channelId: opts.tgChannelId ?? '',
       };
     }
-    config.targets.threadsUsername = opts.threadsUsername;
     config.targets.facebookPageUrl = opts.fbPageUrl;
     saveConfig(config);
     console.error(`設定已寫入: ${getConfigPath()}`);
@@ -64,7 +61,7 @@ program
 program
   .command('fetch')
   .description('抓取最新貼文（輸出 JSON 到 stdout）')
-  .option('-s, --source <source>', '來源：threads / fb / both', 'fb')
+  .option('-s, --source <source>', '來源：fb', 'fb')
   .option('-n, --limit <n>', '每個來源抓幾篇', '3')
   .option('--no-dedup', '不做去重，抓到什麼就輸出什麼')
   .option('--mark-seen', '輸出後自動標記為已讀')
@@ -74,14 +71,8 @@ program
       const limit = parseInt(opts.limit, 10);
       let posts: any[] = [];
 
-      if (opts.source === 'threads' || opts.source === 'both') {
-        const tp = await fetchThreadsPosts(config.targets.threadsUsername, config.apifyToken, limit);
-        posts.push(...tp);
-      }
-      if (opts.source === 'fb' || opts.source === 'both') {
-        const fp = await fetchFacebookPosts(config.targets.facebookPageUrl, config.apifyToken, limit);
-        posts.push(...fp);
-      }
+      const fp = await fetchFacebookPosts(config.targets.facebookPageUrl, config.apifyToken, limit);
+      posts.push(...fp);
 
       // 按時間從新到舊
       posts.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());

@@ -93,7 +93,7 @@ npx @cablate/banini-tracker config             # 顯示設定（token 遮蔽）
 
 ## 費用參考
 
-Facebook 每次抓取約 $0.02（Apify CU 計費）。Threads 也支援但較貴（$0.15/次），一般不需要用。
+Facebook 每次抓取約 $0.02（Apify CU 計費）。
 
 ## 報告格式建議
 

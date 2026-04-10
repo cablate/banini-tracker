@@ -9,7 +9,6 @@ export interface Config {
     channelId: string;
   };
   targets: {
-    threadsUsername: string;
     facebookPageUrl: string;
   };
 }
@@ -38,8 +37,8 @@ export function loadConfig(): Config {
   }
   const raw = JSON.parse(readFileSync(CONFIG_PATH, 'utf-8'));
   if (!raw.apifyToken) throw new Error('設定檔缺少 apifyToken');
-  if (!raw.targets?.threadsUsername || !raw.targets?.facebookPageUrl) {
-    throw new Error('設定檔缺少 targets 設定');
+  if (!raw.targets?.facebookPageUrl) {
+    throw new Error('設定檔缺少 targets.facebookPageUrl 設定');
   }
   return raw as Config;
 }
@@ -56,7 +55,6 @@ export function defaultConfig(): Config {
       channelId: '',
     },
     targets: {
-      threadsUsername: 'banini31',
       facebookPageUrl: 'https://www.facebook.com/DieWithoutBang/',
     },
   };
