@@ -122,7 +122,13 @@ interface TrackingPrediction {
  * 一律追蹤 5 個交易日，不提前終止。
  */
 export async function updateTracking(): Promise<void> {
-  const db = getDb();
+  let db;
+  try {
+    db = getDb();
+  } catch (err) {
+    console.error(`[tracker] 無法開啟資料庫: ${err instanceof Error ? err.message : err}`);
+    return;
+  }
 
   const predictions = db.prepare(`
     SELECT id, symbol_code, symbol_name, base_price
@@ -144,10 +150,19 @@ export async function updateTracking(): Promise<void> {
   // 批次查詢今日 OHLC
   const ohlcMap = new Map<string, { open: number; high: number; low: number; close: number }>();
   for (const code of uniqueCodes) {
-    const data = await getDailyOHLC(code, today);
-    if (data.length > 0) {
-      ohlcMap.set(code, data[0]);
+    try {
+      const data = await getDailyOHLC(code, today);
+      if (data.length > 0) {
+        ohlcMap.set(code, data[0]);
+      }
+    } catch (err) {
+      console.warn(`[tracker] 查詢 ${code} OHLC 失敗，跳過: ${err instanceof Error ? err.message : err}`);
     }
+  }
+
+  if (ohlcMap.size === 0) {
+    console.warn('[tracker] 今日無任何 OHLC 資料，跳過更新');
+    return;
   }
 
   const countSnapshots = db.prepare(`
@@ -204,8 +219,12 @@ export async function updateTracking(): Promise<void> {
     }
   });
 
-  updateInTransaction();
-  console.log('[tracker] 追蹤更新完成');
+  try {
+    updateInTransaction();
+    console.log('[tracker] 追蹤更新完成');
+  } catch (err) {
+    console.error(`[tracker] 寫入快照失敗: ${err instanceof Error ? err.message : err}`);
+  }
 }
 
 /**

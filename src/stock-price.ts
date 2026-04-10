@@ -39,6 +39,7 @@ export async function getRealtimePrice(code: string, market: 'tse' | 'otc'): Pro
     const url = `${TWSE_REALTIME}?ex_ch=${prefix}_${code}.tw&json=1&delay=0`;
     const res = await fetch(url, {
       headers: { 'User-Agent': 'Mozilla/5.0' },
+      signal: AbortSignal.timeout(10000),
     });
     if (!res.ok) return null;
 
@@ -77,7 +78,7 @@ export async function getDailyOHLC(code: string, startDate: string, endDate?: st
   const url = `${FINMIND_BASE}?${params}`;
 
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
     if (!res.ok) {
       console.warn(`[stock-price] FinMind API 回應 ${res.status}`);
       return [];

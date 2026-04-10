@@ -1,5 +1,6 @@
 import Database from 'better-sqlite3';
 import { join } from 'path';
+import { mkdirSync } from 'fs';
 import { homedir } from 'os';
 
 const DATA_DIR = process.env.DATA_DIR || join(homedir(), '.banini-tracker');
@@ -9,13 +10,18 @@ let db: Database.Database | null = null;
 export function getDb(): Database.Database {
   if (db) return db;
 
+  mkdirSync(DATA_DIR, { recursive: true });
+
   const dbPath = join(DATA_DIR, 'banini.db');
-  db = new Database(dbPath);
+  const instance = new Database(dbPath);
 
-  db.pragma('journal_mode = WAL');
-  db.pragma('foreign_keys = ON');
+  instance.pragma('journal_mode = WAL');
+  instance.pragma('foreign_keys = ON');
 
-  migrate(db);
+  migrate(instance);
+
+  // 只在 migrate 成功後才設值
+  db = instance;
 
   return db;
 }
