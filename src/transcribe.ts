@@ -2,6 +2,8 @@
 // 策略模式：定義轉錄介面，具體實作由外部決定。
 // 新增轉錄服務時只需實作 Transcriber 介面並在 createTranscriber() 加入。
 
+import Groq from 'groq-sdk';
+
 export interface TranscribeResult {
   text: string;
   durationSec?: number;
@@ -21,14 +23,47 @@ export class NoopTranscriber implements Transcriber {
   }
 }
 
+// ── Groq Whisper ────────────────────────────────────────────
+
+export class GroqTranscriber implements Transcriber {
+  readonly name = 'groq';
+  private client: Groq;
+  private model: string;
+
+  constructor(apiKey: string, model = 'whisper-large-v3') {
+    this.client = new Groq({ apiKey });
+    this.model = model;
+  }
+
+  async transcribe(videoUrl: string): Promise<TranscribeResult> {
+    const result = await this.client.audio.transcriptions.create({
+      url: videoUrl,
+      model: this.model,
+      language: 'zh',
+      temperature: 0,
+      response_format: 'verbose_json',
+    });
+    const raw = result as any;
+    return {
+      text: result.text ?? '',
+      durationSec: raw.duration ? Math.round(raw.duration) : undefined,
+    };
+  }
+}
+
 // ── 工廠 ──────────────────────────────────────────────────
 
-export type TranscriberType = 'noop';
+export type TranscriberType = 'noop' | 'groq';
 
 export function createTranscriber(type: TranscriberType = 'noop'): Transcriber {
   switch (type) {
     case 'noop':
       return new NoopTranscriber();
+    case 'groq': {
+      const apiKey = process.env.GROQ_API_KEY;
+      if (!apiKey) throw new Error('GROQ_API_KEY 環境變數未設定');
+      return new GroqTranscriber(apiKey, process.env.GROQ_WHISPER_MODEL ?? 'whisper-large-v3');
+    }
     default:
       throw new Error(`不支援的轉錄器類型: ${type}`);
   }

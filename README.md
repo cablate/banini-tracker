@@ -56,6 +56,10 @@ LLM_API_KEY=...
 LLM_MODEL=MiniMaxAI/MiniMax-M2.5
 TG_BOT_TOKEN=...
 TG_CHANNEL_ID=-100...
+
+# 影片轉錄（選填，啟用後自動轉錄影片貼文）
+TRANSCRIBER=groq
+GROQ_API_KEY=gsk_...
 ```
 
 ## CLI 工具模式
@@ -123,6 +127,7 @@ npx @cablate/banini-tracker push -m "分析結果..."
 |------|---------|------|--------|
 | Facebook 抓取（Apify） | ~$0.02 | 盤中 ~198 次 + 盤後 30 次 | ~$4.56 |
 | LLM 分析（常駐模式） | 依模型而定 | 同上 | 依模型定價 |
+| 影片轉錄（Groq Whisper） | ~$0.006/分鐘 | 視影片數量 | 極低 |
 | Telegram 推送 | 免費 | — | $0 |
 
 > 盤中：週一~五 09:00-13:30 每 30 分鐘（~9 次/日 × 22 工作日）
