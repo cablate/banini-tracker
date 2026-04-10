@@ -57,7 +57,7 @@ export async function fetchFacebookPosts(
       shareCount: item.shares ?? 0,
       url: item.url ?? '',
       mediaType: media?.__typename?.toLowerCase() ?? 'text',
-      mediaUrl: media?.thumbnail ?? media?.photo_image?.uri ?? '',
+      mediaUrl: media?.video_url ?? media?.playable_url ?? media?.thumbnail ?? media?.photo_image?.uri ?? '',
     };
   });
 }
