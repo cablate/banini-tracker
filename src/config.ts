@@ -13,8 +13,8 @@ export interface Config {
   };
 }
 
-const CONFIG_PATH = join(homedir(), '.banini-tracker.json');
-const DATA_DIR = join(homedir(), '.banini-tracker');
+const DATA_DIR = process.env.DATA_DIR || join(homedir(), '.banini-tracker');
+const CONFIG_PATH = join(DATA_DIR, 'config.json');
 const SEEN_FILE = join(DATA_DIR, 'seen.json');
 
 export function getConfigPath(): string {

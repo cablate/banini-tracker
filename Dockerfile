@@ -17,5 +17,6 @@ COPY src/ ./src/
 RUN npm run build
 
 ENV NODE_ENV=production
+ENV DATA_DIR=/data
 
 CMD ["node", "dist/index.js", "--cron"]

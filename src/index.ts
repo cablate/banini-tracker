@@ -20,7 +20,7 @@ import { createTranscriber, transcribeVideoPosts, type TranscriberType } from '.
 
 // ── Config ──────────────────────────────────────────────────
 const FB_PAGE_URL = 'https://www.facebook.com/DieWithoutBang/';
-const DATA_DIR = join(process.cwd(), 'data');
+const DATA_DIR = process.env.DATA_DIR || join(process.cwd(), 'data');
 
 const isCronMode = process.argv.includes('--cron');
 
