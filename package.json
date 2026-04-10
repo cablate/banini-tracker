@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "tsx src/index.ts",
     "dry": "tsx src/index.ts --dry",
-    "market": "tsx src/index.ts --fb-only --max-posts=1",
+    "market": "tsx src/index.ts --max-posts=1",
     "evening": "tsx src/index.ts --max-posts=3",
     "cron": "tsx src/index.ts --cron",
     "cli": "tsx src/cli.ts",
@@ -20,7 +20,6 @@
   "keywords": [
     "banini",
     "reverse-indicator",
-    "threads",
     "facebook",
     "apify",
     "telegram",

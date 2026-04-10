@@ -129,6 +129,23 @@ npx @cablate/banini-tracker push -m "分析結果..."
 > 盤後：每天 23:00（30 次/月）
 > CLI 模式搭配 Claude Code 使用則不需 LLM 費用，Claude 自己分析
 
+## 為什麼只用 Facebook？
+
+早期版本同時支援 Threads 和 Facebook 爬取，後來基於兩個原因移除了 Threads：
+
+1. **費用差距大**：Threads 每次抓取 ~$0.15（Pay-per-event），Facebook 只要 ~$0.02（CU 計費），差 7 倍以上
+2. **FB 參考價值更高**：巴逆逆的投資相關貼文（持倉截圖、操作心得）主要發在 Facebook 粉專，Threads 多為生活日常，反指標參考價值較低
+
+## Star History
+
+<a href="https://star-history.com/#cablate/banini-tracker&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=cablate/banini-tracker&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=cablate/banini-tracker&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=cablate/banini-tracker&type=Date" />
+ </picture>
+</a>
+
 ## 免責聲明
 
 本專案僅供娛樂參考，不構成任何投資建議。
