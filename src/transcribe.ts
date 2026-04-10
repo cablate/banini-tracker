@@ -2,7 +2,14 @@
 // 策略模式：定義轉錄介面，具體實作由外部決定。
 // 新增轉錄服務時只需實作 Transcriber 介面並在 createTranscriber() 加入。
 
+import { execFile } from 'child_process';
+import { createReadStream, unlinkSync, mkdirSync } from 'fs';
+import { join } from 'path';
+import { tmpdir } from 'os';
+import { promisify } from 'util';
 import Groq from 'groq-sdk';
+
+const execFileAsync = promisify(execFile);
 
 export interface TranscribeResult {
   text: string;
@@ -24,6 +31,31 @@ export class NoopTranscriber implements Transcriber {
 }
 
 // ── Groq Whisper ────────────────────────────────────────────
+// Facebook 影片 URL 通常是頁面連結（reel/watch），Groq 無法直接存取。
+// 流程：yt-dlp 下載音訊 → 傳檔案給 Groq Whisper → 清理暫存檔。
+
+function needsDownload(url: string): boolean {
+  return /facebook\.com\/(reel|watch|video)/i.test(url);
+}
+
+async function downloadAudio(videoUrl: string): Promise<string> {
+  const tmpDir = join(tmpdir(), 'banini-tracker');
+  mkdirSync(tmpDir, { recursive: true });
+  const outTemplate = join(tmpDir, `audio-${Date.now}.%(ext)s`);
+  const outFile = join(tmpDir, `audio-${Date.now()}.m4a`);
+
+  await execFileAsync('yt-dlp', [
+    '-f', 'ba',
+    '--extract-audio',
+    '--audio-format', 'm4a',
+    '-o', outFile.replace('.m4a', '.%(ext)s'),
+    '--no-playlist',
+    '--quiet',
+    videoUrl,
+  ], { timeout: 60_000 });
+
+  return outFile;
+}
 
 export class GroqTranscriber implements Transcriber {
   readonly name = 'groq';
@@ -36,8 +68,15 @@ export class GroqTranscriber implements Transcriber {
   }
 
   async transcribe(videoUrl: string): Promise<TranscribeResult> {
+    if (needsDownload(videoUrl)) {
+      return this.transcribeViaDownload(videoUrl);
+    }
+    return this.transcribeViaUrl(videoUrl);
+  }
+
+  private async transcribeViaUrl(url: string): Promise<TranscribeResult> {
     const result = await this.client.audio.transcriptions.create({
-      url: videoUrl,
+      url,
       model: this.model,
       language: 'zh',
       temperature: 0,
@@ -48,6 +87,27 @@ export class GroqTranscriber implements Transcriber {
       text: result.text ?? '',
       durationSec: raw.duration ? Math.round(raw.duration) : undefined,
     };
+  }
+
+  private async transcribeViaDownload(videoUrl: string): Promise<TranscribeResult> {
+    console.log(`[轉錄] 下載音訊: ${videoUrl.slice(0, 60)}...`);
+    const audioFile = await downloadAudio(videoUrl);
+    try {
+      const result = await this.client.audio.transcriptions.create({
+        file: createReadStream(audioFile),
+        model: this.model,
+        language: 'zh',
+        temperature: 0,
+        response_format: 'verbose_json',
+      });
+      const raw = result as any;
+      return {
+        text: result.text ?? '',
+        durationSec: raw.duration ? Math.round(raw.duration) : undefined,
+      };
+    } finally {
+      try { unlinkSync(audioFile); } catch {}
+    }
   }
 }
 
