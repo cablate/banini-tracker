@@ -16,6 +16,7 @@ import { analyzePosts } from './analyze.js';
 import { sendTelegramMessageWithConfig, formatReport, formatFallbackReport } from './telegram.js';
 import { filterNewPosts as filterNew, markPostsSeen } from './seen.js';
 import { withRetry } from './retry.js';
+import { createTranscriber, transcribeVideoPosts, type TranscriberType } from './transcribe.js';
 
 // ── Config ──────────────────────────────────────────────────
 const FB_PAGE_URL = 'https://www.facebook.com/DieWithoutBang/';
@@ -41,6 +42,7 @@ interface UnifiedPost {
   mediaType: string;
   mediaUrl: string;
   ocrText: string;
+  transcriptText: string;
 }
 
 function fromFacebook(p: FacebookPost): UnifiedPost {
@@ -49,6 +51,7 @@ function fromFacebook(p: FacebookPost): UnifiedPost {
     source: 'facebook',
     text: p.text,
     ocrText: p.ocrText,
+    transcriptText: '',
     timestamp: p.timestamp,
     likeCount: p.likeCount,
     replyCount: p.commentCount,
@@ -112,6 +115,17 @@ async function runInner(opts: RunOptions) {
     return;
   }
 
+  // 2.5. 影片轉錄
+  const transcriberType = (process.env.TRANSCRIBER ?? 'noop') as TranscriberType;
+  const transcriber = createTranscriber(transcriberType);
+  if (transcriber.name !== 'noop') {
+    const transcripts = await transcribeVideoPosts(newPosts, transcriber);
+    for (const p of newPosts) {
+      const result = transcripts.get(p.id);
+      if (result) p.transcriptText = result.text;
+    }
+  }
+
   // 按時間從新到舊排序
   newPosts.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 
@@ -135,6 +149,7 @@ async function runInner(opts: RunOptions) {
     const localTime = new Date(p.timestamp).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
     console.log(`--- [${tag}]${todayTag} ${localTime} [${p.mediaType}] ---`);
     console.log(p.text || '（無文字，可能是純圖片）');
+    if (p.transcriptText) console.log(`[影片轉錄] ${p.transcriptText}`);
     if (p.mediaUrl) console.log(`媒體: ${p.mediaUrl}`);
     console.log(`讚: ${p.likeCount} | 回覆: ${p.replyCount} | ${p.url}\n`);
   }
@@ -146,12 +161,13 @@ async function runInner(opts: RunOptions) {
 
   // 5. AI 分析
   const textsForAnalysis = newPosts
-    .filter((p) => p.text.trim().length > 0 || p.ocrText.trim().length > 0)
+    .filter((p) => p.text.trim().length > 0 || p.ocrText.trim().length > 0 || p.transcriptText.trim().length > 0)
     .map((p) => {
       const tag = 'Facebook';
       const localTime = new Date(p.timestamp).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
       let content = `[${tag}] ${p.text}`;
       if (p.ocrText) content += `\n[圖片 OCR] ${p.ocrText}`;
+      if (p.transcriptText) content += `\n[影片轉錄] ${p.transcriptText}`;
       return { text: content, timestamp: localTime, isToday: isToday(p.timestamp) };
     });
 
