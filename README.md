@@ -4,17 +4,18 @@
 
 # banini-tracker
 
-追蹤「股海冥燈」巴逆逆（8zz）的 Facebook 社群貼文，透過 Apify 抓取、AI 反指標分析、Telegram 即時推送。
+追蹤「股海冥燈」巴逆逆（8zz）的 Facebook 社群貼文，透過 Apify 抓取、AI 反指標分析、Telegram 即時推送，並自動追蹤預測準確度。
 
 - 辨識她提到的標的（個股、ETF、原物料）
 - 判斷她的操作（買入 / 被套 / 停損）
 - 反轉推導（她停損 → 可能反彈、她買入 → 可能下跌）
 - 推導連鎖效應（油價跌 → 製造業利多 → 電子股受惠）
+- 自動記錄預測，追蹤 5 個交易日的實際走勢
 
 > **Claude Code 使用者？** 直接把 [`skill/SKILL.md`](skill/SKILL.md) 加到你的 `.claude/skills/` 就能用。Claude 自己當分析引擎，不需要額外 LLM。
 
 支援兩種使用模式：
-- **常駐排程**：Docker 部署，自動盤中/盤後排程 + LLM 分析 + Telegram 推送
+- **常駐排程**：Docker 部署，自動盤中/盤後排程 + LLM 分析 + Telegram 推送 + 預測追蹤
 - **CLI 工具**：`npx @cablate/banini-tracker`，搭配 Claude Code 等 AI 手動執行分析
 
 ## 快速開始（常駐排程）
@@ -26,7 +27,7 @@ cp .env.example .env
 
 # 2. Docker 部署
 docker build -t banini-tracker .
-docker run -d --name banini --env-file .env banini-tracker
+docker run -d --name banini --env-file .env -v banini-data:/data banini-tracker
 
 # 3. 或本地直接跑
 npm install && npm run start
@@ -34,18 +35,24 @@ npm install && npm run start
 
 ### 排程規則
 
-- **盤中**（週一~五 09:00-13:30）：每 30 分鐘，FB only 抓 1 篇
-- **盤後**（每天 23:00）：FB 3 篇
+| 排程 | 時間 | 說明 |
+|------|------|------|
+| 早晨補漏 | 每天 08:00 | 抓前一晚 22:00 後的貼文（3 篇） |
+| 盤中 | 週一~五 09:07-13:07 每 30 分 | 抓 08:30 後的貼文（1 篇） |
+| 追蹤更新 | 週一~五 15:00 | 更新預測追蹤（收盤後抓 OHLC） |
+| 盤後 | 每天 23:03 | 抓 13:30 後的貼文（3 篇） |
+
+每個排程只抓自己時間窗口內的貼文，搭配 seen.json 去重，確保無死角且不重複。
 
 ### npm scripts
 
 | 指令 | 說明 |
 |------|------|
-| `npm run start` | 常駐排程模式（盤中 + 盤後自動跑） |
+| `npm run start` | 常駐排程模式（全部排程自動跑） |
 | `npm run dev` | 單次執行（FB 3 篇） |
 | `npm run dry` | 只抓取，不呼叫 LLM |
-| `npm run market` | 盤中模式（FB only, 1 篇） |
-| `npm run evening` | 盤後模式（各 3 篇） |
+| `npm run market` | 盤中模式（FB 1 篇） |
+| `npm run evening` | 盤後模式（FB 3 篇） |
 
 ### .env 設定
 
@@ -60,7 +67,36 @@ TG_CHANNEL_ID=-100...
 # 影片轉錄（選填，啟用後自動轉錄影片貼文）
 TRANSCRIBER=groq
 GROQ_API_KEY=gsk_...
+
+# FinMind API（選填，免費可用，註冊可提高額度）
+FINMIND_TOKEN=...
+
+# 資料目錄（Docker 建議掛載 /data）
+DATA_DIR=/data
 ```
+
+## 預測追蹤系統
+
+LLM 分析出標的後，系統自動：
+
+1. **映射股票代碼**：台股名稱 → 代碼（2230 檔上市 + 上櫃）
+2. **記錄基準價格**：以貼文發佈時間查對應交易日收盤價
+3. **追蹤 5 個交易日**：每天 15:00 收盤後抓 OHLC，記錄漲跌幅
+4. **同股票取代**：新預測自動取代同標的舊預測（supersede 機制）
+
+勝敗判定在查詢時決定，支援多維度分析（不同持有天數、信心度分群、操作類型）。
+
+### 資料儲存
+
+使用 SQLite（better-sqlite3），資料表：
+
+| 表 | 用途 |
+|----|------|
+| `posts` | 所有貼文原文（即時 + 歷史回測統一來源） |
+| `predictions` | 預測記錄（標的、方向、基準價、狀態） |
+| `price_snapshots` | 每日 OHLC 快照（5 天追蹤期） |
+
+資料庫位置：`$DATA_DIR/banini.db`（Docker 掛載 `/data`，本地 `~/.banini-tracker/`）
 
 ## CLI 工具模式
 
@@ -76,8 +112,11 @@ npx @cablate/banini-tracker init \
 # 抓取 Facebook 最新 3 篇
 npx @cablate/banini-tracker fetch -s fb -n 3 --mark-seen
 
+# 抓取指定日期區間（回測用）
+npx @cablate/banini-tracker fetch --since 2025-04-01 --until 2025-05-01 -n 100
+
 # 推送結果到 Telegram
-npx @cablate/banini-tracker push -m "分析結果..."
+npx @cablate/banini-tracker push -f report.txt
 ```
 
 ### CLI 指令
@@ -97,6 +136,8 @@ npx @cablate/banini-tracker push -m "分析結果..."
 ```
 -s, --source <source>  來源：fb（預設 fb）
 -n, --limit <n>        每個來源抓幾篇（預設 3）
+--since <date>         只抓此時間之後的貼文（YYYY-MM-DD / ISO 時間戳 / 相對時間如 "2 months"）
+--until <date>         只抓此時間之前的貼文
 --no-dedup             不去重
 --mark-seen            輸出後自動標記已讀
 ```
@@ -105,7 +146,7 @@ npx @cablate/banini-tracker push -m "分析結果..."
 
 ```
 -m, --message <text>     直接帶訊息
--f, --file <path>        從檔案讀取
+-f, --file <path>        從檔案讀取（推薦多行內容用這個）
 --parse-mode <mode>      HTML / Markdown / none（預設 HTML）
 ```
 
@@ -117,7 +158,7 @@ npx @cablate/banini-tracker push -m "分析結果..."
 
 1. `fetch` 抓貼文 → Claude 讀 JSON
 2. Claude 分析 + WebSearch 查最新走勢
-3. Claude 組報告 → `push` 推送 Telegram
+3. Claude 組報告 → `push -f` 推送 Telegram
 
 詳見 [`skill/SKILL.md`](skill/SKILL.md)。
 
@@ -125,14 +166,14 @@ npx @cablate/banini-tracker push -m "分析結果..."
 
 | 項目 | 單次費用 | 頻率 | 月估算 |
 |------|---------|------|--------|
-| Facebook 抓取（Apify） | ~$0.02 | 盤中 ~198 次 + 盤後 30 次 | ~$4.56 |
+| Facebook 抓取（Apify） | ~$0.005/篇 | ~270 篇/月 | ~$1.35 |
 | LLM 分析（常駐模式） | 依模型而定 | 同上 | 依模型定價 |
 | 影片轉錄（Groq Whisper） | ~$0.006/分鐘 | 視影片數量 | 極低 |
+| 股價查詢（FinMind） | 免費 | 每日收盤後 | $0 |
 | Telegram 推送 | 免費 | — | $0 |
 
-> 盤中：週一~五 09:00-13:30 每 30 分鐘（~9 次/日 × 22 工作日）
-> 盤後：每天 23:00（30 次/月）
-> CLI 模式搭配 Claude Code 使用則不需 LLM 費用，Claude 自己分析
+> CLI 模式搭配 Claude Code 使用不需 LLM 費用，Claude 自己分析。
+> 回測歷史資料加日期篩選：~$7/千篇（$5 基本 + $2 date filter add-on）。
 
 ## 為什麼只用 Facebook？
 
