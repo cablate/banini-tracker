@@ -12,13 +12,24 @@
 - 推導連鎖效應（油價跌 → 製造業利多 → 電子股受惠）
 - 自動記錄預測，追蹤 5 個交易日的實際走勢
 
-## 反指標追蹤報表
+---
+
+### 歷史回測
+
+使用 [Claude Opus 4.6](https://docs.anthropic.com/en/docs/about-claude/models) 回溯分析 2024/04～2026/04 共 2,249 篇貼文，從中提取 345 筆明確的投資操作預測。
 
 <p align="center">
-  <img src="assets/banini-report.gif" alt="反指標追蹤報表" width="600">
+  <img src="assets/banini-report.gif" alt="歷史回測數據" width="600">
 </p>
 
-> 345 筆預測、5 個交易日追蹤、盤中極值 ±1% 判定。她買我就空，她賣我就多 — 到底準不準？
+| | |
+|---|---|
+| **分析範圍** | 2,249 篇貼文 → 345 筆預測，涵蓋 70 個標的（個股、ETF、指數、原物料） |
+| **追蹤方式** | 每筆預測後追蹤 5 個交易日，記錄盤中最高/最低價 |
+| **判定標準** | 反指標方向正確且幅度超過 ±1% 即算「冥燈成功」 |
+| **資料集** | [`data/banini-public.db`](data/banini-public.db)（SQLite，不含原始貼文） |
+
+---
 
 > **Claude Code 使用者？** 直接把 [`skill/SKILL.md`](skill/SKILL.md) 加到你的 `.claude/skills/` 就能用。Claude 自己當分析引擎，不需要額外 LLM。
 
