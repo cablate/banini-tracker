@@ -206,7 +206,8 @@ npx @cablate/banini-tracker push -f report.txt
 | LLM 分析（常駐模式） | 依模型而定 | 同上 | 依模型定價 |
 | 影片轉錄（Groq Whisper） | ~$0.006/分鐘 | 視影片數量 | 極低 |
 | 股價查詢（FinMind） | 免費 | 每日收盤後 | $0 |
-| 通知推送（TG / DC / LINE） | 免費 | — | $0 |
+| 通知推送（TG / DC） | 免費 | — | $0 |
+| LINE 推送 | Free plan 200 則/月 | 同上 | $0（一般用量） |
 
 > CLI 模式搭配 Claude Code 使用不需 LLM 費用，Claude 自己分析。
 > 回測歷史資料加日期篩選：~$7/千篇（$5 基本 + $2 date filter add-on）。
