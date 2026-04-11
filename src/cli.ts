@@ -2,7 +2,7 @@
 import { Command } from 'commander';
 import { loadConfig, saveConfig, defaultConfig, getConfigPath, getSeenFile } from './config.js';
 import { fetchFacebookPosts } from './facebook.js';
-import { sendTelegramMessage } from './telegram.js';
+import { sendTelegramDirect } from './notifiers/index.js';
 import { filterNewPosts, markPostsSeen, listSeenIds, clearSeen } from './seen.js';
 import { readFileSync } from 'fs';
 import { createTranscriber, transcribeVideoPosts, isVideoPost } from './transcribe.js';
@@ -212,7 +212,7 @@ program
       if (!text) throw new Error('沒有訊息內容');
 
       const parseMode = opts.parseMode === 'none' ? '' : opts.parseMode;
-      await sendTelegramMessage(config.telegram.botToken, config.telegram.channelId, text, parseMode as any);
+      await sendTelegramDirect(config.telegram.botToken, config.telegram.channelId, text, parseMode as any);
       console.error('Telegram 訊息已發送');
     } catch (err) {
       console.error(err instanceof Error ? err.message : err);
