@@ -12,6 +12,14 @@
 - 推導連鎖效應（油價跌 → 製造業利多 → 電子股受惠）
 - 自動記錄預測，追蹤 5 個交易日的實際走勢
 
+## 反指標追蹤報表
+
+<p align="center">
+  <img src="assets/banini-report.gif" alt="反指標追蹤報表" width="600">
+</p>
+
+> 345 筆預測、5 個交易日追蹤、盤中極值 ±1% 判定。她買我就空，她賣我就多 — 到底準不準？
+
 > **Claude Code 使用者？** 直接把 [`skill/SKILL.md`](skill/SKILL.md) 加到你的 `.claude/skills/` 就能用。Claude 自己當分析引擎，不需要額外 LLM。
 
 支援兩種使用模式：
@@ -97,6 +105,15 @@ LLM 分析出標的後，系統自動：
 | `price_snapshots` | 每日 OHLC 快照（5 天追蹤期） |
 
 資料庫位置：`$DATA_DIR/banini.db`（Docker 掛載 `/data`，本地 `~/.banini-tracker/`）
+
+### 公開資料集
+
+[`data/banini-public.db`](data/banini-public.db) 提供去識別化的預測資料，包含 345 筆預測記錄與對應的價格快照，不含原始貼文內容。可直接用於分析或驗證反指標勝率。
+
+```bash
+# 快速查看
+sqlite3 data/banini-public.db "SELECT symbol_name, reverse_view, base_price, status FROM predictions LIMIT 10"
+```
 
 ## CLI 工具模式
 
