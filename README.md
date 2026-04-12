@@ -84,6 +84,10 @@ npm install && npm run start
 
 常駐模式會在 port 3000 啟動設定頁面。首次進入建立管理員帳密，之後登入即可修改設定。修改後下次排程執行自動生效，不需重啟。
 
+<p align="center">
+  <img src="assets/setting-page.png" alt="Web 設定頁面" width="600">
+</p>
+
 ### 環境變數（.env）
 
 如果不使用 Web UI，也可以直接設定環境變數：
