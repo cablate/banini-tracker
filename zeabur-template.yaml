@@ -11,17 +11,29 @@ spec:
   readme: |-
     # banini-tracker
 
-    追蹤「股海冥燈」巴逆逆（8zz）的 Facebook 貼文，透過 AI 反指標分析，自動推送到 Telegram / Discord / LINE。
+    追蹤「股海冥燈」巴逆逆（8zz）的 Facebook 貼文，透過 AI 反指標分析、多平台即時推送，並自動追蹤預測準確度。
+
+    ## 功能
+
+    - 辨識她提到的標的（個股、ETF、原物料）
+    - 反轉推導（她停損 → 可能反彈、她買入 → 可能下跌）
+    - 推導連鎖效應（油價跌 → 製造業利多 → 電子股受惠）
+    - 自動記錄預測，追蹤 5 個交易日的實際走勢
+    - 多平台通知：Telegram / Discord / LINE
+
+    ## 歷史回測
+
+    使用 Claude Opus 4.6 回溯分析 2024/04～2026/04 共 2,249 篇貼文，提取 345 筆預測、涵蓋 70 個標的。反指標方向正確且幅度超過 ±1% 即算「冥燈成功」。
 
     ## 部署後設定
 
-    部署完成後，打開網頁設定頁面（Zeabur 會自動分配網域），首次進入需建立管理員帳密，然後在頁面上填入：
+    部署完成後打開 Zeabur 分配的網域，首次進入建立管理員帳密，然後填入：
 
-    - APIFY_TOKEN（必填）
-    - LLM_API_KEY（必填）
-    - 至少一個通知管道（Telegram / Discord / LINE）
+    - **APIFY_TOKEN**（必填）— Facebook 貼文抓取
+    - **LLM_API_KEY**（必填）— AI 分析引擎
+    - **通知管道**（至少一個）— Telegram / Discord / LINE
 
-    其餘設定皆有合理預設值，可按需調整。
+    其餘設定皆有合理預設值（LLM 預設 DeepInfra MiniMax-M2.5），可按需調整。設定修改後下次排程自動生效，不需重啟。
 
     ## 排程
 
@@ -29,12 +41,22 @@ spec:
     |------|------|
     | 每天 08:00 | 早晨補漏（3 篇） |
     | 週一~五 09:07-13:07 每 30 分 | 盤中追蹤（1 篇） |
-    | 週一~五 15:00 | 預測追蹤更新 |
+    | 週一~五 15:00 | 收盤後更新預測追蹤 |
     | 每天 23:03 | 盤後彙整（3 篇） |
+
+    ## 費用估算
+
+    | 項目 | 月估算 |
+    |------|--------|
+    | Facebook 抓取（Apify） | ~.35（~270 篇） |
+    | LLM 分析 | 依模型定價 |
+    | 通知推送（TG / DC） | 免費 |
+    | LINE 推送 | Free plan 200 則/月 |
+    | 股價查詢（FinMind） | 免費 |
 
     ## 詳細說明
 
-    [GitHub README](https://github.com/cablate/banini-tracker)
+    [GitHub](https://github.com/cablate/banini-tracker) · [公開資料集](https://github.com/cablate/banini-tracker/blob/master/data/banini-public.db)
   variables:
     - key: PUBLIC_DOMAIN
       type: DOMAIN
