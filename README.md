@@ -32,7 +32,7 @@
 
 ## 快速開始
 
-三種部署方式，按推薦順序：
+四種使用方式，按推薦順序：
 
 ### 1. Zeabur 一鍵部署（推薦）
 
@@ -49,7 +49,16 @@ docker run -d --name banini --env-file .env -v banini-data:/data -p 3000:3000 ba
 
 部署後打開 `http://localhost:3000` 進入設定頁面。也可以直接用 `.env` 檔設定環境變數（見下方）。
 
-### 3. 本地開發
+### 3. npx 直接啟動
+
+```bash
+npx @cablate/banini-tracker serve
+npx @cablate/banini-tracker serve --port 8080
+```
+
+不需 Docker，直接在本機啟動常駐服務（排程 + Web 設定頁面）。打開 `http://localhost:3000` 進入設定。適合有 Node.js 環境的使用者。
+
+### 4. 本地開發
 
 ```bash
 cp .env.example .env  # 填入必要設定
@@ -112,10 +121,13 @@ sqlite3 data/banini-public.db "SELECT symbol_name, reverse_view, base_price, sta
 不需 clone repo，搭配 Claude Code 等 AI 使用：
 
 ```bash
-# 初始化
+# 啟動常駐服務（排程 + Web UI）
+npx @cablate/banini-tracker serve
+
+# 初始化 CLI 設定
 npx @cablate/banini-tracker init --apify-token YOUR_TOKEN
 
-# 抓取
+# 抓取貼文
 npx @cablate/banini-tracker fetch -n 3 --mark-seen
 
 # 推送到 Telegram
