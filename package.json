@@ -1,6 +1,6 @@
 {
   "name": "@cablate/banini-tracker",
-  "version": "2.0.20",
+  "version": "2.0.21",
   "description": "巴逆逆反指標追蹤器 — 常駐排程 + CLI 雙模式",
   "type": "module",
   "bin": {
