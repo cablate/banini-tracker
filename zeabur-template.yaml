@@ -13,18 +13,15 @@ spec:
 
     追蹤「股海冥燈」巴逆逆（8zz）的 Facebook 貼文，透過 AI 反指標分析，自動推送到 Telegram / Discord / LINE。
 
-    ## 必填設定
+    ## 部署後設定
 
-    | 變數 | 說明 |
-    |------|------|
-    | APIFY_TOKEN | Apify API token（Facebook 抓取用） |
-    | LLM_API_KEY | LLM API key（AI 分析用） |
+    部署完成後，打開網頁設定頁面（Zeabur 會自動分配網域），首次進入需建立管理員帳密，然後在頁面上填入：
 
-    至少設定一個通知管道：
+    - APIFY_TOKEN（必填）
+    - LLM_API_KEY（必填）
+    - 至少一個通知管道（Telegram / Discord / LINE）
 
-    - **Telegram**：TG_BOT_TOKEN + TG_CHANNEL_ID
-    - **Discord**：DISCORD_BOT_TOKEN + DISCORD_CHANNEL_ID
-    - **LINE**：LINE_CHANNEL_ACCESS_TOKEN + LINE_TO
+    其餘設定皆有合理預設值，可按需調整。
 
     ## 排程
 
@@ -38,47 +35,34 @@ spec:
     ## 詳細說明
 
     [GitHub README](https://github.com/cablate/banini-tracker)
-  variables: []
+  variables:
+    - key: PUBLIC_DOMAIN
+      type: DOMAIN
+      name: Domain
+      description: 設定頁面網域
   services:
     - name: banini-tracker
       icon: https://raw.githubusercontent.com/cablate/banini-tracker/master/assets/banner.svg
       template: PREBUILT
+      domainKey: PUBLIC_DOMAIN
       spec:
         source:
           image: ghcr.io/cablate/banini-tracker:latest
+        ports:
+          - id: web
+            port: 3000
+            type: HTTP
         volumes:
           - id: data
             dir: /data
         env:
-          APIFY_TOKEN:
-            default: ""
-          LLM_BASE_URL:
-            default: "https://api.deepinfra.com/v1/openai"
-          LLM_API_KEY:
-            default: ""
-          LLM_MODEL:
-            default: "MiniMaxAI/MiniMax-M2.5"
-          TG_BOT_TOKEN:
-            default: ""
-          TG_CHANNEL_ID:
-            default: ""
-          DISCORD_BOT_TOKEN:
-            default: ""
-          DISCORD_CHANNEL_ID:
-            default: ""
-          LINE_CHANNEL_ACCESS_TOKEN:
-            default: ""
-          LINE_TO:
-            default: ""
-          TRANSCRIBER:
-            default: "noop"
-          GROQ_API_KEY:
-            default: ""
-          FINMIND_TOKEN:
-            default: ""
           DATA_DIR:
             default: "/data"
             readonly: true
   locales:
     zh-TW:
       description: 巴逆逆（8zz）反指標追蹤器 — AI 分析 Facebook 貼文 + 多平台推送（Telegram / Discord / LINE）
+      variables:
+        - key: PUBLIC_DOMAIN
+          name: 網域
+          description: 設定頁面的網域

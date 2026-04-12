@@ -19,6 +19,8 @@ import { withRetry } from './retry.js';
 import { createTranscriber, transcribeVideoPosts, type TranscriberType } from './transcribe.js';
 import { recordPredictions, updateTracking } from './tracker.js';
 import { getDb } from './db.js';
+import { getConfig, initConfigTable, type ConfigKey } from './config-store.js';
+import { startWebServer } from './web.js';
 
 // ── Config ──────────────────────────────────────────────────
 const FB_PAGE_URL = 'https://www.facebook.com/DieWithoutBang/';
@@ -26,9 +28,10 @@ const DATA_DIR = process.env.DATA_DIR || join(process.cwd(), 'data');
 
 const isCronMode = process.argv.includes('--cron');
 
-function env(key: string, fallback?: string): string {
-  const val = process.env[key] ?? fallback;
-  if (!val) throw new Error(`Missing env: ${key}`);
+/** Read config: DB > env > default (getConfig handles all three) */
+function env(key: ConfigKey, fallback?: string): string {
+  const val = getConfig(key) || fallback;
+  if (!val) throw new Error(`Missing config: ${key}`);
   return val;
 }
 
@@ -95,11 +98,11 @@ async function runInner(opts: RunOptions) {
   const apifyToken = env('APIFY_TOKEN');
 
   // 啟動預檢：提前警告設定問題，避免跑完抓取才炸
-  if (!opts.isDryRun && !process.env.LLM_API_KEY) {
+  if (!opts.isDryRun && !getConfig('LLM_API_KEY')) {
     console.warn('⚠ LLM_API_KEY 未設定，AI 分析將會失敗（可用 --dry 跳過分析）');
   }
-  const transcriberType = (process.env.TRANSCRIBER ?? 'noop') as TranscriberType;
-  if (transcriberType === 'groq' && !process.env.GROQ_API_KEY) {
+  const transcriberType = (getConfig('TRANSCRIBER') || 'noop') as TranscriberType;
+  if (transcriberType === 'groq' && !getConfig('GROQ_API_KEY')) {
     console.warn('⚠ TRANSCRIBER=groq 但 GROQ_API_KEY 未設定，影片轉錄將會失敗');
   }
 
@@ -328,7 +331,12 @@ async function runInner(opts: RunOptions) {
 }
 
 // ── 入口 ────────────────────────────────────────────────────
+// 初始化 config table（確保 DB schema ready）
+initConfigTable();
+
 if (isCronMode) {
+  // 啟動 Web 設定頁面
+  startWebServer();
   // 早晨補漏：每天 08:00
   cron.schedule('0 8 * * *', () => {
     run({ maxPosts: 3, isDryRun: false, label: '早晨' })

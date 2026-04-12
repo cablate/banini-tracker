@@ -2,20 +2,21 @@ import { createTelegramNotifier } from './telegram.js';
 import { createDiscordNotifier } from './discord.js';
 import { createLineNotifier } from './line.js';
 import type { Notifier } from './types.js';
+import { getConfig } from '../config-store.js';
 
 export type { Notifier, ReportData, PostSummary, AnalysisResult } from './types.js';
 export { sendTelegramDirect } from './telegram.js';
 
 /**
- * 讀取環境變數，建立所有已設定的 notifier。
- * 常駐模式用：自動偵測哪些 channel 有設定。
+ * 讀取設定，建立所有已設定的 notifier。
+ * 每次呼叫都重新讀取（支援熱重載）。
  */
 export function createNotifiers(): Notifier[] {
   const notifiers: Notifier[] = [];
 
   // Telegram
-  const tgToken = process.env.TG_BOT_TOKEN;
-  const tgChannelId = process.env.TG_CHANNEL_ID;
+  const tgToken = getConfig('TG_BOT_TOKEN');
+  const tgChannelId = getConfig('TG_CHANNEL_ID');
   if (tgToken && tgChannelId) {
     notifiers.push(createTelegramNotifier({ botToken: tgToken, channelId: tgChannelId }));
   } else if (tgToken || tgChannelId) {
@@ -23,8 +24,8 @@ export function createNotifiers(): Notifier[] {
   }
 
   // Discord
-  const dcToken = process.env.DISCORD_BOT_TOKEN;
-  const dcChannelId = process.env.DISCORD_CHANNEL_ID;
+  const dcToken = getConfig('DISCORD_BOT_TOKEN');
+  const dcChannelId = getConfig('DISCORD_CHANNEL_ID');
   if (dcToken && dcChannelId) {
     notifiers.push(createDiscordNotifier({ botToken: dcToken, channelId: dcChannelId }));
   } else if (dcToken || dcChannelId) {
@@ -32,8 +33,8 @@ export function createNotifiers(): Notifier[] {
   }
 
   // LINE
-  const lineToken = process.env.LINE_CHANNEL_ACCESS_TOKEN;
-  const lineTo = process.env.LINE_TO;
+  const lineToken = getConfig('LINE_CHANNEL_ACCESS_TOKEN');
+  const lineTo = getConfig('LINE_TO');
   if (lineToken && lineTo) {
     notifiers.push(createLineNotifier({ channelAccessToken: lineToken, to: lineTo }));
   } else if (lineToken || lineTo) {

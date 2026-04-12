@@ -4,10 +4,9 @@
 
 # banini-tracker
 
-追蹤「股海冥燈」巴逆逆（8zz）的 Facebook 社群貼文，透過 Apify 抓取、AI 反指標分析、多平台即時推送（Telegram / Discord / LINE），並自動追蹤預測準確度。
+追蹤「股海冥燈」巴逆逆（8zz）的 Facebook 社群貼文，透過 AI 反指標分析、多平台即時推送（Telegram / Discord / LINE），並自動追蹤預測準確度。
 
 - 辨識她提到的標的（個股、ETF、原物料）
-- 判斷她的操作（買入 / 被套 / 停損）
 - 反轉推導（她停損 → 可能反彈、她買入 → 可能下跌）
 - 推導連鎖效應（油價跌 → 製造業利多 → 電子股受惠）
 - 自動記錄預測，追蹤 5 個交易日的實際走勢
@@ -31,78 +30,67 @@
 
 ---
 
-> **Claude Code 使用者？** 直接把 [`skill/SKILL.md`](skill/SKILL.md) 加到你的 `.claude/skills/` 就能用。Claude 自己當分析引擎，不需要額外 LLM。
+## 快速開始
 
-支援兩種使用模式：
-- **常駐排程**：Docker 部署，自動盤中/盤後排程 + LLM 分析 + 多平台推送（Telegram / Discord / LINE） + 預測追蹤
-- **CLI 工具**：`npx @cablate/banini-tracker`，搭配 Claude Code 等 AI 手動執行分析
+三種部署方式，按推薦順序：
 
-## 快速開始（常駐排程）
+### 1. Zeabur 一鍵部署（推薦）
+
+[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/banini-tracker)
+
+部署後打開分配的網域，首次進入設定管理員帳密，然後在 Web UI 填入 API key 和通知管道。不需要手動設定環境變數。
+
+### 2. Docker
 
 ```bash
-# 1. 複製設定
-cp .env.example .env
-# 填入必要項目，並設定至少一個通知管道（Telegram / Discord / LINE）
-
-# 2. Docker 部署
 docker build -t banini-tracker .
-docker run -d --name banini --env-file .env -v banini-data:/data banini-tracker
+docker run -d --name banini --env-file .env -v banini-data:/data -p 3000:3000 banini-tracker
+```
 
-# 3. 或本地直接跑
+部署後打開 `http://localhost:3000` 進入設定頁面。也可以直接用 `.env` 檔設定環境變數（見下方）。
+
+### 3. 本地開發
+
+```bash
+cp .env.example .env  # 填入必要設定
 npm install && npm run start
 ```
 
-### 排程規則
+## 排程規則
 
 | 排程 | 時間 | 說明 |
 |------|------|------|
-| 早晨補漏 | 每天 08:00 | 抓前一晚 22:00 後的貼文（3 篇） |
-| 盤中 | 週一~五 09:07-13:07 每 30 分 | 抓 08:30 後的貼文（1 篇） |
-| 追蹤更新 | 週一~五 15:00 | 更新預測追蹤（收盤後抓 OHLC） |
-| 盤後 | 每天 23:03 | 抓 13:30 後的貼文（3 篇） |
+| 早晨補漏 | 每天 08:00 | 抓前一晚的貼文（3 篇） |
+| 盤中 | 週一~五 09:07-13:07 每 30 分 | 即時追蹤（1 篇） |
+| 追蹤更新 | 週一~五 15:00 | 收盤後更新預測追蹤 |
+| 盤後 | 每天 23:03 | 當日彙整（3 篇） |
 
-每個排程只抓自己時間窗口內的貼文，搭配 seen.json 去重，確保無死角且不重複。
+## 設定
 
-### npm scripts
+### Web UI（Zeabur / Docker）
 
-| 指令 | 說明 |
-|------|------|
-| `npm run start` | 常駐排程模式（全部排程自動跑） |
-| `npm run dev` | 單次執行（FB 3 篇） |
-| `npm run dry` | 只抓取，不呼叫 LLM |
-| `npm run market` | 盤中模式（FB 1 篇） |
-| `npm run evening` | 盤後模式（FB 3 篇） |
+常駐模式會在 port 3000 啟動設定頁面。首次進入建立管理員帳密，之後登入即可修改設定。修改後下次排程執行自動生效，不需重啟。
 
-### .env 設定
+### 環境變數（.env）
 
-```
-APIFY_TOKEN=apify_api_...
-LLM_BASE_URL=https://api.deepinfra.com/v1/openai
-LLM_API_KEY=...
-LLM_MODEL=MiniMaxAI/MiniMax-M2.5
-TG_BOT_TOKEN=...
-TG_CHANNEL_ID=-100...
+如果不使用 Web UI，也可以直接設定環境變數：
 
-# Discord Bot（選填，與 Telegram 擇一或同時使用）
-DISCORD_BOT_TOKEN=...
-DISCORD_CHANNEL_ID=...
+| 變數 | 必填 | 說明 |
+|------|------|------|
+| `APIFY_TOKEN` | 是 | Apify API token |
+| `LLM_API_KEY` | 是 | LLM API key |
+| `LLM_BASE_URL` | — | 預設 DeepInfra |
+| `LLM_MODEL` | — | 預設 MiniMax-M2.5 |
+| `TG_BOT_TOKEN` + `TG_CHANNEL_ID` | 至少一組 | Telegram 通知 |
+| `DISCORD_BOT_TOKEN` + `DISCORD_CHANNEL_ID` | 至少一組 | Discord 通知 |
+| `LINE_CHANNEL_ACCESS_TOKEN` + `LINE_TO` | 至少一組 | LINE 通知（Free plan 200 則/月） |
+| `TRANSCRIBER` | — | `noop`（預設）或 `groq` |
+| `GROQ_API_KEY` | — | Groq Whisper 影片轉錄用 |
+| `FINMIND_TOKEN` | — | 股價查詢（免費可用） |
 
-# LINE（選填，與其他通知管道同時使用）
-LINE_CHANNEL_ACCESS_TOKEN=...
-LINE_TO=target_user_or_group_id
+Web UI 和環境變數可以混用，Web UI 的設定優先。
 
-# 影片轉錄（選填，啟用後自動轉錄影片貼文）
-TRANSCRIBER=groq
-GROQ_API_KEY=gsk_...
-
-# FinMind API（選填，免費可用，註冊可提高額度）
-FINMIND_TOKEN=...
-
-# 資料目錄（Docker 建議掛載 /data）
-DATA_DIR=/data
-```
-
-## 預測追蹤系統
+## 預測追蹤
 
 LLM 分析出標的後，系統自動：
 
@@ -111,113 +99,44 @@ LLM 分析出標的後，系統自動：
 3. **追蹤 5 個交易日**：每天 15:00 收盤後抓 OHLC，記錄漲跌幅
 4. **同股票取代**：新預測自動取代同標的舊預測（supersede 機制）
 
-勝敗判定在查詢時決定，支援多維度分析（不同持有天數、信心度分群、操作類型）。
-
-### 資料儲存
-
-使用 SQLite（better-sqlite3），資料表：
-
-| 表 | 用途 |
-|----|------|
-| `posts` | 所有貼文原文（即時 + 歷史回測統一來源） |
-| `predictions` | 預測記錄（標的、方向、基準價、狀態） |
-| `price_snapshots` | 每日 OHLC 快照（5 天追蹤期） |
-
-資料庫位置：`$DATA_DIR/banini.db`（Docker 掛載 `/data`，本地 `~/.banini-tracker/`）
-
 ### 公開資料集
 
-[`data/banini-public.db`](data/banini-public.db) 提供去識別化的預測資料，包含 345 筆預測記錄與對應的價格快照，不含原始貼文內容。可直接用於分析或驗證反指標勝率。
+[`data/banini-public.db`](data/banini-public.db) 提供去識別化的預測資料（345 筆預測 + 價格快照），不含原始貼文。
 
 ```bash
-# 快速查看
 sqlite3 data/banini-public.db "SELECT symbol_name, reverse_view, base_price, status FROM predictions LIMIT 10"
 ```
 
-## CLI 工具模式
+## CLI 工具
 
-不需 clone repo，任何環境直接用：
+不需 clone repo，搭配 Claude Code 等 AI 使用：
 
 ```bash
-# 初始化設定
-npx @cablate/banini-tracker init \
-  --apify-token YOUR_APIFY_TOKEN \
-  --tg-bot-token YOUR_TG_BOT_TOKEN \
-  --tg-channel-id YOUR_TG_CHANNEL_ID
+# 初始化
+npx @cablate/banini-tracker init --apify-token YOUR_TOKEN
 
-# 抓取 Facebook 最新 3 篇
-npx @cablate/banini-tracker fetch -s fb -n 3 --mark-seen
+# 抓取
+npx @cablate/banini-tracker fetch -n 3 --mark-seen
 
-# 抓取指定日期區間（回測用）
-npx @cablate/banini-tracker fetch --since 2025-04-01 --until 2025-05-01 -n 100
-
-# 推送結果到 Telegram
+# 推送到 Telegram
 npx @cablate/banini-tracker push -f report.txt
 ```
 
-### CLI 指令
+> **Claude Code 使用者？** 直接把 [`skill/SKILL.md`](skill/SKILL.md) 加到你的 `.claude/skills/` 就能用。Claude 自己當分析引擎，不需要額外 LLM。
 
-| 指令 | 說明 |
-|------|------|
-| `init` | 初始化設定檔（`~/.banini-tracker.json`） |
-| `config` | 顯示目前設定 |
-| `fetch` | 抓取貼文，輸出 JSON 到 stdout |
-| `push` | 推送訊息到 Telegram |
-| `seen list` | 列出已讀貼文 ID |
-| `seen mark <id...>` | 標記貼文為已讀 |
-| `seen clear` | 清空已讀紀錄 |
-
-### fetch 選項
-
-```
--s, --source <source>  來源：fb（預設 fb）
--n, --limit <n>        每個來源抓幾篇（預設 3）
---since <date>         只抓此時間之後的貼文（YYYY-MM-DD / ISO 時間戳 / 相對時間如 "2 months"）
---until <date>         只抓此時間之前的貼文
---no-dedup             不去重
---mark-seen            輸出後自動標記已讀
-```
-
-### push 選項
-
-```
--m, --message <text>     直接帶訊息
--f, --file <path>        從檔案讀取（推薦多行內容用這個）
---parse-mode <mode>      HTML / Markdown / none（預設 HTML）
-```
-
-不帶 `-m` 或 `-f` 時從 stdin 讀取。
-
-### 搭配 Claude Code 使用
-
-在 Claude Code 的 skill 中，Claude 自己就是分析引擎：
-
-1. `fetch` 抓貼文 → Claude 讀 JSON
-2. Claude 分析 + WebSearch 查最新走勢
-3. Claude 組報告 → `push -f` 推送 Telegram
-
-詳見 [`skill/SKILL.md`](skill/SKILL.md)。
+完整指令說明見 `npx @cablate/banini-tracker --help`。
 
 ## 費用估算
 
-| 項目 | 單次費用 | 頻率 | 月估算 |
-|------|---------|------|--------|
-| Facebook 抓取（Apify） | ~$0.005/篇 | ~270 篇/月 | ~$1.35 |
-| LLM 分析（常駐模式） | 依模型而定 | 同上 | 依模型定價 |
-| 影片轉錄（Groq Whisper） | ~$0.006/分鐘 | 視影片數量 | 極低 |
-| 股價查詢（FinMind） | 免費 | 每日收盤後 | $0 |
-| 通知推送（TG / DC） | 免費 | — | $0 |
-| LINE 推送 | Free plan 200 則/月 | 同上 | $0（一般用量） |
+| 項目 | 月估算 |
+|------|--------|
+| Facebook 抓取（Apify） | ~$1.35（~270 篇） |
+| LLM 分析 | 依模型定價 |
+| 通知推送（TG / DC） | 免費 |
+| LINE 推送 | Free plan 200 則/月 |
+| 股價查詢（FinMind） | 免費 |
 
-> CLI 模式搭配 Claude Code 使用不需 LLM 費用，Claude 自己分析。
-> 回測歷史資料加日期篩選：~$7/千篇（$5 基本 + $2 date filter add-on）。
-
-## 為什麼只用 Facebook？
-
-早期版本同時支援 Threads 和 Facebook 爬取，後來基於兩個原因移除了 Threads：
-
-1. **費用差距大**：Threads 每次抓取 ~$0.15（Pay-per-event），Facebook 只要 ~$0.02（CU 計費），差 7 倍以上
-2. **FB 參考價值更高**：巴逆逆的投資相關貼文（持倉截圖、操作心得）主要發在 Facebook 粉專，Threads 多為生活日常，反指標參考價值較低
+> CLI 模式搭配 Claude Code 不需 LLM 費用，Claude 自己分析。
 
 ## Star History
 

@@ -28,10 +28,12 @@
   "author": "cablate",
   "license": "MIT",
   "dependencies": {
+    "@hono/node-server": "^1.19.13",
     "better-sqlite3": "^12.8.0",
     "commander": "^13.0.0",
     "dotenv": "^16.4.0",
     "groq-sdk": "^1.1.2",
+    "hono": "^4.12.12",
     "node-cron": "^4.2.1",
     "openai": "^4.0.0"
   },
