@@ -79,3 +79,11 @@ jobs:
           docker build -t ghcr.io/${{ github.repository }}:${VERSION} -t ghcr.io/${{ github.repository }}:latest .
           docker push ghcr.io/${{ github.repository }}:${VERSION}
           docker push ghcr.io/${{ github.repository }}:latest
+
+      - name: Sync Zeabur template
+        if: hashFiles('zeabur-template.yaml') != ''
+        run: |
+          curl -sL https://raw.githubusercontent.com/zeabur/zbpack/main/scripts/install-zbctl.sh | bash
+          zbctl template update -f zeabur-template.yaml --yes
+        env:
+          ZEABUR_TOKEN: ${{ secrets.ZEABUR_TOKEN }}
