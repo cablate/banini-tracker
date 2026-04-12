@@ -40,7 +40,7 @@
 
 ### 1. Zeabur 一鍵部署（推薦）
 
-[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/banini-tracker)
+[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/ITT41M)
 
 部署後打開分配的網域，首次進入設定管理員帳密，然後在 Web UI 填入 API key 和通知管道。不需要手動設定環境變數。
 
