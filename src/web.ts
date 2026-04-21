@@ -10,7 +10,7 @@ import { getCookie, setCookie, deleteCookie } from 'hono/cookie';
 import { isInitialized, setupAdmin, login, logout, validateSession } from './auth.js';
 import { getAllConfig, setConfigs, getConfigKeys, getConfig, type ConfigKey } from './config-store.js';
 import { fetchFacebookPosts } from './facebook.js';
-import { analyzePosts } from './analyze.js';
+import { analyzePosts, DEFAULT_SYSTEM_PROMPT } from './analyze.js';
 import { createNotifiers, type ReportData, type PostSummary } from './notifiers/index.js';
 
 const app = new Hono();
@@ -70,6 +70,10 @@ app.get('/api/config', requireAuth, (c) => {
       masked[key] = value;
     }
   }
+  // SYSTEM_PROMPT 空值時回傳預設值，讓前端直接看到
+  if (!masked['SYSTEM_PROMPT']) {
+    masked['SYSTEM_PROMPT'] = DEFAULT_SYSTEM_PROMPT;
+  }
   return c.json({ config: masked, keys: getConfigKeys() });
 });
 
@@ -87,6 +91,10 @@ app.put('/api/config', requireAuth, async (c) => {
   }
   setConfigs(entries);
   return c.json({ ok: true });
+});
+
+app.get('/api/default-prompt', requireAuth, (c) => {
+  return c.json({ prompt: DEFAULT_SYSTEM_PROMPT });
 });
 
 // Test pipeline (SSE streaming)
@@ -346,6 +354,13 @@ const FRONTEND_HTML = /* html */ `<!DOCTYPE html>
     background: var(--surface);
   }
   .f input::placeholder { color: var(--text-muted); font-weight: 400; }
+  .f textarea:hover { border-color: var(--border-hover); }
+  .f textarea:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px var(--accent-subtle);
+    background: var(--surface);
+  }
+  .f textarea::placeholder { color: var(--text-muted); font-weight: 400; }
 
   .sep { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
 
@@ -453,6 +468,22 @@ const FRONTEND_HTML = /* html */ `<!DOCTYPE html>
       <div class="f"><label>Groq API Key</label><input id="cfg-GROQ_API_KEY"></div>
       <div class="f"><label>FinMind Token</label><input id="cfg-FINMIND_TOKEN"></div>
       <p class="hint">Base URL 預設 DeepInfra / Model 預設 MiniMax-M2.5</p>
+      <hr class="sep">
+      <div class="section">分析提示詞</div>
+      <div class="f">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem">
+          <label style="margin-bottom:0">System Prompt</label>
+          <button class="btn-ghost btn-sm" onclick="resetPrompt()" type="button">重置為預設</button>
+        </div>
+        <textarea id="cfg-SYSTEM_PROMPT" rows="10" style="
+          width:100%;padding:0.6rem 0.85rem;font-family:var(--mono);
+          font-size:0.8rem;color:var(--text);background:var(--surface-alt);
+          border:1px solid var(--border);border-radius:var(--radius);
+          transition:all var(--transition);outline:none;resize:vertical;
+          line-height:1.6;min-height:120px;
+        " placeholder="留空則使用預設提示詞"></textarea>
+        <p class="hint">自訂 LLM 分析提示詞。留空時使用內建預設值。</p>
+      </div>
     </div>
     <div class="col-footer">
       <div class="actions">
@@ -545,6 +576,8 @@ async function doAuth() {
   showConfig(await cfgRes.json());
 }
 
+let defaultPrompt = '';
+
 function showConfig(data) {
   configKeys = data.keys || [];
   originalValues = {};
@@ -554,13 +587,36 @@ function showConfig(data) {
     if (el) el.value = val;
     originalValues[key] = val;
   }
+  // 載入預設 prompt（用於重置按鈕 + 空值時自動填入）
+  if (!defaultPrompt) {
+    fetch('/api/default-prompt').then(r => r.json()).then(d => {
+      defaultPrompt = d.prompt;
+      const el = $('cfg-SYSTEM_PROMPT');
+      if (el && !el.value) {
+        el.value = defaultPrompt;
+        originalValues['SYSTEM_PROMPT'] = '';
+      }
+    }).catch(() => {});
+  }
+}
+
+async function resetPrompt() {
+  if (!defaultPrompt) {
+    try {
+      const r = await fetch('/api/default-prompt');
+      const d = await r.json();
+      defaultPrompt = d.prompt;
+    } catch { appendLog('無法取得預設提示詞', 'fail'); return; }
+  }
+  $('cfg-SYSTEM_PROMPT').value = defaultPrompt;
+  appendLog('已重置為預設提示詞', 'info');
 }
 
 async function saveConfig() {
   const body = {}; let n = 0;
   for (const key of configKeys) {
     const el = $('cfg-' + key);
-    const val = el ? el.value.trim() : '';
+    const val = el ? (key === 'SYSTEM_PROMPT' ? el.value : el.value.trim()) : '';
     if (val !== originalValues[key]) { body[key] = val; n++; }
   }
   if (!n) { appendLog('沒有變更', 'info'); toast('config-msg','沒有變更',false); return; }

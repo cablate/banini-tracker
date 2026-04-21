@@ -1,6 +1,7 @@
 import OpenAI from 'openai';
+import { getConfig } from './config-store.js';
 
-const SYSTEM_PROMPT = `你是一位台股投資分析助手，專門解讀「反指標女神」巴逆逆（8zz）的社群貼文。
+export const DEFAULT_SYSTEM_PROMPT = `你是一位台股投資分析助手，專門解讀「反指標女神」巴逆逆（8zz）的社群貼文。
 
 ## 背景
 巴逆逆是台灣知名的「股海冥燈」，她的投資判斷長期被網友驗證與市場走勢高度反向。
@@ -72,6 +73,11 @@ const SYSTEM_PROMPT = `你是一位台股投資分析助手，專門解讀「反
 如果貼文與投資完全無關（純生活、搞笑），hasInvestmentContent 設為 false，其他欄位可省略，只需 summary。
 注意：僅供娛樂參考，不構成投資建議。`;
 
+function getSystemPrompt(): string {
+  const custom = getConfig('SYSTEM_PROMPT');
+  return custom || DEFAULT_SYSTEM_PROMPT;
+}
+
 export interface BaniniAnalysis {
   hasInvestmentContent: boolean;
   mentionedTargets?: {
@@ -120,7 +126,7 @@ ${formatted}`;
     model: llmConfig.model,
     temperature: 0.3,
     messages: [
-      { role: 'system', content: SYSTEM_PROMPT },
+      { role: 'system', content: getSystemPrompt() },
       { role: 'user', content: userPrompt },
     ],
   });

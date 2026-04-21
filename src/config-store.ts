@@ -23,6 +23,7 @@ const CONFIG_KEYS = [
   'TRANSCRIBER',
   'GROQ_API_KEY',
   'FINMIND_TOKEN',
+  'SYSTEM_PROMPT',
 ] as const;
 
 export type ConfigKey = typeof CONFIG_KEYS[number];
