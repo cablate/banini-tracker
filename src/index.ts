@@ -14,7 +14,7 @@ import cron from 'node-cron';
 import { fetchFacebookPosts, type FacebookPost } from './facebook.js';
 import { analyzePosts } from './analyze.js';
 import { createNotifiers, type ReportData, type PostSummary } from './notifiers/index.js';
-import { filterNewPosts as filterNew, markPostsSeen } from './seen.js';
+import { filterNewPosts as filterNew } from './seen.js';
 import { withRetry } from './retry.js';
 import { createTranscriber, transcribeVideoPosts, type TranscriberType } from './transcribe.js';
 import { recordPredictions, updateTracking } from './tracker.js';
@@ -125,7 +125,7 @@ async function runInner(opts: RunOptions) {
     return;
   }
 
-  // 3. 去重（共用 ~/.banini-tracker/seen.json）
+  // 3. 去重（查 SQLite posts 表）
   const newPosts = filterNew(allPosts);
 
   if (newPosts.length === 0) {
@@ -196,7 +196,7 @@ async function runInner(opts: RunOptions) {
   const todayCount = newPosts.filter((p) => isToday(p.timestamp)).length;
   console.log(`發現 ${newPosts.length} 篇新貼文（FB: ${fbCount}, 今日: ${todayCount}）\n`);
 
-  markPostsSeen(newPosts.map((p) => p.id));
+  // Posts are marked as "seen" when inserted into DB (step 2.6 above)
 
   // 4. 印出貼文
   for (const p of newPosts) {
