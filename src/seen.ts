@@ -1,46 +1,38 @@
-import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
-import { dirname } from 'path';
-import { getSeenFile } from './config.js';
-
-function loadIds(): string[] {
-  const file = getSeenFile();
-  if (!existsSync(file)) return [];
-  try {
-    const data = JSON.parse(readFileSync(file, 'utf-8'));
-    return Array.isArray(data) ? data : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveIds(ids: string[]): void {
-  const file = getSeenFile();
-  mkdirSync(dirname(file), { recursive: true });
-  writeFileSync(file, JSON.stringify(ids.slice(-500), null, 2), 'utf-8');
-}
+/**
+ * Post dedup: uses SQLite `posts` table as source of truth.
+ * Replaces the old file-based seen.json which was fragile
+ * (silent JSON parse failure → all posts re-processed).
+ */
+import { getDb } from './db.js';
 
 export function isPostSeen(id: string): boolean {
-  return loadIds().includes(id);
-}
-
-export function markPostsSeen(ids: string[]): void {
-  const existing = loadIds();
-  const set = new Set(existing);
-  for (const id of ids) set.add(id);
-  saveIds([...set]);
+  const db = getDb();
+  const row = db.prepare('SELECT 1 FROM posts WHERE id = ?').get(id);
+  return !!row;
 }
 
 export function filterNewPosts<T extends { id: string }>(posts: T[]): T[] {
-  const seen = new Set(loadIds());
-  return posts.filter((p) => !seen.has(p.id));
+  const db = getDb();
+  const stmt = db.prepare('SELECT 1 FROM posts WHERE id = ?');
+  return posts.filter((p) => !stmt.get(p.id));
+}
+
+/**
+ * @deprecated Posts are now marked as seen by inserting into the `posts` table.
+ * This function is kept for backward compatibility but is a no-op.
+ */
+export function markPostsSeen(_ids: string[]): void {
+  // no-op: posts are marked seen when inserted into DB (index.ts upsert)
 }
 
 export function listSeenIds(): string[] {
-  return loadIds();
+  const db = getDb();
+  const rows = db.prepare('SELECT id FROM posts ORDER BY fetched_at DESC LIMIT 500').all() as { id: string }[];
+  return rows.map((r) => r.id);
 }
 
 export function clearSeen(): void {
-  const file = getSeenFile();
-  mkdirSync(dirname(file), { recursive: true });
-  writeFileSync(file, '[]', 'utf-8');
+  // Dangerous: clears all posts. Kept for CLI compatibility.
+  const db = getDb();
+  db.prepare('DELETE FROM posts').run();
 }

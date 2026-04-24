@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import { loadConfig, saveConfig, defaultConfig, getConfigPath, getSeenFile } from './config.js';
+import { loadConfig, saveConfig, defaultConfig, getConfigPath } from './config.js';
 import { fetchFacebookPosts } from './facebook.js';
 import { sendTelegramDirect } from './notifiers/index.js';
 import { filterNewPosts, markPostsSeen, listSeenIds, clearSeen } from './seen.js';
@@ -178,7 +178,7 @@ seenCmd
   .description('清空已讀紀錄')
   .action(() => {
     clearSeen();
-    console.error(`已清空: ${getSeenFile()}`);
+    console.log('已清空已讀紀錄（posts 表）');
   });
 
 // ── serve ────────────────────────────────────────────────
