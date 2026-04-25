@@ -77,6 +77,27 @@ function migrate(db: Database.Database): void {
       change_pct_low REAL NOT NULL,
       UNIQUE(prediction_id, date)
     );
+
+    CREATE TABLE IF NOT EXISTS run_logs (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      label TEXT NOT NULL,
+      started_at TEXT NOT NULL,
+      ended_at TEXT,
+      status TEXT NOT NULL DEFAULT 'running',
+      posts_found INTEGER NOT NULL DEFAULT 0,
+      posts_new INTEGER NOT NULL DEFAULT 0,
+      error_message TEXT,
+      summary TEXT
+    );
+
+    CREATE TABLE IF NOT EXISTS notification_logs (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      run_id INTEGER REFERENCES run_logs(id),
+      channel TEXT NOT NULL,
+      status TEXT NOT NULL,
+      error_message TEXT,
+      sent_at TEXT NOT NULL
+    );
   `);
 }
 

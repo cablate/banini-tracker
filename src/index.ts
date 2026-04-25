@@ -18,6 +18,7 @@ import { filterNewPosts as filterNew } from './seen.js';
 import { withRetry } from './retry.js';
 import { createTranscriber, transcribeVideoPosts, type TranscriberType } from './transcribe.js';
 import { recordPredictions, updateTracking } from './tracker.js';
+import { startRun, endRun, logNotification } from './run-logger.js';
 import { getDb } from './db.js';
 import { getConfig, initConfigTable, type ConfigKey } from './config-store.js';
 import { startWebServer } from './web.js';
@@ -81,17 +82,32 @@ interface RunOptions {
 async function run(opts: RunOptions) {
   if (running) {
     console.log(`[${opts.label}] 上一次還在跑，跳過本次排程`);
+    const skipId = startRun(opts.label);
+    endRun(skipId, 'skip', { summary: '上一次還在跑，跳過' });
     return;
   }
   running = true;
+  const runId = startRun(opts.label);
   try {
-    await runInner(opts);
+    await runInner(opts, runId);
+    endRun(runId, 'ok', {
+      postsFound: (opts as any)._postsFound ?? 0,
+      postsNew: (opts as any)._postsNew ?? 0,
+      summary: (opts as any)._summary ?? null,
+    });
+  } catch (err) {
+    endRun(runId, 'fail', {
+      postsFound: (opts as any)._postsFound ?? 0,
+      postsNew: (opts as any)._postsNew ?? 0,
+      error: err instanceof Error ? err.message : String(err),
+    });
+    throw err;
   } finally {
     running = false;
   }
 }
 
-async function runInner(opts: RunOptions) {
+async function runInner(opts: RunOptions, runId: number) {
   const now = new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' });
   console.log(`\n=== 巴逆逆反指標追蹤器 [${opts.label}] ${now} ===\n`);
 
@@ -120,16 +136,20 @@ async function runInner(opts: RunOptions) {
     console.error(`[Facebook] 抓取失敗: ${err instanceof Error ? err.message : err}`);
   }
 
+  (opts as any)._postsFound = allPosts.length;
   if (allPosts.length === 0) {
     console.log('沒有抓到任何貼文，結束');
+    (opts as any)._summary = '沒有抓到貼文';
     return;
   }
 
   // 3. 去重（查 SQLite posts 表）
   const newPosts = filterNew(allPosts);
 
+  (opts as any)._postsNew = newPosts.length;
   if (newPosts.length === 0) {
     console.log('沒有新貼文，結束');
+    (opts as any)._summary = '沒有新貼文';
     return;
   }
 
@@ -254,6 +274,7 @@ async function runInner(opts: RunOptions) {
   console.log('  巴逆逆反指標分析報告');
   console.log('========================================\n');
   console.log(`摘要: ${analysis.summary}`);
+  (opts as any)._summary = analysis.summary;
 
   if (analysis.hasInvestmentContent) {
     if (analysis.mentionedTargets?.length) {
@@ -300,8 +321,11 @@ async function runInner(opts: RunOptions) {
       const r = results[i];
       if (r.status === 'fulfilled') {
         console.log(`[${notifiers[i].name}] 通知已發送`);
+        logNotification(runId, notifiers[i].name, 'sent');
       } else {
-        console.error(`[${notifiers[i].name}] 發送失敗（已重試 3 次）: ${r.reason instanceof Error ? r.reason.message : r.reason}`);
+        const errMsg = r.reason instanceof Error ? r.reason.message : String(r.reason);
+        console.error(`[${notifiers[i].name}] 發送失敗（已重試 3 次）: ${errMsg}`);
+        logNotification(runId, notifiers[i].name, 'failed', errMsg);
       }
     }
   } else {

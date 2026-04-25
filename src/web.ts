@@ -10,6 +10,7 @@ import { getCookie, setCookie, deleteCookie } from 'hono/cookie';
 import { isInitialized, setupAdmin, login, logout, validateSession } from './auth.js';
 import { getAllConfig, setConfigs, getConfigKeys, getConfig, type ConfigKey } from './config-store.js';
 import { fetchFacebookPosts } from './facebook.js';
+import { getRecentRuns, getRecentNotifications } from './run-logger.js';
 import { analyzePosts, DEFAULT_SYSTEM_PROMPT } from './analyze.js';
 import { createNotifiers, type ReportData, type PostSummary } from './notifiers/index.js';
 
@@ -91,6 +92,16 @@ app.put('/api/config', requireAuth, async (c) => {
   }
   setConfigs(entries);
   return c.json({ ok: true });
+});
+
+app.get('/api/runs', requireAuth, (c) => {
+  const runs = getRecentRuns(50);
+  return c.json({ runs });
+});
+
+app.get('/api/notifications', requireAuth, (c) => {
+  const notifications = getRecentNotifications(100);
+  return c.json({ notifications });
 });
 
 app.get('/api/default-prompt', requireAuth, (c) => {
@@ -290,6 +301,38 @@ const FRONTEND_HTML = /* html */ `<!DOCTYPE html>
     font-family: var(--mono); font-size: 0.8rem; font-weight: 600;
     color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;
   }
+  .tab-group { display: flex; gap: 0.2rem; }
+  .tab-btn {
+    font-family: var(--mono); font-size: 0.8rem; font-weight: 600;
+    color: var(--text-muted); background: transparent; border: none;
+    padding: 0.3rem 0.7rem; border-radius: 6px; cursor: pointer;
+    transition: all var(--transition);
+  }
+  .tab-btn:hover { color: var(--text-secondary); background: var(--surface-alt); }
+  .tab-btn.active { color: var(--accent); background: var(--accent-subtle); }
+  .run-row {
+    padding: 0.5rem 2rem; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 0.75rem;
+    font-size: 0.85rem; transition: background var(--transition);
+  }
+  .run-row:hover { background: rgba(0,0,0,0.02); }
+  .run-status {
+    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+  }
+  .run-status.ok { background: var(--accent); }
+  .run-status.fail { background: var(--red); }
+  .run-status.skip { background: var(--text-muted); }
+  .run-status.running { background: var(--amber); }
+  .run-label { font-weight: 600; color: var(--text); min-width: 3.5rem; }
+  .run-meta { color: var(--text-muted); font-family: var(--mono); font-size: 0.8rem; }
+  .run-summary { color: var(--text-secondary); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .notif-row {
+    padding: 0.5rem 2rem; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 0.75rem;
+    font-size: 0.85rem; transition: background var(--transition);
+  }
+  .notif-row:hover { background: rgba(0,0,0,0.02); }
+  .notif-channel { font-weight: 600; color: var(--text); min-width: 5rem; }
   .log-actions { display: flex; gap: 0.4rem; }
   .log-body {
     flex: 1; overflow-y: auto; padding: 0.75rem 0;
@@ -496,14 +539,24 @@ const FRONTEND_HTML = /* html */ `<!DOCTYPE html>
 
   <div class="col-right">
     <div class="log-bar">
-      <span class="log-bar-title">Log</span>
+      <div class="tab-group">
+        <button class="tab-btn active" data-tab="log" onclick="switchTab('log')">Log</button>
+        <button class="tab-btn" data-tab="runs" onclick="switchTab('runs')">排程</button>
+        <button class="tab-btn" data-tab="notifs" onclick="switchTab('notifs')">推送</button>
+      </div>
       <div class="log-actions">
-        <button class="btn-ghost btn-sm" onclick="clearLog()">清除</button>
-        <button class="btn-ghost btn-sm" id="copy-btn" onclick="copyLog()">複製</button>
+        <button class="btn-ghost btn-sm" id="tab-action-1" onclick="clearLog()">清除</button>
+        <button class="btn-ghost btn-sm" id="tab-action-2" onclick="copyLog()">複製</button>
       </div>
     </div>
     <div class="log-body" id="log-body">
       <div class="log-empty">等待操作</div>
+    </div>
+    <div class="log-body" id="runs-body" style="display:none">
+      <div class="log-empty">載入中...</div>
+    </div>
+    <div class="log-body" id="notifs-body" style="display:none">
+      <div class="log-empty">載入中...</div>
     </div>
   </div>
 </div>
@@ -675,6 +728,78 @@ function toast(id, text, isErr) {
   el.className = 'toast ' + (isErr ? 'err' : 'ok');
   el.textContent = text;
   setTimeout(() => { el.textContent = ''; el.className = ''; }, 4000);
+}
+
+let currentTab = 'log';
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  $('log-body').style.display = tab === 'log' ? '' : 'none';
+  $('runs-body').style.display = tab === 'runs' ? '' : 'none';
+  $('notifs-body').style.display = tab === 'notifs' ? '' : 'none';
+  // Update action buttons
+  const a1 = $('tab-action-1'), a2 = $('tab-action-2');
+  if (tab === 'log') {
+    a1.textContent = '清除'; a1.onclick = clearLog;
+    a2.textContent = '複製'; a2.onclick = copyLog;
+    a1.style.display = ''; a2.style.display = '';
+  } else if (tab === 'runs') {
+    a1.textContent = '重新整理'; a1.onclick = loadRuns;
+    a2.style.display = 'none';
+    loadRuns();
+  } else {
+    a1.textContent = '重新整理'; a1.onclick = loadNotifs;
+    a2.style.display = 'none';
+    loadNotifs();
+  }
+}
+
+function fmtTime(iso) {
+  if (!iso) return '-';
+  return new Date(iso).toLocaleString('zh-TW', { timeZone: 'Asia/Taipei', hour12: false, month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit', second:'2-digit' });
+}
+
+async function loadRuns() {
+  const body = $('runs-body');
+  body.innerHTML = '<div class="log-empty">載入中...</div>';
+  try {
+    const res = await fetch('/api/runs');
+    const { runs } = await res.json();
+    if (runs.length === 0) { body.innerHTML = '<div class="log-empty">尚無排程紀錄</div>'; return; }
+    body.innerHTML = '';
+    for (const r of runs) {
+      const el = document.createElement('div');
+      el.className = 'run-row';
+      const dur = r.ended_at ? ((new Date(r.ended_at) - new Date(r.started_at)) / 1000).toFixed(0) + 's' : '...';
+      el.innerHTML = '<div class="run-status ' + r.status + '"></div>'
+        + '<span class="run-label">' + esc(r.label) + '</span>'
+        + '<span class="run-meta">' + fmtTime(r.started_at) + ' (' + dur + ')</span>'
+        + '<span class="run-summary">' + esc(r.summary || r.error_message || (r.posts_new > 0 ? r.posts_new + ' 篇新貼文' : '')) + '</span>'
+        + '<span class="run-meta">' + r.posts_found + '/' + r.posts_new + '</span>';
+      body.appendChild(el);
+    }
+  } catch { body.innerHTML = '<div class="log-empty">載入失敗</div>'; }
+}
+
+async function loadNotifs() {
+  const body = $('notifs-body');
+  body.innerHTML = '<div class="log-empty">載入中...</div>';
+  try {
+    const res = await fetch('/api/notifications');
+    const { notifications } = await res.json();
+    if (notifications.length === 0) { body.innerHTML = '<div class="log-empty">尚無推送紀錄</div>'; return; }
+    body.innerHTML = '';
+    for (const n of notifications) {
+      const el = document.createElement('div');
+      el.className = 'notif-row';
+      const statusCls = n.status === 'sent' ? 'log-ok' : 'log-fail';
+      el.innerHTML = '<div class="run-status ' + (n.status === 'sent' ? 'ok' : 'fail') + '"></div>'
+        + '<span class="notif-channel">' + esc(n.channel) + '</span>'
+        + '<span class="run-meta">' + fmtTime(n.sent_at) + '</span>'
+        + '<span class="' + statusCls + '">' + esc(n.status === 'sent' ? '成功' : n.error_message || '失敗') + '</span>';
+      body.appendChild(el);
+    }
+  } catch { body.innerHTML = '<div class="log-empty">載入失敗</div>'; }
 }
 
 init();
