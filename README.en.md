@@ -52,10 +52,10 @@ Push messages use plain text fields aligned with the current analysis output: `s
 
 ## Quick Start
 
-Try the public dataset with no keys:
+Try the public dataset and back-test summary with no keys:
 
 ```bash
-sqlite3 data/banini-public.db "SELECT symbol_name, reverse_view, base_price, status FROM predictions LIMIT 10"
+npx @cablate/banini-tracker demo
 ```
 
 | Option | Command / Entry | Best For |

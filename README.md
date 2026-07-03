@@ -52,10 +52,10 @@
 
 ## Quick Start
 
-零金鑰先看公開資料集：
+零金鑰先看公開資料集與回測摘要：
 
 ```bash
-sqlite3 data/banini-public.db "SELECT symbol_name, reverse_view, base_price, status FROM predictions LIMIT 10"
+npx @cablate/banini-tracker demo
 ```
 
 | 方式 | 指令 / 入口 | 適合情境 |

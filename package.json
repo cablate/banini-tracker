@@ -46,6 +46,7 @@
     "typescript": "^5.5.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "data/banini-public.db"
   ]
 }

@@ -7,6 +7,8 @@ import { filterNewPosts, markPostsSeen, listSeenIds, clearSeen } from './seen.js
 import { readFileSync } from 'fs';
 import { createTranscriber, transcribeVideoPosts, isVideoPost } from './transcribe.js';
 import { getDb } from './db.js';
+import { formatDemo, readStats } from './stats.js';
+import { fileURLToPath } from 'node:url';
 
 const program = new Command();
 program
@@ -179,6 +181,26 @@ seenCmd
   .action(() => {
     clearSeen();
     console.log('已清空已讀紀錄（posts 表）');
+  });
+
+// ── demo ─────────────────────────────────────────────────
+program
+  .command('demo')
+  .description('讀取內建公開資料集，零金鑰展示反指標回測結果')
+  .option('--json', '輸出機器可讀 JSON')
+  .action((opts) => {
+    try {
+      const dbPath = fileURLToPath(new URL('../data/banini-public.db', import.meta.url));
+      const summary = readStats(dbPath);
+      if (opts.json) {
+        console.log(JSON.stringify(summary, null, 2));
+      } else {
+        console.log(formatDemo(summary));
+      }
+    } catch (err) {
+      console.error(err instanceof Error ? err.message : err);
+      process.exit(1);
+    }
   });
 
 // ── serve ────────────────────────────────────────────────
