@@ -30,6 +30,10 @@ Using Claude Opus 4.6, the project back-tested 2,249 posts from 2024/04-2026/04 
   <img src="assets/banini-report.gif" alt="historical back-test" width="600">
 </p>
 
+<p align="center">
+  <img src="assets/weekly-report.svg" alt="weekly automated report" width="600">
+</p>
+
 ## What It Does
 
 1. Reads Banini's posts.

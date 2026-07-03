@@ -30,6 +30,10 @@
   <img src="assets/banini-report.gif" alt="歷史回測數據" width="600">
 </p>
 
+<p align="center">
+  <img src="assets/weekly-report.svg" alt="每週自動戰報" width="600">
+</p>
+
 ## 它做什麼
 
 1. 讀取巴逆逆貼文。

@@ -1,0 +1,37 @@
+name: Weekly Report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  weekly-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # TODO: [需人工] 決定 live 數據同步管道；目前先使用 repo 內公開 db。
+      - run: npm run weekly-report
+
+      - name: Commit report if changed
+        run: |
+          if git diff --quiet -- assets/weekly-report.svg; then
+            echo "weekly report unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/weekly-report.svg
+          git commit -m "chore: 更新每週戰報"
+          git push
