@@ -22,12 +22,13 @@ import { startRun, endRun, logNotification } from './run-logger.js';
 import { getDb } from './db.js';
 import { getConfig, initConfigTable, type ConfigKey } from './config-store.js';
 import { startWebServer } from './web.js';
+import { getPersonaPathArg, getPersonaSourceTarget, loadPersona } from './persona.js';
 
 // ── Config ──────────────────────────────────────────────────
-const FB_PAGE_URL = 'https://www.facebook.com/DieWithoutBang/';
 const DATA_DIR = process.env.DATA_DIR || join(process.cwd(), 'data');
 
 const isCronMode = process.argv.includes('--cron');
+const activePersona = loadPersona(getPersonaPathArg());
 
 /** Read config: DB > env > default (getConfig handles all three) */
 function env(key: ConfigKey, fallback?: string): string {
@@ -127,8 +128,9 @@ async function runInner(opts: RunOptions, runId: number) {
   // 1. 抓取 Facebook（含 retry）
   try {
     const fetchOpts = (opts.since || opts.until) ? { since: opts.since, until: opts.until } : undefined;
+    const facebookTarget = getPersonaSourceTarget(activePersona, 'facebook');
     const fbPosts = await withRetry(
-      () => fetchFacebookPosts(FB_PAGE_URL, apifyToken, opts.maxPosts, fetchOpts),
+      () => fetchFacebookPosts(facebookTarget, apifyToken, opts.maxPosts, fetchOpts),
       { label: 'Facebook', maxRetries: 2, baseDelayMs: 5000 },
     );
     allPosts.push(...fbPosts.map(fromFacebook));
@@ -260,7 +262,7 @@ async function runInner(opts: RunOptions, runId: number) {
         baseUrl: env('LLM_BASE_URL', 'https://api.deepinfra.com/v1/openai'),
         apiKey: env('LLM_API_KEY'),
         model: env('LLM_MODEL', 'MiniMaxAI/MiniMax-M2.5'),
-      }),
+      }, activePersona),
       { label: 'LLM', maxRetries: 3, baseDelayMs: 5000 },
     );
   } catch (err) {
@@ -380,7 +382,7 @@ if (isCronMode) {
 
   // 追蹤更新：週一到五 15:00（收盤後更新預測追蹤）
   cron.schedule('0 15 * * 1-5', () => {
-    updateTracking()
+    updateTracking(activePersona.analysis.trackingDays)
       .catch((err) => console.error('[追蹤更新] 執行失敗:', err));
   }, { timezone: 'Asia/Taipei' });
 

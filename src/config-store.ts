@@ -24,6 +24,7 @@ const CONFIG_KEYS = [
   'GROQ_API_KEY',
   'FINMIND_TOKEN',
   'SYSTEM_PROMPT',
+  'PERSONA_PATH',
 ] as const;
 
 export type ConfigKey = typeof CONFIG_KEYS[number];

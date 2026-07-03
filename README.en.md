@@ -153,6 +153,7 @@ Use it with Claude Code or other AI tools without cloning the repo:
 ```bash
 # Start persistent service (scheduler + Web UI)
 npx @cablate/banini-tracker serve
+npx @cablate/banini-tracker serve --persona ./personas/banini.json
 
 # Initialize CLI settings
 npx @cablate/banini-tracker init --apify-token YOUR_TOKEN
@@ -209,7 +210,7 @@ No. This project is for entertainment, data analysis, and engineering demonstrat
 | Status | Direction | Description |
 |---|---|---|
 | In progress | Demo mode | Run `npx @cablate/banini-tracker demo` with no keys and read the public dataset |
-| In progress | Persona configuration | Move target, prompt, tracking days, and threshold into JSON |
+| Completed | Persona configuration | Move target, prompt, tracking days, and threshold into JSON |
 | In progress | Weekly report | Generate shareable SVG / Markdown reports |
 | In progress | Multi-source adapters | Threads / PTT / YouTube comments via a source adapter interface |
 | Long term | Community persona templates | Accept PRs, similar to n8n templates |

@@ -138,7 +138,7 @@ interface TrackingPrediction {
  * 每日更新追蹤中的預測（建議 15:00 後執行）
  * 一律追蹤 5 個交易日，不提前終止。
  */
-export async function updateTracking(): Promise<void> {
+export async function updateTracking(trackingDays = 5): Promise<void> {
   let db;
   try {
     db = getDb();
@@ -226,9 +226,9 @@ export async function updateTracking(): Promise<void> {
       });
 
       // 5 個交易日 → completed
-      if (shouldCompleteTracking(dayNumber)) {
+      if (shouldCompleteTracking(dayNumber, trackingDays)) {
         markCompleted.run(today, pred.id);
-        console.log(`[tracker] 完成追蹤: ${pred.symbol_name}（${pred.symbol_code}）5 天結束`);
+        console.log(`[tracker] 完成追蹤: ${pred.symbol_name}（${pred.symbol_code}）${trackingDays} 天結束`);
       } else {
         const pctStr = changePctClose >= 0 ? `+${changePctClose.toFixed(2)}` : changePctClose.toFixed(2);
         console.log(`[tracker] ${pred.symbol_name}（${pred.symbol_code}）day ${dayNumber}: ${pctStr}%`);

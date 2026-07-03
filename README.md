@@ -153,6 +153,7 @@ Web UI 和環境變數可以混用，Web UI 的設定優先。
 ```bash
 # 啟動常駐服務（排程 + Web UI）
 npx @cablate/banini-tracker serve
+npx @cablate/banini-tracker serve --persona ./personas/banini.json
 
 # 初始化 CLI 設定
 npx @cablate/banini-tracker init --apify-token YOUR_TOKEN
@@ -209,7 +210,7 @@ CLI 模式搭配 Claude Code 不需 LLM 費用，Claude 自己分析。
 | 狀態 | 方向 | 說明 |
 |---|---|---|
 | 進行中 | demo 模式 | 零金鑰執行 `npx @cablate/banini-tracker demo`，直接讀公開資料集看結果 |
-| 進行中 | persona 設定檔 | 把目標、prompt、追蹤天數與門檻抽成 JSON，支援追蹤其他人物 |
+| 已完成 | persona 設定檔 | 把目標、prompt、追蹤天數與門檻抽成 JSON，支援追蹤其他人物 |
 | 進行中 | 每週自動戰報 | 產出可分享的 SVG / Markdown 戰報 |
 | 進行中 | 多來源 adapter | Threads / PTT / YouTube 留言，基於 source adapter 介面擴充 |
 | 長期 | personas/ 社群模板庫 | 接受 PR，類似 n8n templates 模式 |

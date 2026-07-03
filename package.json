@@ -49,6 +49,7 @@
   },
   "files": [
     "dist",
-    "data/banini-public.db"
+    "data/banini-public.db",
+    "personas"
   ]
 }

@@ -1,5 +1,6 @@
 import OpenAI from 'openai';
 import { getConfig } from './config-store.js';
+import { loadPersona, resolvePromptTemplate, type Persona } from './persona.js';
 
 export const DEFAULT_SYSTEM_PROMPT = `你是一位台股投資分析助手，專門解讀「反指標女神」巴逆逆（8zz）的社群貼文。
 
@@ -73,9 +74,9 @@ export const DEFAULT_SYSTEM_PROMPT = `你是一位台股投資分析助手，專
 如果貼文與投資完全無關（純生活、搞笑），hasInvestmentContent 設為 false，其他欄位可省略，只需 summary。
 注意：僅供娛樂參考，不構成投資建議。`;
 
-function getSystemPrompt(): string {
+function getSystemPrompt(persona: Persona): string {
   const custom = getConfig('SYSTEM_PROMPT');
-  return custom || DEFAULT_SYSTEM_PROMPT;
+  return custom || resolvePromptTemplate(persona, DEFAULT_SYSTEM_PROMPT);
 }
 
 export interface BaniniAnalysis {
@@ -97,6 +98,7 @@ export interface BaniniAnalysis {
 export async function analyzePosts(
   posts: { text: string; timestamp: string; isToday: boolean }[],
   llmConfig: { baseUrl: string; apiKey: string; model: string },
+  persona: Persona = loadPersona(),
 ): Promise<BaniniAnalysis> {
   const client = new OpenAI({
     apiKey: llmConfig.apiKey,
@@ -115,7 +117,7 @@ export async function analyzePosts(
 
   const userPrompt = `現在時間：${nowStr}（台北時間）
 
-以下是巴逆逆最新的社群貼文（按時間從新到舊排列），請進行反指標分析。
+以下是${persona.displayName}最新的社群貼文（按時間從新到舊排列），請進行反指標分析。
 注意：標記「今天」的貼文最重要，請優先分析。
 
 ${formatted}`;
@@ -126,7 +128,7 @@ ${formatted}`;
     model: llmConfig.model,
     temperature: 0.3,
     messages: [
-      { role: 'system', content: getSystemPrompt() },
+      { role: 'system', content: getSystemPrompt(persona) },
       { role: 'user', content: userPrompt },
     ],
   });
