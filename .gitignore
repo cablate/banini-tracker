@@ -9,6 +9,8 @@ scripts/*
 !scripts/stats.ts
 !scripts/weekly-report.ts
 data/tracker.db
+data/*.db-shm
+data/*.db-wal
 data/report-*.json
 Python/
 prompts/

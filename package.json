@@ -13,6 +13,7 @@
     "evening": "tsx src/index.ts --max-posts=3",
     "cron": "tsx src/index.ts --cron",
     "cli": "tsx src/cli.ts",
+    "stats": "tsx scripts/stats.ts",
     "build": "tsc",
     "start": "node dist/index.js --cron",
     "prepublishOnly": "npm run build"
