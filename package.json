@@ -15,6 +15,7 @@
     "cli": "tsx src/cli.ts",
     "stats": "tsx scripts/stats.ts",
     "build": "tsc",
+    "test": "vitest run",
     "start": "node dist/index.js --cron",
     "prepublishOnly": "npm run build"
   },
@@ -43,7 +44,8 @@
     "@types/node": "^20.0.0",
     "@types/node-cron": "^3.0.11",
     "tsx": "^4.0.0",
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.9"
   },
   "files": [
     "dist",

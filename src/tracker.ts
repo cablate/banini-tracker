@@ -17,6 +17,36 @@ interface PostInfo {
   timestamp: string;
 }
 
+type TrackerDb = ReturnType<typeof getDb>;
+
+export function supersedePreviousTrackingPrediction(
+  db: TrackerDb,
+  stockCode: string,
+  newPredictionId: number,
+): number | null {
+  const existing = db.prepare(`
+    SELECT id FROM predictions
+    WHERE symbol_code = ? AND status = 'tracking' AND id != ?
+    ORDER BY id DESC LIMIT 1
+  `).get(stockCode, newPredictionId) as { id: number } | undefined;
+
+  if (!existing) {
+    return null;
+  }
+
+  db.prepare(`
+    UPDATE predictions
+    SET status = 'superseded', next_prediction_id = ?
+    WHERE id = ?
+  `).run(newPredictionId, existing.id);
+
+  return existing.id;
+}
+
+export function shouldCompleteTracking(dayNumber: number, trackingDays = 5): boolean {
+  return dayNumber >= trackingDays;
+}
+
 /**
  * 記錄 LLM 分析出的預測
  * 同股票有 tracking 中的舊預測 → supersede 舊的
@@ -39,18 +69,6 @@ export async function recordPredictions(
       (@post_id, @post_url, @symbol_name, @symbol_code, @symbol_type,
        @her_action, @reverse_view, @confidence, @reasoning,
        @base_price, @created_at, @recorded_at, @status)
-  `);
-
-  const findTracking = db.prepare(`
-    SELECT id FROM predictions
-    WHERE symbol_code = ? AND status = 'tracking'
-    ORDER BY id DESC LIMIT 1
-  `);
-
-  const supersede = db.prepare(`
-    UPDATE predictions
-    SET status = 'superseded', next_prediction_id = ?
-    WHERE id = ?
   `);
 
   const latestPost = posts[0];
@@ -94,10 +112,9 @@ export async function recordPredictions(
 
       // 同股票有追蹤中的舊預測 → supersede
       if (stock && status === 'tracking') {
-        const existing = findTracking.get(stock.code) as { id: number } | undefined;
-        if (existing && existing.id !== newId) {
-          supersede.run(newId, existing.id);
-          console.log(`[tracker] 覆蓋舊預測 #${existing.id} → #${newId}（${target.name}）`);
+        const supersededId = supersedePreviousTrackingPrediction(db, stock.code, newId);
+        if (supersededId !== null) {
+          console.log(`[tracker] 覆蓋舊預測 #${supersededId} → #${newId}（${target.name}）`);
         }
       }
 
@@ -209,7 +226,7 @@ export async function updateTracking(): Promise<void> {
       });
 
       // 5 個交易日 → completed
-      if (dayNumber >= 5) {
+      if (shouldCompleteTracking(dayNumber)) {
         markCompleted.run(today, pred.id);
         console.log(`[tracker] 完成追蹤: ${pred.symbol_name}（${pred.symbol_code}）5 天結束`);
       } else {

@@ -85,10 +85,7 @@ function favorableChange(row: Pick<RecentPredictionRow, 'reverse_view' | 'min_lo
   return null;
 }
 
-export function readStats(dbPath: string, recentLimit = 10): StatsSummary {
-  const db = new Database(dbPath, { readonly: true, fileMustExist: true });
-
-  try {
+export function calculateStats(db: Database.Database, dbPath: string, recentLimit = 10): StatsSummary {
     const meta = db
       .prepare(
         `
@@ -191,6 +188,13 @@ export function readStats(dbPath: string, recentLimit = 10): StatsSummary {
         maxFavorableChangePct: favorableChange(row),
       })),
     };
+}
+
+export function readStats(dbPath: string, recentLimit = 10): StatsSummary {
+  const db = new Database(dbPath, { readonly: true, fileMustExist: true });
+
+  try {
+    return calculateStats(db, dbPath, recentLimit);
   } finally {
     db.close();
   }
