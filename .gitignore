@@ -3,5 +3,15 @@ dist/
 *.log
 .env
 tmp-report.txt
-scripts/
 output/
+scripts/*
+!scripts/
+!scripts/stats.ts
+!scripts/weekly-report.ts
+data/tracker.db
+data/report-*.json
+Python/
+prompts/
+plans/
+*.local
+assets/long-only-analysis.png
