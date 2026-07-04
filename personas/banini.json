@@ -1,0 +1,14 @@
+{
+  "id": "banini",
+  "displayName": "巴逆逆（8zz）",
+  "source": {
+    "type": "facebook",
+    "target": "https://www.facebook.com/DieWithoutBang/"
+  },
+  "analysis": {
+    "mode": "reverse",
+    "promptTemplate": "__DEFAULT_SYSTEM_PROMPT__",
+    "trackingDays": 5,
+    "thresholdPct": 1.0
+  }
+}

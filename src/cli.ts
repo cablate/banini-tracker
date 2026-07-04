@@ -7,6 +7,9 @@ import { filterNewPosts, markPostsSeen, listSeenIds, clearSeen } from './seen.js
 import { readFileSync } from 'fs';
 import { createTranscriber, transcribeVideoPosts, isVideoPost } from './transcribe.js';
 import { getDb } from './db.js';
+import { formatDemo, readStats } from './stats.js';
+import { fileURLToPath } from 'node:url';
+import { getPersonaSourceTarget, loadPersona } from './persona.js';
 
 const program = new Command();
 program
@@ -73,14 +76,17 @@ program
   .option('--mark-seen', '輸出後自動標記為已讀')
   .option('--transcribe', '自動轉錄影片（captionText 為空時走 Groq Whisper）')
   .option('--save-db', '抓取後直接存入 SQLite')
+  .option('--persona <path>', 'Persona JSON 設定檔路徑')
   .action(async (opts) => {
     try {
       const config = loadConfig();
       const limit = parseInt(opts.limit, 10);
       let posts: any[] = [];
+      const persona = opts.persona ? loadPersona(opts.persona) : null;
+      const facebookTarget = persona ? getPersonaSourceTarget(persona, 'facebook') : config.targets.facebookPageUrl;
 
       const fetchOpts = (opts.since || opts.until) ? { since: opts.since, until: opts.until } : undefined;
-      const fp = await fetchFacebookPosts(config.targets.facebookPageUrl, config.apifyToken, limit, fetchOpts);
+      const fp = await fetchFacebookPosts(facebookTarget, config.apifyToken, limit, fetchOpts);
       posts.push(...fp);
 
       // 按時間從新到舊
@@ -181,13 +187,35 @@ seenCmd
     console.log('已清空已讀紀錄（posts 表）');
   });
 
+// ── demo ─────────────────────────────────────────────────
+program
+  .command('demo')
+  .description('讀取內建公開資料集，零金鑰展示反指標回測結果')
+  .option('--json', '輸出機器可讀 JSON')
+  .action((opts) => {
+    try {
+      const dbPath = fileURLToPath(new URL('../data/banini-public.db', import.meta.url));
+      const summary = readStats(dbPath);
+      if (opts.json) {
+        console.log(JSON.stringify(summary, null, 2));
+      } else {
+        console.log(formatDemo(summary));
+      }
+    } catch (err) {
+      console.error(err instanceof Error ? err.message : err);
+      process.exit(1);
+    }
+  });
+
 // ── serve ────────────────────────────────────────────────
 program
   .command('serve')
   .description('啟動常駐服務（排程 + Web 設定頁面）')
   .option('-p, --port <port>', 'Web UI port', '3000')
+  .option('--persona <path>', 'Persona JSON 設定檔路徑')
   .action(async (opts) => {
     if (opts.port) process.env.WEB_PORT = opts.port;
+    if (opts.persona) process.env.PERSONA_PATH = opts.persona;
     process.argv.push('--cron');
     await import('./index.js');
   });

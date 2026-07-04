@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">banini-tracker weekly report</title>
+  <desc id="desc">Weekly reverse-indicator report generated from the public SQLite dataset.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="32" y="32" width="1136" height="566" rx="24" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="56" y="92" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">banini-tracker 每週戰報</text>
+  <text x="56" y="132" font-family="Arial, sans-serif" font-size="18" fill="#4b5563">資料週期 2026-04-02 - 2026-04-09｜產生 2026-07-03</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="56" y="176" width="320" height="72" rx="12" fill="#ecfeff" stroke="#a5f3fc"/>
+    <text x="80" y="204" font-size="18" fill="#0f766e">本期新預測</text>
+    <text x="80" y="234" font-size="32" font-weight="700" fill="#0f172a">14</text>
+
+    <rect x="440" y="176" width="320" height="72" rx="12" fill="#fef3c7" stroke="#fde68a"/>
+    <text x="464" y="204" font-size="18" fill="#92400e">追蹤中</text>
+    <text x="464" y="234" font-size="32" font-weight="700" fill="#0f172a">316</text>
+
+    <rect x="824" y="176" width="320" height="72" rx="12" fill="#eef2ff" stroke="#c7d2fe"/>
+    <text x="848" y="204" font-size="18" fill="#4338ca">累計勝率（±1%）</text>
+    <text x="848" y="234" font-size="32" font-weight="700" fill="#0f172a">68.6% (218/318)</text>
+
+    <text x="56" y="310" font-size="24" font-weight="700" fill="#111827">最新 3 筆預測</text>
+    <text x="56" y="354" font-size="22" fill="#1f2937">2026-04-09 台泥｜考慮買入 → 空｜追蹤中</text>
+    <text x="56" y="396" font-size="22" fill="#1f2937">2026-04-09 PCB｜計畫買入 → 空｜追蹤中</text>
+    <text x="56" y="438" font-size="22" fill="#1f2937">2026-04-09 信驊｜被套 → 空｜追蹤中</text>
+    <text x="56" y="536" font-size="18" fill="#6b7280">娛樂為主，數據為證。不構成投資建議。</text>
+    <text x="56" y="568" font-size="18" fill="#6b7280">github.com/cablate/banini-tracker</text>
+  </g>
+</svg>
